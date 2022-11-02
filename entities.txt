@@ -1,0 +1,98 @@
+Rules for System
+There can be multiple awards
+A nominee can be nominated for multiple awards
+A nominee can not be nominated twice for a particular award set_type
+A nominee can recive multiple vote for an award type.
+A nominee can be a user
+A nominee can vote.
+A user without ticket can cast exaclty free one vote for all awards type.
+A user can buy extra ticket* to vote multiple times.
+A user can cast more than one vote 
+A user makes payment for a ticket
+
+
+
+Entities
+vote{
+    user_id
+    nominee_id
+    award_id
+    count //get a way to increase this variable
+
+}
+
+awards{
+    award_id
+    award_name
+    award_des
+    award_type
+
+}
+
+
+
+nominees{
+    nominee_id
+    nominee_name
+    nominee_role
+    nominee_des
+    award_id
+}
+
+user{
+    user_id
+    user_name
+    user_typre/user_role
+    user_email
+    user_school_id
+    
+    
+}
+considering having a role table 
+role{
+    role_id
+    role_type(student,facultyintern,faculty,staff)
+}
+
+
+order
+{
+    order_id
+    order_name
+}
+
+
+tickets{
+    ticket_id
+    ticket_status
+    ticket_type
+    number_of_tickers
+    valid_period     
+    ticket_price
+}
+
+
+payment
+{
+    user_id
+    payment_id
+    payment_reference
+    payment_type(momo, visa)
+    
+}
+
+
+food
+{
+
+}
+seat{
+    set_id
+    set_type{regular, vip, vvip, stand} 
+    }
+
+transport{
+    transport_id
+    transport_name
+    transport_medium {}
+}
