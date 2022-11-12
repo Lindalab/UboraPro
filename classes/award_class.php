@@ -34,7 +34,7 @@ class Awards extends db_connection{
         return $this->db_query($sql);
     }
 
-    function updateAward($award_name, $award_description, $award_image){
+    function updateAward($award_id, $award_name, $award_description, $award_image){
         $sql = "";
 
         return $this->db_query($sql);
@@ -44,6 +44,14 @@ class Awards extends db_connection{
         $sql = "";
 
         return $this->db_query($sql);
+    }
+
+    function countNomimeeVotes($award_id,$nominee_id){
+        $sql = " ";
+
+        $result = $this->fetchAllData($sql);
+        
+        return $this->countData();
     }
 
 }
