@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 12, 2022 at 01:07 PM
+-- Generation Time: Nov 12, 2022 at 01:27 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -43,7 +43,7 @@ CREATE TABLE `award` (
 CREATE TABLE `food` (
   `food_id` int(11) NOT NULL,
   `food_name` varchar(100) NOT NULL,
-  `food_price` decimal(10,2) NOT NULL
+  `food_price` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -68,6 +68,7 @@ CREATE TABLE `nominee` (
 
 CREATE TABLE `payment` (
   `payment_id` int(11) NOT NULL,
+  `amt` double NOT NULL,
   `user_id` int(11) NOT NULL,
   `payment_reference` varchar(80) NOT NULL,
   `payment_type` int(11) NOT NULL
@@ -83,7 +84,7 @@ CREATE TABLE `ticket` (
   `ticket_id` int(11) NOT NULL,
   `ticket_status` int(11) NOT NULL,
   `ticket_type` int(11) NOT NULL,
-  `ticket_price` decimal(10,2) NOT NULL,
+  `ticket_price` double NOT NULL,
   `valid_period` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -96,6 +97,7 @@ CREATE TABLE `ticket` (
 CREATE TABLE `transportation` (
   `transport_id` int(11) NOT NULL,
   `transport_name` varchar(50) NOT NULL,
+  `transport_price` double NOT NULL,
   `transport_description` varchar(100) NOT NULL,
   `transport_medium` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
