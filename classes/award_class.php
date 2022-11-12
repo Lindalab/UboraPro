@@ -40,7 +40,7 @@ class Awards extends db_connection{
         return $this->db_query($sql);
     }
 
-    function addNominee($award_id, $user_id, $nominee_name, $nominee_description, $nominee_image){
+    function addNominee($award_id, $nominee_name, $nominee_description, $nominee_image){
         $sql = "";
 
         return $this->db_query($sql);
