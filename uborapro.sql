@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 12, 2022 at 01:27 PM
+-- Generation Time: Nov 12, 2022 at 02:08 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -32,6 +32,21 @@ CREATE TABLE `award` (
   `award_name` varchar(80) NOT NULL,
   `award_description` text NOT NULL,
   `award_image` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cart`
+--
+
+CREATE TABLE `cart` (
+  `food_id` int(11) DEFAULT NULL,
+  `food_qty` int(11) DEFAULT NULL,
+  `transport_id` int(11) DEFAULT NULL,
+  `ticket_id` int(11) NOT NULL,
+  `ip_address` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -142,6 +157,14 @@ ALTER TABLE `award`
   ADD UNIQUE KEY `award_name` (`award_name`);
 
 --
+-- Indexes for table `cart`
+--
+ALTER TABLE `cart`
+  ADD KEY `food_id` (`food_id`),
+  ADD KEY `ticket_id` (`ticket_id`),
+  ADD KEY `transport_id` (`transport_id`);
+
+--
 -- Indexes for table `food`
 --
 ALTER TABLE `food`
@@ -239,6 +262,14 @@ ALTER TABLE `user`
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `cart`
+--
+ALTER TABLE `cart`
+  ADD CONSTRAINT `cart_ibfk_1` FOREIGN KEY (`food_id`) REFERENCES `food` (`food_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `cart_ibfk_2` FOREIGN KEY (`ticket_id`) REFERENCES `ticket` (`ticket_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `cart_ibfk_3` FOREIGN KEY (`transport_id`) REFERENCES `transportation` (`transport_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `nominee`

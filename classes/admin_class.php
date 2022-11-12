@@ -8,12 +8,14 @@ class Admin extends Users{
     function deleteUser($user_id, $admin_id){
         $role = $this->checkUserPrivilege($admin_id);
         if($role){
-            $sql = "";
+            $sql = " DELETE FROM `user` WHERE `user_id` = '$user_id'";
             return $this->db_query($sql);
         }
 
         return false;
     }
+
+    
     
 
 
