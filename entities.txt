@@ -137,3 +137,17 @@ visa {
     expiry
 
 }
+
+
+To do  
+Add event table to database
+Admin can create event
+
+event{
+    event_id int(11) not null primary,
+    event_name varchar(100) not null
+    event_year year/ datatime
+    event_location varchar(50)
+    
+
+}
