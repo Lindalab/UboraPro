@@ -9,6 +9,27 @@ A user without ticket can cast exaclty free one vote for all awards type.
 A user can buy extra ticket* to vote multiple times.
 A user can cast more than one vote 
 A user makes payment for a ticket
+A ticket has a seat type for a user
+A ticket is for only a seat
+A user can only register with Ashesi Email
+
+Statistics about ticket
+Count of seat available
+Validation for ashesi user_email(OTP)
+
+Login{
+    ashesi user_email
+    password
+    otp code to verify login
+}
+Register {
+     ashesi user_email
+    password
+    user_name
+    phone number
+
+
+}
 
 
 
@@ -25,6 +46,7 @@ awards{
     award_id
     award_name
     award_des
+    award_image
     award_type
 
 }
@@ -36,6 +58,7 @@ nominees{
     nominee_name
     nominee_role
     nominee_des
+    nominee_image
     award_id
 }
 
@@ -65,7 +88,7 @@ order
 tickets{
     ticket_id
     ticket_status
-    ticket_type
+    ticket_type{regular, vip, vvip, stand}
     number_of_tickers
     valid_period     
     ticket_price
@@ -86,13 +109,31 @@ food
 {
 
 }
-seat{
-    set_id
-    set_type{regular, vip, vvip, stand} 
-    }
+
 
 transport{
     transport_id
     transport_name
     transport_medium {}
+}
+
+cart{
+    cart_id
+    product_id
+    user_id
+    product_id
+}
+
+Momo/visa{
+    number
+    user_name
+    amt
+
+}
+
+visa {
+    user_id
+    account number
+    expiry
+
 }
