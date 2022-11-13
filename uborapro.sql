@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 12, 2022 at 02:08 PM
+-- Generation Time: Nov 13, 2022 at 10:42 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -46,7 +46,8 @@ CREATE TABLE `cart` (
   `transport_id` int(11) DEFAULT NULL,
   `ticket_id` int(11) NOT NULL,
   `ip_address` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL
+  `user_id` int(11) NOT NULL,
+  `payment_status` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -100,7 +101,8 @@ CREATE TABLE `ticket` (
   `ticket_status` int(11) NOT NULL,
   `ticket_type` int(11) NOT NULL,
   `ticket_price` double NOT NULL,
-  `valid_period` datetime NOT NULL
+  `valid_period` datetime NOT NULL,
+  `ticket_qty` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
