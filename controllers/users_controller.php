@@ -20,6 +20,12 @@
         return $user->getAllUser();
     }
 
+    function checkEmail($user_email){
+        $user = new Users;
+
+        return $user->checkEmail($user_email);
+    }
+
     function getAUser($user_id){
         $user = new Users;
 
