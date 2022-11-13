@@ -151,3 +151,13 @@ event{
     
 
 }
+
+Documentation
+ticket_type
+1 = regular
+2 = vi
+3= Couple
+
+cart
+Paid = 1
+Upaid =0
