@@ -4,14 +4,14 @@ require_once("../settings/db_class.php");
 class Users extends db_connection
 {
 
-// add a user to the database
+    // add a user to the database
     function registerUser($user_name, $user_email, $user_school_id,$phone_number, $password)
     {
         $sql = "INSERT INTO `user`(`user_name`, `user_email`, `user_school_id`, `phone_number`, `password`) VALUES ('$user_name',' $user_email','$user_school_id',,'$phone_number',' $password')";
 
         return $this->db_query($sql);
     }
-// voting for a candidate under an award
+    // voting for a candidate under an award
     function vote($user_id,$nomimee_id,$award_id )
     {
         $sql = "INSERT INTO `vote`(`user_id`, `nominee_id`, `award_id`) VALUES ('$user_id','$nomimee_id','$award_id')";
@@ -45,8 +45,15 @@ class Users extends db_connection
     function login($user_email, $password){
         $sql = "SELECT * FROM `user` WHERE `user_email`= '$user_email' and  `password` ='$password'";
 
-        return $this->fetchAllData($sql);
+        return $this->fetchOne($sql);
     }
+
+    // checjing if email exist
+    function checkEmail($user_email){
+        $sql = "SELECT * FROM `user` WHERE `user_email`= '$user_email'";
+        $this->fetchAllData($sql);
+        return $this->countData();
+    }    
 
     // checks if the user role is 0. if not then the person is not an admin
     function checkUserPrivilege($user_id){
