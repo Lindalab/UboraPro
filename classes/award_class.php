@@ -15,7 +15,7 @@ class Awards extends db_connection{
         return $this->fetchOne($sql);
     }
 
-    function getAwardsAndNominees(){
+    function getAllAwardsAndNominees(){
         $sql = "";
 
         return $this->fetchAllData($sql);
