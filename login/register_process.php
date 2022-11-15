@@ -9,13 +9,13 @@
         $password = $_POST['password'];
         $hashed_password = password_hash($password, PASSWORD_BCRYPT);
 
-        $check = checkEmail($user_email);
+        $check = checkEmail_ctr($user_email);
 
         if($check > 0){
             echo "email already exist";
         }
 
-        $register = registerUser($user_name, $user_email, $user_school_id,$phone_number, $hashed_password);
+        $register = registerUser_ctr($user_name, $user_email, $user_school_id,$phone_number, $hashed_password);
 
         if($register){
             echo "success";
