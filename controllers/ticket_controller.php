@@ -35,7 +35,7 @@
     function countTickets($award_id){
         $ticket = new Tickets;
 
-        return $ticket->countTickets($award_id);
+        // return $ticket->countTickets($award_id);
     }
 
 

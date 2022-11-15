@@ -26,6 +26,12 @@
         return $user->checkEmail($user_email);
     }
 
+    function  getAUserDetails($user_email){
+        $user = new Users;
+
+        return $user-> getAUserDetails($user_email);
+    }
+
     function getAUser($user_id){
         $user = new Users;
 
