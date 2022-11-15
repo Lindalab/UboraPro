@@ -26,7 +26,17 @@
         return $user->checkEmail($user_email);
     }
 
+<<<<<<< HEAD
     function getAUser_ctr($user_id){
+=======
+    function  getAUserDetails($user_email){
+        $user = new Users;
+
+        return $user-> getAUserDetails($user_email);
+    }
+
+    function getAUser($user_id){
+>>>>>>> 9687e6e98bc3be90dd73d7174b526f2038e505f1
         $user = new Users;
 
         return $user->getAUser($user_id);

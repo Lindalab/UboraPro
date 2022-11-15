@@ -42,7 +42,11 @@
     function countTicketsSold_ctr($ticket_type){
         $ticket = new Tickets;
 
+<<<<<<< HEAD
         return $ticket->countTicketsSold($ticket_type);
+=======
+        // return $ticket->countTickets($award_id);
+>>>>>>> 9687e6e98bc3be90dd73d7174b526f2038e505f1
     }
 
 

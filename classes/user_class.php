@@ -53,7 +53,12 @@ class Users extends db_connection
         $sql = "SELECT * FROM `user` WHERE `user_email`= '$user_email'";
         $this->fetchAllData($sql);
         return $this->countData();
-    }    
+    }  
+    
+    function getAUserDetails($user_email){
+        $sql = "SELECT * FROM `user` WHERE `user_email`= '$user_email'";
+        return $this->fetchAllData($sql);
+    }
 
     // checks if the user role is 0. if not then the person is not an admin
     function checkUserPrivilege($user_id){
