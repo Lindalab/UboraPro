@@ -9,7 +9,8 @@ $ticket_type = $_GET['ticket_type']; $ticket_price = $_GET['ticket_price']; $val
 
 $result = updateTicket_ctr($ticket_id, $ticket_status, $ticket_type, $ticket_price, $valid_period);
 
-if($result){
+if($result)
+{
     echo "success";
 }else{
     echo "failed";
