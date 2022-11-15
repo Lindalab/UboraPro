@@ -17,7 +17,7 @@ class Awards extends db_connection{
 
     // this function would be used for display all awards and nominee
     function getAllAwardsAndNominees(){
-        $sql = "";
+        $sql = "SELECT * FROM `award`";
 
         return $this->fetchAllData($sql);
     }
@@ -49,7 +49,7 @@ class Awards extends db_connection{
     }
 
     function countNomimeeVotesUnderAnAward($award_id,$nominee_id){
-        $sql = "SELECT  COUNT(`user_id`) FROM `vote` WHERE `nominee_id` = '$nominee_id' and  `award_id` = '$award_id' ";
+        $sql = "SELECT  `user_id` FROM `vote` WHERE `nominee_id` = '$nominee_id' and  `award_id` = '$award_id' ";
 
         $result = $this->fetchAllData($sql);
         

@@ -6,7 +6,7 @@
     $award_description = $_GET['award_description'];
     $award_image = $_GET['award_image'];
 
-    $result = updateAward($award_id, $award_name, $award_description, $award_image);
+    $result = updateAward_ctr($award_id, $award_name, $award_description, $award_image);
 
     if($result){
         

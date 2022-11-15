@@ -4,7 +4,7 @@
 
     $award_id = $_GET['award_id'];
 
-    $result = deleteAward($award_id);
+    $result = deleteAward_ctr($award_id);
 
     if($result){
         echo "success";

@@ -5,7 +5,7 @@
     $award_description = $_GET['award_description'];
     $ward_image = $_GET['award_image'];
 
-    $result = createAward($award_name, $award_description, $award_image);
+    $result = createAward_ctr($award_name, $award_description, $award_image);
 
     if($result){
         echo "success";
