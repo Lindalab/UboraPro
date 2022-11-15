@@ -15,26 +15,15 @@ class Awards extends db_connection{
         return $this->fetchOne($sql);
     }
 
-<<<<<<< HEAD
-    function getAllAwardsAndNominees(){
-        $sql = "SELECT * FROM `award`";
-
-        return $this->fetchAllData($sql);
-    
-    }
-
-    function getNomineesForAwards($award_id){
-=======
     // this function would be used for display all awards and nominee
     function getAllAwardsAndNominees(){
-        $sql = "";
+        $sql = "SELECT * FROM `award`";
 
         return $this->fetchAllData($sql);
     }
     
     // this would list the nominees under a particular award. This is suitable for a single view
     function getNomineesForAnAward($award_id){
->>>>>>> 9687e6e98bc3be90dd73d7174b526f2038e505f1
         $sql = "SELECT * FROM `nominee` WHERE award_id='$award_id'";
 
         return $this->fetchOne($sql);
