@@ -56,6 +56,19 @@ class Awards extends db_connection{
         return $this->countData();
     }
 
+    function deleteANominee($nominee_id){
+        $sql = "";
+
+        return $this->db_query($sql);
+        
+    }
+
+    function updateANominee($award_id, $nominee_name, $nominee_description, $nominee_image){
+        $sql = "";
+
+        return $this->db_query($sql);
+    }
+
 }
 
 

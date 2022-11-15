@@ -1,17 +1,18 @@
 <?php 
     require_once("../controllers/awards_controller.php");
 
+    $award_id = $_GET['award_id'];
     $award_name = $_GET['award_name'];
     $award_description = $_GET['award_description'];
-    $ward_image = $_GET['award_image'];
+    $award_image = $_GET['award_image'];
 
-    $result = createAward($award_name, $award_description, $award_image);
+    $result = updateAward($award_id, $award_name, $award_description, $award_image);
 
     if($result){
+        
         echo "success";
     }else{
+        
         echo "failed";
     }
-    
-    
 ?>

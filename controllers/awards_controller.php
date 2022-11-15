@@ -1,7 +1,7 @@
 <?php 
     require_once("../classes/award_class.php");
 
-
+    
     function createAward($award_name, $award_description, $award_image){
         $award = new Awards;
 
@@ -23,7 +23,7 @@
     function getNomineesForAwards($award_id){
         $award = new Awards;
 
-        return $award->getNomineesForAwards($award_id);
+        return $award->getNomineesForAnAward($award_id);
     }
 
     function deleteAward($award_id){
@@ -48,5 +48,17 @@
     function countNomimeeVotes($award_id,$nominee_id){
         $award = new Awards;
 
-        return $award->countNomimeeVotes($award_id,$nominee_id);
+        return $award->countNomimeeVotesUnderAnAward($award_id,$nominee_id);
+    }
+
+    function deleteANominee($nominee_id){
+        $award = new Awards;
+
+        return $award->deleteANominee($nominee_id);
+    }
+
+    function updateANominee($award_id, $nominee_name, $nominee_description, $nominee_image){
+        $award = new Awards;
+
+        return $award->updateANominee($award_id, $nominee_name, $nominee_description, $nominee_image);
     }
