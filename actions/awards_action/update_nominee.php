@@ -6,13 +6,14 @@
     $nominee_description = $_GET['nominee_description'];
     $nominee_image = $_GET['nominee_image'];
 
-    $result = addNominee_ctr($award_id, $nominee_name, $nominee_description, $nominee_image);
+    $result = updateANominee_ctr($award_id, $nominee_name, $nominee_description, $nominee_image);
 
     if($result){
         echo "success";
     }else{
         echo "failed";
     }
+    
 
 
 ?>
