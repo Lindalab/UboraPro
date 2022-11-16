@@ -76,6 +76,16 @@ class Awards extends db_connection{
         return $this->db_query($sql);
     }
 
+    // Check if an Award Exist
+    function checkAward($award_name){
+        $sql="SELECT * FROM `award` WHERE award_name='$award_name' ";
+
+        
+        $result = $this->fetchOne($sql);
+        
+        return $this->countData();
+    }
+
 }
 
 
