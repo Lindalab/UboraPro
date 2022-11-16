@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 16, 2022 at 05:50 PM
+-- Generation Time: Nov 16, 2022 at 09:25 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `award` (
   `award_id` int(11) NOT NULL,
   `award_name` varchar(80) NOT NULL,
-  `award_description` text NOT NULL,
+  `award_description` varchar(200) NOT NULL,
   `award_image` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -41,36 +41,8 @@ CREATE TABLE `award` (
 --
 
 CREATE TABLE `cart` (
-  `item_id` int(11) NOT NULL,
-  `ticket_id` int(11) NOT NULL,
-  `ip_add` int(50) NOT NULL,
-  `user_id` int(11) NOT NULL,
-  `item_qty` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `categories`
---
-
-CREATE TABLE `categories` (
   `cat_id` int(11) NOT NULL,
   `cat_name` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `event`
---
-
-CREATE TABLE `event` (
-  `event_id` int(11) NOT NULL,
-  `event_name` varchar(100) NOT NULL,
-  `event_year` year(4) NOT NULL,
-  `event_location` varchar(50) NOT NULL,
-  `event_description` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -87,6 +59,19 @@ CREATE TABLE `items` (
   `item_description` varchar(200) NOT NULL,
   `item_image` varchar(100) NOT NULL,
   `item_keyword` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `item_cart`
+--
+
+CREATE TABLE `item_cart` (
+  `item_id` int(11) NOT NULL,
+  `ip_address` int(50) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `item_qty` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -112,7 +97,6 @@ CREATE TABLE `nominee` (
 CREATE TABLE `orderhistory` (
   `order_id` int(11) NOT NULL,
   `item_id` int(11) NOT NULL,
-  `ticket_id` int(11) NOT NULL,
   `item_qty` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -127,6 +111,7 @@ CREATE TABLE `orders` (
   `user_id` int(11) NOT NULL,
   `reciept_no` int(11) NOT NULL,
   `order_date` date NOT NULL,
+  `order_type` int(11) NOT NULL,
   `order_status` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -156,8 +141,32 @@ CREATE TABLE `ticket` (
   `ticket_status` int(11) NOT NULL,
   `ticket_type` int(11) NOT NULL,
   `ticket_price` double NOT NULL,
-  `valid_period` datetime NOT NULL,
-  `ticket_qty` int(11) NOT NULL
+  `ticket_date` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tickethistroy`
+--
+
+CREATE TABLE `tickethistroy` (
+  `order_id` int(11) NOT NULL,
+  `ticket_id` int(11) NOT NULL,
+  `item_qty` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ticket_cart`
+--
+
+CREATE TABLE `ticket_cart` (
+  `ticket_id` int(11) NOT NULL,
+  `ip_address` int(50) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `ticket_qty` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -176,18 +185,6 @@ CREATE TABLE `user` (
   `user_role` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- --------------------------------------------------------
-
---
--- Table structure for table `vote`
---
-
-CREATE TABLE `vote` (
-  `user_id` int(11) NOT NULL,
-  `nominee_id` int(11) NOT NULL,
-  `award_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
 --
 -- Indexes for dumped tables
 --
@@ -202,28 +199,21 @@ ALTER TABLE `award`
 -- Indexes for table `cart`
 --
 ALTER TABLE `cart`
-  ADD KEY `item_id` (`item_id`),
-  ADD KEY `ticket_id` (`ticket_id`),
-  ADD KEY `user_id` (`user_id`);
-
---
--- Indexes for table `categories`
---
-ALTER TABLE `categories`
   ADD PRIMARY KEY (`cat_id`);
-
---
--- Indexes for table `event`
---
-ALTER TABLE `event`
-  ADD PRIMARY KEY (`event_id`);
 
 --
 -- Indexes for table `items`
 --
 ALTER TABLE `items`
   ADD PRIMARY KEY (`item_id`),
-  ADD KEY `items_ibfk_1` (`item_cat`);
+  ADD KEY `item_cat` (`item_cat`);
+
+--
+-- Indexes for table `item_cart`
+--
+ALTER TABLE `item_cart`
+  ADD KEY `item_id` (`item_id`),
+  ADD KEY `user_id` (`user_id`);
 
 --
 -- Indexes for table `nominee`
@@ -237,8 +227,7 @@ ALTER TABLE `nominee`
 --
 ALTER TABLE `orderhistory`
   ADD KEY `order_id` (`order_id`),
-  ADD KEY `item_id` (`item_id`),
-  ADD KEY `ticket_id` (`ticket_id`);
+  ADD KEY `item_id` (`item_id`);
 
 --
 -- Indexes for table `orders`
@@ -262,6 +251,20 @@ ALTER TABLE `ticket`
   ADD PRIMARY KEY (`ticket_id`);
 
 --
+-- Indexes for table `tickethistroy`
+--
+ALTER TABLE `tickethistroy`
+  ADD KEY `order_id` (`order_id`),
+  ADD KEY `ticket_id` (`ticket_id`);
+
+--
+-- Indexes for table `ticket_cart`
+--
+ALTER TABLE `ticket_cart`
+  ADD KEY `ticket_id` (`ticket_id`),
+  ADD KEY `user_id` (`user_id`);
+
+--
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
@@ -269,14 +272,6 @@ ALTER TABLE `user`
   ADD UNIQUE KEY `user_email` (`user_email`),
   ADD UNIQUE KEY `user_school_id` (`user_school_id`),
   ADD UNIQUE KEY `phone_number` (`phone_number`);
-
---
--- Indexes for table `vote`
---
-ALTER TABLE `vote`
-  ADD KEY `award_id` (`award_id`),
-  ADD KEY `nominee_id` (`nominee_id`),
-  ADD KEY `user_id` (`user_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -289,16 +284,10 @@ ALTER TABLE `award`
   MODIFY `award_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `categories`
+-- AUTO_INCREMENT for table `cart`
 --
-ALTER TABLE `categories`
+ALTER TABLE `cart`
   MODIFY `cat_id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `event`
---
-ALTER TABLE `event`
-  MODIFY `event_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `items`
@@ -341,32 +330,30 @@ ALTER TABLE `user`
 --
 
 --
--- Constraints for table `cart`
---
-ALTER TABLE `cart`
-  ADD CONSTRAINT `cart_ibfk_1` FOREIGN KEY (`item_id`) REFERENCES `items` (`item_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `cart_ibfk_2` FOREIGN KEY (`ticket_id`) REFERENCES `ticket` (`ticket_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `cart_ibfk_3` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
 -- Constraints for table `items`
 --
 ALTER TABLE `items`
-  ADD CONSTRAINT `items_ibfk_1` FOREIGN KEY (`item_cat`) REFERENCES `categories` (`cat_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `items_ibfk_1` FOREIGN KEY (`item_cat`) REFERENCES `items` (`item_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `item_cart`
+--
+ALTER TABLE `item_cart`
+  ADD CONSTRAINT `item_cart_ibfk_1` FOREIGN KEY (`item_id`) REFERENCES `items` (`item_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `item_cart_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `nominee`
 --
 ALTER TABLE `nominee`
-  ADD CONSTRAINT `nominee_ibfk_1` FOREIGN KEY (`award_id`) REFERENCES `award` (`award_id`);
+  ADD CONSTRAINT `nominee_ibfk_1` FOREIGN KEY (`award_id`) REFERENCES `award` (`award_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `orderhistory`
 --
 ALTER TABLE `orderhistory`
   ADD CONSTRAINT `orderhistory_ibfk_1` FOREIGN KEY (`order_id`) REFERENCES `orders` (`order_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `orderhistory_ibfk_2` FOREIGN KEY (`item_id`) REFERENCES `items` (`item_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `orderhistory_ibfk_3` FOREIGN KEY (`ticket_id`) REFERENCES `ticket` (`ticket_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `orderhistory_ibfk_2` FOREIGN KEY (`item_id`) REFERENCES `items` (`item_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `orders`
@@ -382,12 +369,18 @@ ALTER TABLE `payment`
   ADD CONSTRAINT `payment_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `vote`
+-- Constraints for table `tickethistroy`
 --
-ALTER TABLE `vote`
-  ADD CONSTRAINT `vote_ibfk_1` FOREIGN KEY (`award_id`) REFERENCES `award` (`award_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `vote_ibfk_2` FOREIGN KEY (`nominee_id`) REFERENCES `nominee` (`nominee_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `vote_ibfk_3` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `tickethistroy`
+  ADD CONSTRAINT `tickethistroy_ibfk_1` FOREIGN KEY (`order_id`) REFERENCES `orders` (`order_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `tickethistroy_ibfk_2` FOREIGN KEY (`ticket_id`) REFERENCES `ticket` (`ticket_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `ticket_cart`
+--
+ALTER TABLE `ticket_cart`
+  ADD CONSTRAINT `ticket_cart_ibfk_1` FOREIGN KEY (`ticket_id`) REFERENCES `ticket` (`ticket_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `ticket_cart_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
