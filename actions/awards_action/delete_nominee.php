@@ -6,9 +6,9 @@ require_once("../../controllers/awards_controller.php");
 
  $result = deleteANominee_ctr($nominee_id);
  if($result){
-    echo "success";
+   echo "<script>alert('success')</script>";
  }else{
-    echo "failed";
+   echo "<script>alert('success')</script>";
  }
 
 ?>

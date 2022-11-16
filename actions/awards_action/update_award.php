@@ -4,6 +4,7 @@
     $award_id = $_GET['award_id'];
     $award_name = $_GET['award_name'];
     $award_description = $_GET['award_description'];
+    
     $award_image = $_GET['award_image'];
 
     $result = updateAward_ctr($award_id, $award_name, $award_description, $award_image);

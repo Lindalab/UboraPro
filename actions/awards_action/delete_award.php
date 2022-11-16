@@ -7,9 +7,9 @@
     $result = deleteAward_ctr($award_id);
 
     if($result){
-        echo "success";
+        echo "<script>alert('success')</script>";
     }else{
-        echo "failed";
+        echo "<script>alert('failed')</script>";
     }
 
 ?>

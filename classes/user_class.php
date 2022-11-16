@@ -19,6 +19,13 @@ class Users extends db_connection
         return $this->db_query($sql);
     }
 
+    //this function checks if a user has voted already
+    function userHasVoted($user_id, $award_id){
+        $sql = "SELECT * vote where `user_id` = '$user_id' and `award_id` = '$award_id'";
+        $this->fetchAllData($sql);
+        return $this->countData();
+    }
+
     // selects All users in the database
     function getAllUser(){
         $sql = "SELECT * FROM `user`";

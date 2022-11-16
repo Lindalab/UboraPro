@@ -14,6 +14,12 @@
         return $user->vote($user_id,$nomimee_id,$award_id );
     }
 
+    function userHasVoted_ctr($user_id, $award_id){
+        $user = new Users;
+
+        return $user->userHasVoted($user_id, $award_id);
+    }
+
     function getAllUser_ctr(){
         $user = new Users;
 
