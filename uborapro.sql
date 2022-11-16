@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 16, 2022 at 09:25 PM
+-- Generation Time: Nov 16, 2022 at 10:01 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -34,6 +34,10 @@ CREATE TABLE `award` (
   `award_image` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- RELATIONSHIPS FOR TABLE `award`:
+--
+
 -- --------------------------------------------------------
 
 --
@@ -44,6 +48,10 @@ CREATE TABLE `cart` (
   `cat_id` int(11) NOT NULL,
   `cat_name` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- RELATIONSHIPS FOR TABLE `cart`:
+--
 
 -- --------------------------------------------------------
 
@@ -61,6 +69,12 @@ CREATE TABLE `items` (
   `item_keyword` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- RELATIONSHIPS FOR TABLE `items`:
+--   `item_cat`
+--       `items` -> `item_id`
+--
+
 -- --------------------------------------------------------
 
 --
@@ -73,6 +87,14 @@ CREATE TABLE `item_cart` (
   `user_id` int(11) NOT NULL,
   `item_qty` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- RELATIONSHIPS FOR TABLE `item_cart`:
+--   `item_id`
+--       `items` -> `item_id`
+--   `user_id`
+--       `user` -> `user_id`
+--
 
 -- --------------------------------------------------------
 
@@ -88,6 +110,12 @@ CREATE TABLE `nominee` (
   `nominee_image` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- RELATIONSHIPS FOR TABLE `nominee`:
+--   `award_id`
+--       `award` -> `award_id`
+--
+
 -- --------------------------------------------------------
 
 --
@@ -99,6 +127,14 @@ CREATE TABLE `orderhistory` (
   `item_id` int(11) NOT NULL,
   `item_qty` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- RELATIONSHIPS FOR TABLE `orderhistory`:
+--   `order_id`
+--       `orders` -> `order_id`
+--   `item_id`
+--       `items` -> `item_id`
+--
 
 -- --------------------------------------------------------
 
@@ -115,6 +151,12 @@ CREATE TABLE `orders` (
   `order_status` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- RELATIONSHIPS FOR TABLE `orders`:
+--   `user_id`
+--       `user` -> `user_id`
+--
+
 -- --------------------------------------------------------
 
 --
@@ -130,6 +172,14 @@ CREATE TABLE `payment` (
   `payment_date` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- RELATIONSHIPS FOR TABLE `payment`:
+--   `order_id`
+--       `orders` -> `order_id`
+--   `user_id`
+--       `user` -> `user_id`
+--
+
 -- --------------------------------------------------------
 
 --
@@ -144,6 +194,10 @@ CREATE TABLE `ticket` (
   `ticket_date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- RELATIONSHIPS FOR TABLE `ticket`:
+--
+
 -- --------------------------------------------------------
 
 --
@@ -155,6 +209,14 @@ CREATE TABLE `tickethistroy` (
   `ticket_id` int(11) NOT NULL,
   `item_qty` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- RELATIONSHIPS FOR TABLE `tickethistroy`:
+--   `order_id`
+--       `orders` -> `order_id`
+--   `ticket_id`
+--       `ticket` -> `ticket_id`
+--
 
 -- --------------------------------------------------------
 
@@ -168,6 +230,14 @@ CREATE TABLE `ticket_cart` (
   `user_id` int(11) NOT NULL,
   `ticket_qty` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- RELATIONSHIPS FOR TABLE `ticket_cart`:
+--   `ticket_id`
+--       `ticket` -> `ticket_id`
+--   `user_id`
+--       `user` -> `user_id`
+--
 
 -- --------------------------------------------------------
 
@@ -184,6 +254,32 @@ CREATE TABLE `user` (
   `password` varchar(100) NOT NULL,
   `user_role` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- RELATIONSHIPS FOR TABLE `user`:
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `vote`
+--
+
+CREATE TABLE `vote` (
+  `user_id` int(11) NOT NULL,
+  `nominee_id` int(11) NOT NULL,
+  `award_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- RELATIONSHIPS FOR TABLE `vote`:
+--   `award_id`
+--       `award` -> `award_id`
+--   `nominee_id`
+--       `nominee` -> `nominee_id`
+--   `user_id`
+--       `user` -> `user_id`
+--
 
 --
 -- Indexes for dumped tables
@@ -272,6 +368,14 @@ ALTER TABLE `user`
   ADD UNIQUE KEY `user_email` (`user_email`),
   ADD UNIQUE KEY `user_school_id` (`user_school_id`),
   ADD UNIQUE KEY `phone_number` (`phone_number`);
+
+--
+-- Indexes for table `vote`
+--
+ALTER TABLE `vote`
+  ADD KEY `award_id` (`award_id`),
+  ADD KEY `nominee_id` (`nominee_id`),
+  ADD KEY `user_id` (`user_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -381,6 +485,14 @@ ALTER TABLE `tickethistroy`
 ALTER TABLE `ticket_cart`
   ADD CONSTRAINT `ticket_cart_ibfk_1` FOREIGN KEY (`ticket_id`) REFERENCES `ticket` (`ticket_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `ticket_cart_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `vote`
+--
+ALTER TABLE `vote`
+  ADD CONSTRAINT `vote_ibfk_1` FOREIGN KEY (`award_id`) REFERENCES `award` (`award_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `vote_ibfk_2` FOREIGN KEY (`nominee_id`) REFERENCES `nominee` (`nominee_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `vote_ibfk_3` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
