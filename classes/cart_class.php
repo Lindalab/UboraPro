@@ -2,64 +2,78 @@
     require_once("../settings/db_class.php");
 
     class Cart extends db_connection{
-
+         
+        /** 
+         * Item cart Operations
+        */
+        
         // adds a user cart to the database
-        function addToCart($item_id,$ticket_id, $ip_address, $user_id,$item_qty){
-            $sql = "INSERT INTO `cart`(`item_id`, `ticket_id`, `ip_add`, `user_id`, `item_qty`) VALUES ('$item_id','$ticket_id','$ip_address',' $user_id','$item_qty')";
+        function addToItemsCart($item_id,$ip_address,$user_id,$item_qty){
+            $sql = "INSERT INTO `item_cart`(`item_id`, `ip_address`, `user_id`, `item_qty`) VALUES ('$item_id','$ip_address','$user_id','$item_qty')";
 
             return $this->db_query($sql);
         }
 
         // deletes every item from user's cart 
-        function deleteCart($user_id, $ip_address){
-            $sql = "DELETE FROM `cart` WHERE `ip_add`='$ip_address' and `user_id`='$user_id' ";
+        function deleteItemsCart($user_id, $ip_address,$item_id){
+            $sql = "DELETE FROM `item_cart` WHERE  `ip_address` ='$ip_address' and `user_id`='$user_id' and `item_id`='$item_id'  ";
 
             return $this->db_query($sql);
         }
 
-        // updates elements in a cart
-        function updateCart($item_id, $ticket_id, $ip_add, $user_id, $item_qty){
-            $sql = "UPDATE `cart` SET `item_id`='$item_id',`ticket_id`='$ticket_id',`item_qty`='$item_qty' WHERE `ip_add`='$ip_add' and `user_id`='$user_id' ";
+        // updates elements in a cart by 1
+        function increaseItemsCartByOne($item_id,$ip_address, $user_id){
+
+            $sql = "UPDATE `item_cart` SET `item_qty`=item_qty+1 WHERE `ip_address`='$ip_address' and `user_id`='$user_id' and `item_id`='$item_id' ";
 
             return $this->db_query($sql);
         }
 
+        // Decerease item cart Item by 1
+        function decreaseItemsCartByOne($item_id,$ip_address, $user_id){
+           
+            $sql = "UPDATE `item_cart` SET `item_qty`= item_qty-1 WHERE `ip_address`='$ip_address' and `user_id`='$user_id' and `item_id`='$item_id' ";
 
-        function showAPersonCart($c_id,$ip_add){
-            $sql="";
+            return $this->db_query($sql);
+        }
+
+       // Show a person Cart Item
+        function showAPersonItemsCart($user_id,$ip_address){
+            $sql="SELECT item.item_id, items.item_name,items.item_price,items.item_image, item_cart.item_qty,item_cart.user_id,item_cart.ip_address FROM `item_cart`, `items` WHERE items.item_id=item_cart.item_id and item_cart.user_id ='$user_id' and item_cart.ip_address='$ip_address' ;";
             return $this->fetchAllData($sql);
         }
 
-        function showAllProductInCart(){
-            
-        }
 
-        // update payment status after payment is done
-        // function updateCartOnPaymentSuccess($food_id, $food_qty, $transport_id, $ticket_id, $ip_address, $user_id,$payment_status){
-        //     $sql = "";
+        /**
+         * Actions for Ticket Cart
+         */
 
-        //     return $this->db_query($sql);
-        // }
+         function addToTicketCart($ticket_id,$ip_address,$user_id,$ticket_qty){
+            $sql="INSERT INTO `ticket_cart`(`ticket_id`, `ip_address`, `user_id`, `ticket_qty`) VALUES ('$ticket_id','$ip_address','$user_id','$ticket_qty')";
+            return $this->db_query($sql);
+         }
 
-        // select all items in cart table that are not paid for by a user.
-        function selectCartItems($user_id, $ip_address){
-            $sql = "SELECT `item_id`, `ticket_id`, `ip_add`, `user_id`, `item_qty` FROM `cart` WHERE ";
-            
-            return $this->fetchAllData($sql);
-        }
+         function deleteTicketCart($ticket_id,$ip_address,$user_id,$item_qty){
+            $sql="DELETE FROM `ticket_cart` WHERE `ticket_id`='$ticket_id' and `ip_address`='$ip_address' and `user_id` ='$user_id' and `item_qty`= '$item_qty'";
+            return $this->db_query($sql);
+         }
 
-        // function selectCartItemsWithPayment($user_id, $ip_address){
-        //     $sql = "SELECT *  FROM `cart` WHERE `ip_address` = '$user_id'and  `user_id` ='$ip_address',`payment_status`=1";
-            
-        //     return $this->fetchAllData($sql);
-        // }
+         function increaseTicketCartByOne($ticket_id,$ip_address, $user_id,$ticket_qty){
+            $sql="UPDATE `ticket_cart` SET `ticket_qty`=$ticket_qty+1 WHERE `ticket_id`='$ticket_id' and `ip_address`='$ip_address' and `user_id`=' $user_id' ";
+            return $this->db_query($sql);
+         }
 
-        // gets all the items in a cart paid by a user
-        function showPurchaseHistory($user_id, $ip_address){
-            $sql = "";
+         function decreaseTicketCartByOne($ticket_id,$ip_address, $user_id,$ticket_qty){
+            $sql="UPDATE `ticket_cart` SET `ticket_qty`=$ticket_qty-1 WHERE `ticket_id`='$ticket_id' and `ip_address`='$ip_address' and `user_id`=' $user_id'";
+            return $this->db_query($sql);
+         }
 
-            return $this->fetchAllData($sql);
-        }        
+         function showAPersonTicketCart($user_id,$ip_address){
+            $sql="SELECT ticket.ticket_id,ticket.ticket_type,ticket.ticket_price,ticket.ticket_date, ticket_cart.ip_address,ticket_cart.user_id, ticket_cart.ticket_qty FROM `ticket_cart`,ticket WHERE ticket.ticket_id=ticket_cart.ticket_id and ticket_cart.user_id='$user_id' and ticket_cart.ip_address = '$ip_address' ";
+            return $this->db_query($sql);
+         }
+
+
     }
 
 

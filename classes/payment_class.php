@@ -3,8 +3,8 @@
 
     class Payment extends db_connection{
 
-        function makePayment($amount, $user_id, $payment_reference, $payment_type){
-            $sql = "";
+        function makePayment($paid_amt,$user_id,$order_id,$currency,$payment_date){
+            $sql = "INSERT INTO `payment`(`paid_amt`, `user_id`, `order_id`, `currency`, `payment_date`) VALUES ('$paid_amt','$user_id','$order_id','$currency','$payment_date')";
 
             return $this->db_query($sql);
         }

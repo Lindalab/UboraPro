@@ -1,40 +1,61 @@
 <?php 
     require_once("../classes/cart_class.php");
 
-    // add a new cart item to the cart
-    function addToCart_ctr($item_id,$ticket_id, $ip_address, $user_id,$item_qty){
-        $cart = new Cart;
+    /**
+     * Items Cart Operations
+     */
+      function addToItemsCart_ctr($item_id,$ip_address,$user_id,$item_qty){
+        $itemsCart = new Cart();
+        return $itemsCart->addToItemsCart($item_id,$ip_address,$user_id,$item_qty);
+      } 
 
-        return $cart->addToCart($item_id,$ticket_id, $ip_address, $user_id,$item_qty);
-    }
+      function deleteItemsCart_ctr($user_id, $ip_address,$item_id){
+        $itemsCart = new Cart();
+        return $itemsCart->deleteItemsCart($user_id, $ip_address,$item_id);
+      }
+      
+      function increaseItemsCartByOne_ctr($item_id,$ip_address, $user_id){
+        $itemsCart = new Cart();
+        return $itemsCart->increaseItemsCartByOne($item_id,$ip_address, $user_id);
+      } 
 
-    function deleteCart_ctr($user_id, $ip_address){
-        $cart = new Cart;
+      function decreaseItemsCartByOne_ctr($item_id,$ip_address, $user_id){
+        $itemsCart = new Cart();
+        return $itemsCart->decreaseItemsCartByOne($item_id,$ip_address, $user_id);
+      } 
 
-        return $cart->deleteCart($user_id, $ip_address);
-    }
+      function showAPersonItemsCart_ctr($user_id,$ip_address){
+        $itemsCart = new Cart();
+        return $itemsCart->showAPersonItemsCart($user_id,$ip_address);
+      } 
 
-    function updateCart_ctr($item_id, $ticket_id, $ip_add, $user_id, $item_qty){
-        $cart = new Cart;
+     /**
+      * Ticket Carts Operations
+      */
 
-        return $cart->updateCart($item_id, $ticket_id, $ip_add, $user_id, $item_qty);
-    }
+      function addToTicketCart($ticket_id,$ip_address,$user_id,$ticket_qty){
+        $ticketCart = new Cart();
+        return $ticketCart->addToTicketCart($ticket_id,$ip_address,$user_id,$ticket_qty);
+      } 
 
-    function selectCartItems_ctr($user_id, $ip_address){
-        $cart = new Cart;
+      function deleteTicketCart_ctr($ticket_id,$ip_address,$user_id,$item_qty){
+        $ticketCart = new Cart();
+        return $ticketCart->deleteTicketCart($ticket_id,$ip_address,$user_id,$item_qty);
+      } 
 
-        return $cart->selectCartItems($user_id, $ip_address);
-    }
+      function increaseTicketCartByOne_ctr($ticket_id,$ip_address, $user_id,$ticket_qty){
+        $ticketCart = new Cart();
+        return $ticketCart->increaseTicketCartByOne($ticket_id,$ip_address, $user_id,$ticket_qty);
+      } 
 
-    // function showPurchaseHistory_ctr($user_id, $ip_address){
-    //     $cart = new Cart;
+      function decreaseTicketCartByOne_ctr($ticket_id,$ip_address, $user_id,$ticket_qty){
+        $ticketCart = new Cart();
+        return $ticketCart->decreaseTicketCartByOne($ticket_id,$ip_address, $user_id,$ticket_qty);
+      } 
 
-    //     return $cart->showPurchaseHistory($user_id, $ip_address);
-    // }
-
-    // function updateCartOnPaymentSuccess_ctr($food_id, $food_qty, $transport_id, $ticket_id, $ip_address, $user_id,$payment_status){
-    //     $cart = new Cart;
-    //     return $cart->updateCartOnPaymentSuccess($food_id, $food_qty, $transport_id, $ticket_id, $ip_address, $user_id,$payment_status);
-    // }
+      function showAPersonTicketCart_ctr($user_id,$ip_address){
+        $ticketCart = new Cart();
+        return $ticketCart->showAPersonTicketCart($user_id,$ip_address);
+      }
 
 ?>

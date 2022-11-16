@@ -7,7 +7,7 @@ class Users extends db_connection
     // add a user to the database
     function registerUser($user_name, $user_email, $user_school_id,$phone_number, $password)
     {
-        $sql = "INSERT INTO `user`(`user_name`, `user_email`, `user_school_id`, `phone_number`, `password`) VALUES ('$user_name',' $user_email','$user_school_id',,'$phone_number',' $password')";
+        $sql = "INSERT INTO `user`(`user_name`, `user_email`, `user_school_id`, `phone_number`, `password`) VALUES ('$user_name','$user_email',' $user_school_id','$phone_number',' $password')";
 
         return $this->db_query($sql);
     }
