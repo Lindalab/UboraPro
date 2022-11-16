@@ -103,7 +103,7 @@
           <form action="https://forms.nicepagesrv.com/Form/Process" class="u-clearfix u-form-spacing-41 u-form-vertical u-inner-form" source="email" name="form" style="padding: 50px;" id="log-form" data-parsley-validate="">
             <div class="u-form-group u-form-name">
               <label for="name-9b05" class="u-label">Name</label>
-              <input type="text" placeholder="Enter your Name" id="name-9b05" name="name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" placeholder="User Name" data-parsleytrigger="change" required="">
+              <input type="text" placeholder="Enter your Name" id="name-9b05" name="name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" data-parsley-pattern="^([^0-9]*)$" placeholder="User Name" data-parsleytrigger="change" required="">
             </div>
             <div class="u-form-email u-form-group">
               <label for="email-9b05" class="u-label">Email</label>
