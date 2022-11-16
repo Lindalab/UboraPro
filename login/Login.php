@@ -7,8 +7,8 @@
     <title>Login</title>
     <link rel="stylesheet" href="../css/nicepage.css" media="screen">
 <link rel="stylesheet" href="../css/Login.css" media="screen">
-    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="../js/jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="../js/nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 4.21.12, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous" async defer></script>
@@ -19,7 +19,7 @@
 		"@context": "http://schema.org",
 		"@type": "Organization",
 		"name": "",
-		"logo": "images/ubora2.png"
+		"logo": "../images/ubora2.png"
 }</script>
     <meta name="theme-color" content="#478ac9">
     <meta property="og:title" content="Login">
@@ -27,7 +27,7 @@
   </head>
   <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-white u-header" id="sec-ef51"><div class="u-clearfix u-sheet u-sheet-1">
         <a href="https://nicepage.com" class="u-image u-logo u-image-1" data-image-width="1920" data-image-height="1080">
-          <img src="images/ubora2.png" class="u-logo-image u-logo-image-1">
+          <img src="../images/ubora2.png" class="u-logo-image u-logo-image-1">
         </a>
         <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
           <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
@@ -96,14 +96,14 @@
     <section class="u-clearfix u-section-1" id="sec-9d3f">
       <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-clearfix u-group-elements u-group-elements-1">
-          <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-1" src="https://pixabay.com/get/gdfd54cd298c5c73c4644aee176e593f7a9b4463c40180d8e81b1cfd1a73d73d3feae07f1a2fdf1e717ba38395fd70d56b94311ff72ba8c63f0c96b43cb6295fc_1280.png" alt="" data-image-width="1271" data-image-height="1280">
+          <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-1" src="../images/goldL.png" alt="L" data-image-width="1271" data-image-height="1280">
           <h1 class="u-text u-text-default u-text-1">ogin</h1>
         </div>
         <div class="u-form u-form-1">
           <form action="https://forms.nicepagesrv.com/Form/Process" class="u-clearfix u-form-spacing-50 u-form-vertical u-inner-form" source="email" name="form" id="log-form" style="padding: 50px;" data-parsley-validate="">
             <div class="u-form-email u-form-group">
               <label for="email-3f67" class="u-label">Email</label>
-              <input type="email" placeholder="Enter a valid email address" id="email-3f67" name="email" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" data-parsleytrigger="change" data-parsley-pattern="((\w*)[(\.)].(\w*)@ashesi.edu.gh$)" required="">
+              <input type="email" placeholder="Enter a valid Ashesi email address" id="email-3f67" name="email" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" data-parsleytrigger="change" data-parsley-pattern="((\w*)[(\.)].(\w*)@ashesi.edu.gh$)" required="">
             </div>
             <div class="u-form-group u-form-name u-form-group-2">
               <label for="name-0657" class="u-label">Password</label>

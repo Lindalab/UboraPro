@@ -7,8 +7,8 @@
     <title>Transport</title>
     <link rel="stylesheet" href="../css/nicepage.css" media="screen">
 <link rel="stylesheet" href="../css/Transport.css" media="screen">
-    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="../js/jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="../js/nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 4.21.12, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     
@@ -25,7 +25,7 @@
   </head>
   <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-white u-header" id="sec-ef51"><div class="u-clearfix u-sheet u-sheet-1">
         <a href="https://nicepage.com" class="u-image u-logo u-image-1" data-image-width="1920" data-image-height="1080">
-          <img src="images/ubora2.png" class="u-logo-image u-logo-image-1">
+          <img src="../images/ubora2.png" class="u-logo-image u-logo-image-1">
         </a>
         <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
           <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
@@ -36,18 +36,18 @@
             </a>
           </div>
           <div class="u-custom-menu u-nav-container">
-            <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Home.html" style="padding: 10px 20px;">Home</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Tickets.html" target="_blank" style="padding: 10px 20px;">Tickets</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Voting.html" target="_blank" style="padding: 10px 20px;">Voting</a>
+            <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Home.php" style="padding: 10px 20px;">Home</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Tickets.php" style="padding: 10px 20px;">Tickets</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Voting.php" style="padding: 10px 20px;">Voting</a>
 </li></ul>
           </div>
           <div class="u-custom-menu u-nav-container-collapse">
             <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
               <div class="u-inner-container-layout u-sidenav-overflow">
                 <div class="u-menu-close"></div>
-                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home.html">Home</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Tickets.html" target="_blank">Tickets</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Voting.html" target="_blank">Voting</a>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home.php">Home</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Tickets.php">Tickets</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Voting.php">Voting</a>
 </li></ul>
               </div>
             </div>
@@ -96,7 +96,7 @@
         <h1 class="u-text u-text-default u-text-1">Book your Transport!</h1>
         <div class="u-form u-form-1">
           <form action="https://forms.nicepagesrv.com/Form/Process" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form" style="padding: 10px;">
-            <img class="u-form-group u-form-image u-image u-image-contain u-image-1" src="images/g95de7e8b52be14d3860a6680d3ace85a2645f0a2d9d05eee9a53ff9ee344a44fc455fa51b86340d3cc323895adc203d2_1280.png" data-image-width="1280" data-image-height="657">
+            <img class="u-form-group u-form-image u-image u-image-contain u-image-1" src="../images/g95de7e8b52be14d3860a6680d3ace85a2645f0a2d9d05eee9a53ff9ee344a44fc455fa51b86340d3cc323895adc203d2_1280.png" data-image-width="1280" data-image-height="657">
             <div class="u-form-group u-form-name u-form-group-2">
               <label for="name-910d" class="u-label">Name</label>
               <input type="text" placeholder="Enter your Name" id="name-910d" name="name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
@@ -134,7 +134,7 @@
         </div>
         <div class="u-form u-form-2">
           <form action="https://forms.nicepagesrv.com/Form/Process" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form" style="padding: 10px;">
-            <img class="u-form-group u-form-image u-image u-image-contain u-image-2" src="images/53ad0d0e05feefd8c7212074d61efe577ac7de7c822e66ed3e2039c0496a256a5574605d94d05300474d365a3961be532c8d91ece50b8eb9252de7_1280.png" data-image-width="1280" data-image-height="595">
+            <img class="u-form-group u-form-image u-image u-image-contain u-image-2" src="../images/53ad0d0e05feefd8c7212074d61efe577ac7de7c822e66ed3e2039c0496a256a5574605d94d05300474d365a3961be532c8d91ece50b8eb9252de7_1280.png" data-image-width="1280" data-image-height="595">
             <div class="u-form-group u-form-name u-form-group-7">
               <label for="name-4a58" class="u-label">Name</label>
               <input type="text" placeholder="Enter your Name" id="name-4a58" name="name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
@@ -178,13 +178,13 @@
         <p class="u-small-text u-text u-text-body-color u-text-variant u-text-1">(c) DELC&nbsp; All Rights reserved</p>
       </div></footer>
     <section class="u-backlink u-clearfix u-grey-80">
-      <a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
+      <a class="u-link" href="https://nicepage.com/website-templates">
         <span>Website Templates</span>
       </a>
       <p class="u-text">
         <span>created with</span>
       </p>
-      <a class="u-link" href="" target="_blank">
+      <a class="u-link" href="">
         <span>Website Builder Software</span>
       </a>. 
     </section>

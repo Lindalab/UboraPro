@@ -13,7 +13,7 @@
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous" async defer></script>
    <script src="https://cdn.jsdelivr.net/gh/guillaumepotier/Parsley.js@2.9.2/dist/parsley.js" async defer></script>
-   <script src="./js/parsley.js" async defer></script>
+   <script src="../js/parsley.js" async defer></script>
     
     <script type="application/ld+json">{
 		"@context": "http://schema.org",
@@ -27,7 +27,7 @@
   </head>
   <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-white u-header" id="sec-ef51"><div class="u-clearfix u-sheet u-sheet-1">
         <a href="https://nicepage.com" class="u-image u-logo u-image-1" data-image-width="1920" data-image-height="1080">
-          <img src="images/ubora2.png" class="u-logo-image u-logo-image-1">
+          <img src="../images/ubora2.png" class="u-logo-image u-logo-image-1">
         </a>
         <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
           <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
@@ -96,7 +96,7 @@
     <section class="u-clearfix u-section-1" id="sec-8fa8">
       <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-clearfix u-group-elements u-group-elements-1">
-          <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-1" src="images/gc48e398d4e4389e2ea1a357b83a51d85bc95cc9ad1642abaf20e90b478db006b53fbf62a0d246dc56433bb3fc271feff_1280.png" alt="" data-image-width="1280" data-image-height="1280">
+          <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-1" src="../images/gc48e398d4e4389e2ea1a357b83a51d85bc95cc9ad1642abaf20e90b478db006b53fbf62a0d246dc56433bb3fc271feff_1280.png" alt="" data-image-width="1280" data-image-height="1280">
           <h1 class="u-text u-text-1">egister</h1>
         </div>
         <div class="u-form u-form-1">
