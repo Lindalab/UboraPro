@@ -32,7 +32,7 @@ use uborapro;
 
 CREATE TABLE `award` (
   `award_id` int(11) NOT NULL,
-  `award_name` varchar(80) NOT NULL,
+  `award_name` varchar(80) NOT NULL UNIQUE,
   `award_description` varchar(200) NOT NULL,
   `award_image` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
