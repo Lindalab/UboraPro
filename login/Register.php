@@ -7,8 +7,8 @@
     <title>Register</title>
     <link rel="stylesheet" href="../css/nicepage.css" media="screen">
 <link rel="stylesheet" href="../css/Register.css" media="screen">
-    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="../js/jquery.js" defer=""></script>
+    <!-- <script class="u-script" type="text/javascript" src="../js/nicepage.js" defer=""></script> -->
     <meta name="generator" content="Nicepage 4.21.12, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous" async defer></script>
@@ -29,33 +29,6 @@
         <a href="https://nicepage.com" class="u-image u-logo u-image-1" data-image-width="1920" data-image-height="1080">
           <img src="../images/ubora2.png" class="u-logo-image u-logo-image-1">
         </a>
-        <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
-          <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
-            <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
-              <svg class="u-svg-link" viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
-              <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
-</g></svg>
-            </a>
-          </div>
-          <div class="u-custom-menu u-nav-container">
-            <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Home.html" style="padding: 10px 20px;">Home</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Tickets.html" target="_blank" style="padding: 10px 20px;">Tickets</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Voting.html" target="_blank" style="padding: 10px 20px;">Voting</a>
-</li></ul>
-          </div>
-          <div class="u-custom-menu u-nav-container-collapse">
-            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
-              <div class="u-inner-container-layout u-sidenav-overflow">
-                <div class="u-menu-close"></div>
-                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home.html">Home</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Tickets.html" target="_blank">Tickets</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Voting.html" target="_blank">Voting</a>
-</li></ul>
-              </div>
-            </div>
-            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
-          </div>
-        </nav>
         <div class="u-countdown u-countdown-1" data-timer-id="6bac" data-type="to-date" data-target-date="Tue, 22 Nov 2022 04:39:48 GMT" data-for="everyone" data-direction="down" data-time-left="750m" data-target-number="100" data-start-time="Mon Nov 14 2022 16:12:21 GMT+0000 (Greenwich Standard Time)" data-frequency="1s" data-after-count="none" data-redirect-url="https://">
           <div class="u-countdown-wrapper u-spacing-20">
             <div class="u-countdown-item u-countdown-years u-hidden u-spacing-10">
@@ -100,26 +73,30 @@
           <h1 class="u-text u-text-1">egister</h1>
         </div>
         <div class="u-form u-form-1">
-          <form action="https://forms.nicepagesrv.com/Form/Process" class="u-clearfix u-form-spacing-41 u-form-vertical u-inner-form" source="email" name="form" style="padding: 50px;" id="log-form" data-parsley-validate="">
+          <form action="./register_process.php" class="u-clearfix u-form-spacing-41 u-form-vertical u-inner-form" method="POST" source="email" name="form" style="padding: 50px;" id="form" data-parsley-validate="">
             <div class="u-form-group u-form-name">
               <label for="name-9b05" class="u-label">Name</label>
-              <input type="text" placeholder="Enter your Name" id="name-9b05" name="name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" data-parsley-pattern="^([^0-9]*)$" placeholder="User Name" data-parsleytrigger="change" required="">
+              <input type="text" placeholder="Enter your Name" id="name-9b05" name="user_name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" data-parsley-pattern="^([^0-9]*)$" placeholder="User Name" data-parsleytrigger="change" required="">
             </div>
             <div class="u-form-email u-form-group">
               <label for="email-9b05" class="u-label">Email</label>
-              <input type="email" placeholder="Enter a valid Ashesi email address" id="email-9b05" name="email" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" data-parsleytrigger="change" data-parsley-pattern="((\w*)[(\.)].(\w*)@ashesi.edu.gh$)" required="">
+              <input type="email" placeholder="Enter a valid Ashesi email address" id="email-9b05" name="user_email" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" data-parsleytrigger="change" data-parsley-pattern="((\w*)[(\.)].(\w*)@ashesi.edu.gh$)" required="">
+            </div>
+            <div class="u-form-email u-form-group">
+              <label for="school_id" class="u-label">Student ID</label>
+              <input type="number" placeholder="Enter a valid student ID" id="school_id" name="user_school_id" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" data-parsleytrigger="change" required="">
             </div>
             <div class="u-form-group u-form-phone u-form-group-3">
               <label for="phone-66e5" class="u-label">Phone</label>
-              <input type="tel" data-parsley-pattern="\+?\d{0,3}[\s\(\-]?([0-9]{2,3})[\s\)\-]?([\s\-]?)([0-9]{3})[\s\-]?([0-9]{2})[\s\-]?([0-9]{2})" placeholder="Enter your phone (e.g. +14155552675)" id="phone-66e5" name="phone" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+              <input type="tel" data-parsley-pattern="\+?\d{0,3}[\s\(\-]?([0-9]{2,3})[\s\)\-]?([\s\-]?)([0-9]{3})[\s\-]?([0-9]{2})[\s\-]?([0-9]{2})" placeholder="Enter your phone (e.g. +14155552675)" id="phone-66e5" name="phone_number" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
             </div>
             <div class="u-form-group u-form-name u-form-group-2">
               <label for="name-0657" class="u-label">Password</label>
-              <input type="password" placeholder="Enter your Password" id="name-0657" name="name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" data-parsleytrigger="change" data-parsley-minlength="8" required="">
+              <input type="password" placeholder="Enter your Password" id="name-0657" name="password" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" data-parsleytrigger="change" data-parsley-minlength="8" required="">
             </div>
             <div class="u-form-group u-form-name u-form-group-2">
               <label for="name-0657" class="u-label">Confirm Password</label>
-              <input type="password" placeholder="Enter your Password" id="name-0657" name="name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" data-parsleytrigger="change" data-parsley-minlength="8" required="">
+              <input type="password" placeholder="Enter your Password" id="name-0657" name="conf_password" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" data-parsleytrigger="change" data-parsley-minlength="8" required="">
             </div>
             <div class="u-form-agree u-form-group u-form-group-4">
               <input type="checkbox" id="agree-01e4" name="agree" class="u-agree-checkbox" required="">
@@ -127,13 +104,10 @@
               </label>
             </div>
             <div class="u-align-left u-form-group u-form-submit">
-              <a href="#" class="u-btn u-btn-submit u-button-style">Submit</a>
-              <input type="submit" value="submit" class="u-form-control-hidden">
+              <input type="submit" name="register" value="Submit" class="u-form-control">
             </div>
             <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
             <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
-            <input type="hidden" value="" name="recaptchaResponse">
-            <input type="hidden" name="formServices" value="d544b4c863795dc104fe754b85fafb8a">
           </form>
         </div>
       </div>

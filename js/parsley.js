@@ -1,14 +1,14 @@
 $(function () {
-    $('#log-form').parsley().on('field:validated', function() {
+    let counter = 0;
+    $('#form').parsley().on('field:validated', function() {
       var ok = $('.parsley-error').length === 0;
       if (ok) {
-        alert("No errors");
+        counter += 0;
       }
       else 
-        alert("Errors");
+      counter += 1;
     })
     .on('form:submit', function() {
-        alert("Submitting")
-      return false; // Don't submit form for this demo
+      return true; // Don't submit form for this demo
     });
   });

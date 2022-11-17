@@ -5,9 +5,9 @@ class Users extends db_connection
 {
 
     // add a user to the database
-    function registerUser($user_name, $user_email, $user_school_id,$phone_number, $password)
+    function registerUser($user_name, $user_email, $user_school_id,$phone_number, $password, $user_role = 2)
     {
-        $sql = "INSERT INTO `user`(`user_name`, `user_email`, `user_school_id`, `phone_number`, `password`) VALUES ('$user_name','$user_email',' $user_school_id','$phone_number',' $password')";
+        $sql = "INSERT INTO `user`(`user_name`, `user_email`, `user_school_id`, `phone_number`, `password`, `user_role`) VALUES ('$user_name','$user_email',' $user_school_id','$phone_number','$password', '$user_role')";
 
         return $this->db_query($sql);
     }
@@ -50,7 +50,7 @@ class Users extends db_connection
 
     // if login is true, it should return only 1 data from the database
     function login($user_email, $password){
-        $sql = "SELECT * FROM `user` WHERE `user_email`= '$user_email' and  `password` ='$password'";
+        $sql = "SELECT * FROM `user` WHERE user_email= '$user_email' AND `password` ='$password'";
 
         return $this->fetchOne($sql);
     }
