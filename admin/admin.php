@@ -5,10 +5,9 @@
     <meta name="keywords" content="Admin Dashboard">
     <meta name="description" content="">
     <title>admin</title>
-    <link rel="stylesheet" href="nicepage.css" media="screen">
-<link rel="stylesheet" href="admin.css" media="screen">
-    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <link rel="stylesheet" href="../css/nicepage.css" media="screen">
+<link rel="stylesheet" href="../css/admin.css" media="screen">
+    <script class="u-script" type="text/javascript" src="../js/jquery.js" defer=""></script>
     <meta name="generator" content="Nicepage 4.21.12, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     
@@ -17,7 +16,7 @@
 		"@context": "http://schema.org",
 		"@type": "Organization",
 		"name": "",
-		"logo": "images/ubora2.png"
+		"logo": "../images/ubora2.png"
 }</script>
     <meta name="theme-color" content="#478ac9">
     <meta property="og:title" content="admin">
@@ -25,7 +24,7 @@
   </head>
   <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-white u-header" id="sec-ef51"><div class="u-clearfix u-sheet u-sheet-1">
         <a href="https://nicepage.com" class="u-image u-logo u-image-1" data-image-width="1920" data-image-height="1080">
-          <img src="images/ubora2.png" class="u-logo-image u-logo-image-1">
+          <img src="../images/ubora2.png" class="u-logo-image u-logo-image-1">
         </a>
         <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
           <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
@@ -36,16 +35,16 @@
             </a>
           </div>
           <div class="u-custom-menu u-nav-container">
-            <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="index.php" style="padding: 10px 20px;">View as User</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#" target="_blank" style="padding: 10px 20px;">Tickets</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#" target="_blank" style="padding: 10px 20px;">Voting</a>
+            <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="../index.php" style="padding: 10px 20px;">View as User</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="../view/Tickets.php" style="padding: 10px 20px;">Tickets</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="../view/voting.php" style="padding: 10px 20px;">Voting</a>
 </li></ul>
           </div>
           <div class="u-custom-menu u-nav-container-collapse">
             <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
               <div class="u-inner-container-layout u-sidenav-overflow">
                 <div class="u-menu-close"></div>
-                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="index.php">View as User</a>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../index.php">View as User</a>
 </li></ul>
               </div>
             </div>
@@ -58,24 +57,22 @@
         </div>
       </div></header>
     <section class="u-clearfix u-section-1" id="sec-8670">
-      <a href="" class="u-border-none u-btn u-button-style u-hover-palette-2-base u-btn-1"><span class="u-icon"><svg class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" style="width: 1em; height: 1em;"><path d="m19.98,200.65909l180.67121,0l55.82879,-171.63684l55.82883,171.63684l180.67118,0l-146.16581,106.07619l55.83168,171.63684l-146.16587,-106.07908l-146.16584,106.07908l55.8317,-171.63684l-146.16586,-106.07619z"></path></svg><img></span>Remove User from System
-      </a>
       <h1 class="u-text u-text-default u-text-1">Admin Dashboard</h1>
       <div class="u-list u-list-1">
         <div class="u-repeater u-repeater-1">
           <div class="u-border-2 u-border-black u-container-style u-list-item u-repeater-item">
             <div class="u-container-layout u-similar-container u-valign-middle u-container-layout-1">
-              <a href="Admin-Categories.html" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-2">Create Award Category</a>
+              <a href="Admin-Categories.php" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-2">Create Award Category</a>
             </div>
           </div>
           <div class="u-border-2 u-border-black u-container-style u-list-item u-repeater-item">
             <div class="u-container-layout u-similar-container u-valign-middle u-container-layout-2">
-              <a href="Admin-Categories.html" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-3">Edit Award Category</a>
+              <a href="Admin-Categories.php" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-3">Edit Award Category</a>
             </div>
           </div>
           <div class="u-border-2 u-border-black u-container-style u-list-item u-repeater-item">
             <div class="u-container-layout u-similar-container u-valign-middle u-container-layout-3">
-              <a href="Admin-Categories.html" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-4">Delete Award Category</a>
+              <a href="Admin-Categories.php" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-4">Delete Award Category</a>
             </div>
           </div>
         </div>
@@ -84,17 +81,17 @@
         <div class="u-repeater u-repeater-2">
           <div class="u-border-2 u-border-black u-container-style u-list-item u-repeater-item">
             <div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-4">
-              <a href="admin-Nominee.html" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-5">Create Award Nominee</a>
+              <a href="admin-Nominee.php" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-5">Create Award Nominee</a>
             </div>
           </div>
           <div class="u-border-2 u-border-black u-container-style u-list-item u-repeater-item">
             <div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-5">
-              <a href="admin-Nominee.html" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-6">Edit&nbsp;Award Nominee</a>
+              <a href="admin-Nominee.php" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-6">Edit&nbsp;Award Nominee</a>
             </div>
           </div>
           <div class="u-border-2 u-border-black u-container-style u-list-item u-repeater-item">
             <div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-6">
-              <a href="admin-Nominee.html" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-7">Delete&nbsp;Award Nominee</a>
+              <a href="admin-Nominee.php" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-7">Delete&nbsp;Award Nominee</a>
             </div>
           </div>
         </div>
@@ -127,17 +124,17 @@
         <div class="u-repeater u-repeater-3">
           <div class="u-border-2 u-border-black u-container-style u-list-item u-repeater-item">
             <div class="u-container-layout u-similar-container u-container-layout-7">
-              <a href="Admin-Transport.html" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-8">Create Available Transport</a>
+              <a href="Admin-Transport.php" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-8">Create Available Transport</a>
             </div>
           </div>
           <div class="u-border-2 u-border-black u-container-style u-list-item u-repeater-item">
             <div class="u-container-layout u-similar-container u-container-layout-8">
-              <a href="Admin-Transport.html" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-9">Edit Available Transport</a>
+              <a href="Admin-Transport.php" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-9">Edit Available Transport</a>
             </div>
           </div>
           <div class="u-border-2 u-border-black u-container-style u-list-item u-repeater-item">
             <div class="u-container-layout u-similar-container u-container-layout-9">
-              <a href="Admin-Transport.html" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-10">Delete Available Transport</a>
+              <a href="Admin-Transport.php" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-10">Delete Available Transport</a>
             </div>
           </div>
         </div>
@@ -146,17 +143,17 @@
         <div class="u-repeater u-repeater-4">
           <div class="u-border-2 u-border-black u-container-style u-list-item u-repeater-item">
             <div class="u-container-layout u-similar-container u-valign-middle u-container-layout-10">
-              <a href="Admin-Food.html" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-11">Create Food Package</a>
+              <a href="Admin-Food.php" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-11">Create Food Package</a>
             </div>
           </div>
           <div class="u-border-2 u-border-black u-container-style u-list-item u-repeater-item">
             <div class="u-container-layout u-similar-container u-valign-middle u-container-layout-11">
-              <a href="Admin-Food.html" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-12">Edit Food Package</a>
+              <a href="Admin-Food.php" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-12">Edit Food Package</a>
             </div>
           </div>
           <div class="u-border-2 u-border-black u-container-style u-list-item u-repeater-item">
             <div class="u-container-layout u-similar-container u-valign-middle u-container-layout-12">
-              <a href="Admin-Food.html" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-13">Delete Food Package</a>
+              <a href="Admin-Food.php" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-13">Delete Food Package</a>
             </div>
           </div>
         </div>
