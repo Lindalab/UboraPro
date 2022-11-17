@@ -5,12 +5,10 @@
     $award_description = $_GET['award_description'];
     // $award_image = $_GET['award_image'];
 
-    $destinationfolder="image/";
+    $destinationfolder="../images/awards/";
     $imgname=  basename($_FILES['award_image']['name']);
     $tempname = $_FILES["file"]["tmp_name"];
     $award_image = $destinationfolder.$imgname;
-
-
 
 
     $checkAwardName=checkAward_ctr($award_name);
@@ -26,7 +24,7 @@
     }
     else{
         echo "<script>
-        alert('Award is already created')
+        alert('Award Category Already Exit')
         </script>";
     }
 
