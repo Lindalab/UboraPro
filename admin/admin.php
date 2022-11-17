@@ -97,7 +97,7 @@
         </div>
       </div>
       <div class="u-shape u-shape-svg u-text-palette-2-dark-1 u-shape-1">
-        <svg class="u-svg-link" preserveAspectRatio="none" viewBox="0 0 160 160" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-f6d0"></use></svg>
+        <svg class="u-svg-link" preserveAspectRatio="none" viewBox="0 0 160 160"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-f6d0"></use></svg>
         <svg class="u-svg-content" viewBox="0 0 160 160" x="0px" y="0px" id="svg-f6d0"><path d="M14.5,7.3c0,4-3.3,7.3-7.3,7.3S0,11.2,0,7.3S3.3,0,7.3,0S14.5,3.3,14.5,7.3z M7.3,24.2c-4,0-7.3,3.3-7.3,7.3
 	s3.3,7.3,7.3,7.3s7.3-3.3,7.3-7.3S11.2,24.2,7.3,24.2z M31.5,0c-4,0-7.3,3.3-7.3,7.3s3.3,7.3,7.3,7.3s7.3-3.3,7.3-7.3S35.5,0,31.5,0
 	z M55.8,0c-4,0-7.3,3.3-7.3,7.3s3.3,7.3,7.3,7.3S63,11.2,63,7.3S59.7,0,55.8,0z M80,0c-4,0-7.3,3.3-7.3,7.3s3.3,7.3,7.3,7.3
@@ -160,7 +160,7 @@
       </div>
       <div class="u-rotation-parent u-rotation-parent-1">
         <div class="u-rotate-180 u-shape u-shape-svg u-text-palette-2-dark-1 u-shape-2">
-          <svg class="u-svg-link" preserveAspectRatio="none" viewBox="0 0 160 160" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-cfc1"></use></svg>
+          <svg class="u-svg-link" preserveAspectRatio="none" viewBox="0 0 160 160"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-cfc1"></use></svg>
           <svg class="u-svg-content" viewBox="0 0 160 160" x="0px" y="0px" id="svg-cfc1"><path d="M14.5,7.3c0,4-3.3,7.3-7.3,7.3S0,11.2,0,7.3S3.3,0,7.3,0S14.5,3.3,14.5,7.3z M7.3,24.2c-4,0-7.3,3.3-7.3,7.3
 	s3.3,7.3,7.3,7.3s7.3-3.3,7.3-7.3S11.2,24.2,7.3,24.2z M31.5,0c-4,0-7.3,3.3-7.3,7.3s3.3,7.3,7.3,7.3s7.3-3.3,7.3-7.3S35.5,0,31.5,0
 	z M55.8,0c-4,0-7.3,3.3-7.3,7.3s3.3,7.3,7.3,7.3S63,11.2,63,7.3S59.7,0,55.8,0z M80,0c-4,0-7.3,3.3-7.3,7.3s3.3,7.3,7.3,7.3
