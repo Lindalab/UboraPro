@@ -13,7 +13,9 @@
 
         function  addtoOrder($user_id,$reciept_no,$order_date,$order_type,$order_status){
             $sql="INSERT INTO `orders`(`user_id`, `reciept_no`, `order_date`, `order_type`, `order_status`) VALUES ('$user_id','$reciept_no','$order_date','$order_type','$order_status')";
-            return $this->db_query($sql);
+            $this->db_query($sql);
+            $last_id = mysqli_insert_id($this->conn);
+            return  $last_id;
 
         }
 

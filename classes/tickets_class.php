@@ -43,6 +43,11 @@ class Tickets extends db_connection{
         $result= $this->fetchAllData($sql);
         return $this->countData();
     }
+
+    function deletefromTicketCart($ticket_id,$ip_address,$user_id){
+        $sql="DELETE FROM `ticket_cart` WHERE  `ticket_id`='$ticket_id' and `ip_address`='$ip_address' and `user_id`='$user_id' ";
+        return $this->db_query($sql);
+    }
 }
 
 
