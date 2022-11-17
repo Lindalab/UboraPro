@@ -1,0 +1,163 @@
+Rules for System
+There can be multiple awards
+A nominee can be nominated for multiple awards
+A nominee can not be nominated twice for a particular award set_type
+A nominee can recive multiple vote for an award type.
+A nominee can be a user
+A nominee can vote.
+A user without ticket can cast exaclty free one vote for all awards type.
+A user can buy extra ticket* to vote multiple times.
+A user can cast more than one vote 
+A user makes payment for a ticket
+A ticket has a seat type for a user
+A ticket is for only a seat
+A user can only register with Ashesi Email
+
+Statistics about ticket
+Count of seat available
+Validation for ashesi user_email(OTP)
+
+Login{
+    ashesi user_email
+    password
+    otp code to verify login
+}
+Register {
+     ashesi user_email
+    password
+    user_name
+    phone number
+
+
+}
+
+
+
+Entities
+vote{
+    user_id
+    nominee_id
+    award_id
+    count //get a way to increase this variable
+
+}
+
+awards{
+    award_id
+    award_name
+    award_des
+    award_image
+    award_type
+
+}
+
+
+
+nominees{
+    nominee_id
+    nominee_name
+    nominee_role
+    nominee_des
+    nominee_image
+    award_id
+}
+
+user{
+    user_id
+    user_name
+    user_typre/user_role
+    user_email
+    user_school_id
+    
+    
+}
+considering having a role table 
+role{
+    role_id
+    role_type(student,facultyintern,faculty,staff)
+}
+
+
+order
+{
+    order_id
+    order_name
+}
+
+
+tickets{
+    ticket_id
+    ticket_status
+    ticket_type{regular, vip, vvip, stand}
+    number_of_tickers
+    valid_period     
+    ticket_price
+}
+
+
+payment
+{
+    user_id
+    payment_id
+    payment_reference
+    payment_type(momo, visa)
+    
+}
+
+
+food
+{
+
+}
+
+
+transport{
+    transport_id
+    transport_name
+    transport_medium {}
+}
+
+cart{
+    cart_id
+    product_id
+    user_id
+    product_id
+}
+
+Momo/visa{
+    number
+    user_name
+    amt
+
+}
+
+visa {
+    user_id
+    account number
+    expiry
+
+}
+
+
+To do  
+Add event table to database
+Admin can create event
+
+event{
+    event_id int(11) not null primary,
+    event_name varchar(100) not null
+    event_year year/ datatime
+    event_location varchar(50)
+    
+
+}
+
+Documentation
+ticket_type
+1 = regular
+2 = vi
+3= Couple
+
+cart
+Paid = 1
+Upaid =0
