@@ -46,6 +46,13 @@
         return $ticket->countTicketsTypeSold($ticket_type);
     }
 
+    function deletefromTicketCart_ctr($ticket_id,$ip_address,$user_id){
+        $ticket = new Tickets;
+
+        return $ticket->deletefromTicketCart($ticket_id,$ip_address,$user_id);
+
+    }
+
 
 
 ?>
