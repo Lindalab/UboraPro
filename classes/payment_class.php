@@ -13,8 +13,8 @@
 
         function  addtoOrder($user_id,$reciept_no,$order_date,$order_type,$order_status){
             $sql="INSERT INTO `orders`(`user_id`, `reciept_no`, `order_date`, `order_type`, `order_status`) VALUES ('$user_id','$reciept_no','$order_date','$order_type','$order_status')";
-            return $this->db_query($sql);
-
+            $this->db_query($sql);
+            return mysqli_insert_id($this->db);
         }
 
         function  addToOrderItemHistroy($order_id,$item_id,$item_qty){
