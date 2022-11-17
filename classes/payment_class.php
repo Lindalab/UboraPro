@@ -8,6 +8,27 @@
 
             return $this->db_query($sql);
         }
+
+        // Functions for Order for item and ticket
+
+        function  addtoOrder($user_id,$reciept_no,$order_date,$order_type,$order_status){
+            $sql="INSERT INTO `orders`(`user_id`, `reciept_no`, `order_date`, `order_type`, `order_status`) VALUES ('$user_id','$reciept_no','$order_date','$order_type','$order_status')";
+            return $this->db_query($sql);
+
+        }
+
+        function  addToOrderItemHistroy($order_id,$item_id,$item_qty){
+            $sql="INSERT INTO `orderhistory`(`order_id`, `item_id`, `item_qty`) VALUES ('$order_id',',$item_id','$item_qty')";
+            return $this->db_query($sql);
+
+        }
+
+
+        function  addToticketHistroy($order_id,$ticket_id,$ticket_qty){
+            $sql="INSERT INTO `tickethistroy`(`order_id`, `ticket_id`, `item_qty`) VALUES ('$order_id','$ticket_id','$ticket_qty')";
+            return $this->db_query($sql);
+
+        }
     }
 
 
