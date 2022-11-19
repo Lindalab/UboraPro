@@ -5,8 +5,8 @@
     <meta name="keywords" content="​Author&amp;apos;s cake and desserts for your holiday, ​Few words about myself, ​Catalog, How We Work, Facts &amp;amp; Questions, ​​Best Choice, ​Make an order">
     <meta name="description" content="">
     <title>Admin: Add Categories</title>
-    <link rel="stylesheet" href="../css/nicepage.css" media="screen">
-<link rel="stylesheet" href="../css/Admin-Categories.css" media="screen">
+    <link rel="stylesheet" href="/../css/nicepage.css" media="screen">
+<link rel="stylesheet" href="/../css/Admin-Categories.css" media="screen">
     <script class="u-script" type="text/javascript" src="../js/jquery.js" defer=""></script>
     <meta name="generator" content="Nicepage 4.21.12, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
@@ -24,7 +24,7 @@
   </head>
   <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-white u-header" id="sec-ef51"><div class="u-clearfix u-sheet u-sheet-1">
         <a href="" class="u-image u-logo u-image-1" data-image-width="1920" data-image-height="1080">
-          <img src="../images/ubora2.png" class="u-logo-image u-logo-image-1">
+          <img src="/../images/ubora2.png" class="u-logo-image u-logo-image-1">
         </a>
         <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
           <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
@@ -76,7 +76,7 @@
             <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
           </form>
         </div>
-        <img class="u-image u-image-contain u-image-default u-image-1" src="../images/ubora2.png" alt="" data-image-width="1920" data-image-height="1080">
+        <img class="u-image u-image-contain u-image-default u-image-1" src="/../images/ubora2.png" alt="" data-image-width="1920" data-image-height="1080">
       </div>
     </section>
     
