@@ -13,6 +13,7 @@
 
         if($check > 0){
             echo "email already exist";
+            return;
         }
 
         $register = registerUser_ctr($user_name, $user_email, $user_school_id,$phone_number, $hashed_password);
@@ -24,4 +25,6 @@
             echo "failed";
         }
     }
+
+
 ?>

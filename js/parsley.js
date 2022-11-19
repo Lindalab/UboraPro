@@ -9,6 +9,6 @@ $(function () {
     })
     .on('form:submit', function() {
         alert("Submitting")
-      return false; // Don't submit form for this demo
+      return true; // Don't submit form for this demo
     });
   });

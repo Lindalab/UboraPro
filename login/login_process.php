@@ -6,7 +6,7 @@
         $password = $_POST['password'];
         $hashed_password = password_hash($password, PASSWORD_BCRYPT);
 
-        $login = login($user_email, $hashed_password);
+        $login = login_ctr($user_email, $hashed_password);
 
         $db_email = null;
         $db_password = null;
@@ -20,7 +20,7 @@
 
         if($db_email === $email && $db_password === $password){
             session_start();
-            $user_detail =  getAUserDetails($user_email);
+            $user_detail =  getAUserDetails_ctr($user_email);
             foreach($user_detail as $user){
                 $_SESSION['user_id'] = $user['user_id'];
                 $_SESSION['user_name'] = $user['user_name'];
@@ -35,5 +35,6 @@
             echo "failed";
         }
     }
+
 
 ?>
