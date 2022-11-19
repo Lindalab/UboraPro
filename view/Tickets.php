@@ -1,3 +1,6 @@
+<?php
+require_once("../functions/getAllTicket.php");
+?>
 <!DOCTYPE html>
 <html style="font-size: 16px;" lang="en"><head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -96,15 +99,18 @@
         <div class="u-clearfix u-expanded-width u-gutter-30 u-layout-wrap u-layout-wrap-1">
           <div class="u-gutter-0 u-layout">
             <div class="u-layout-row">
-              <div class="u-align-center u-container-style u-layout-cell u-left-cell u-size-20 u-size-20-md u-layout-cell-1">
+              <!-- <div class="u-align-center u-container-style u-layout-cell u-left-cell u-size-20 u-size-20-md u-layout-cell-1">
                 <div class="u-border-2 u-border-grey-50 u-container-layout u-container-layout-1">
                   <h4 class="u-text u-text-1">Couple</h4>
                   <h2 class="u-text u-text-2">100 ghc</h2>
                   <p class="u-text u-text-3">For two individuals</p>
                   <a href="" class="u-btn u-button-style u-grey-15 u-hover-palette-2-base u-btn-1">Order Now</a>
                 </div>
-              </div>
-              <div class="u-align-center u-container-style u-layout-cell u-size-20 u-size-20-md u-layout-cell-2">
+              </div> -->
+              <?php 
+              showTypeOfTicket();
+              ?>
+              <!-- <div class="u-align-center u-container-style u-layout-cell u-size-20 u-size-20-md u-layout-cell-2">
                 <div class="u-border-2 u-border-grey-50 u-container-layout u-container-layout-2">
                   <h4 class="u-text u-text-4">Regular</h4>
                   <h2 class="u-text u-text-5">150 ghc</h2>
@@ -119,7 +125,7 @@
                   <p class="u-text u-text-9">For 1 individual</p>
                   <a href="" class="u-btn u-button-style u-grey-15 u-hover-palette-2-base u-btn-3">Order Now</a>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>

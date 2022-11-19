@@ -62,7 +62,7 @@
         <div class="u-repeater u-repeater-1">
           <div class="u-border-2 u-border-black u-container-style u-list-item u-repeater-item">
             <div class="u-container-layout u-similar-container u-valign-middle u-container-layout-1">
-              <a href="Admin-Categories.php" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-2">Create Award Category</a>
+              <a href="./admincategories.php" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-2">Create Award Category</a>
             </div>
           </div>
           <div class="u-border-2 u-border-black u-container-style u-list-item u-repeater-item">
@@ -81,7 +81,7 @@
         <div class="u-repeater u-repeater-2">
           <div class="u-border-2 u-border-black u-container-style u-list-item u-repeater-item">
             <div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-4">
-              <a href="admin-Nominee.php" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-5">Create Award Nominee</a>
+              <a href="adminnominee.php" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-5">Create Award Nominee</a>
             </div>
           </div>
           <div class="u-border-2 u-border-black u-container-style u-list-item u-repeater-item">

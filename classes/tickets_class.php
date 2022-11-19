@@ -4,8 +4,8 @@ require_once("../settings/db_class.php");
 
 class Tickets extends db_connection{
 
-    function createTicket($ticket_status, $ticket_type, $ticket_price, $ticket_date){
-        $sql = "INSERT INTO `ticket`(`ticket_status`, `ticket_type`, `ticket_price`, `ticket_date`) VALUES ('$ticket_status','$ticket_type','$ticket_price','$ticket_date')";
+    function createTicket($ticket_status, $ticket_type, $ticket_price,$ticket_description, $ticket_date){
+        $sql = "INSERT INTO `ticket`(`ticket_status`, `ticket_type`, `ticket_price`, `ticket_description`, `ticket_date`) VALUES ('$ticket_status','$ticket_type','$ticket_price','$ticket_description','$ticket_date')";
         return $this->db_query($sql);
         
     }
@@ -26,8 +26,8 @@ class Tickets extends db_connection{
         return $this->fetchOne($sql);
     }
 
-    function updateTicket($ticket_id, $ticket_status, $ticket_type, $ticket_price, $ticket_date){
-        $sql = "UPDATE  SET `ticket_status`=' $ticket_status',`ticket_type`='$ticket_type',`ticket_price`='$ticket_price',`ticket_date`='$ticket_date' WHERE `ticket`= $ticket_id ";
+    function updateTicket($ticket_id, $ticket_status, $ticket_type, $ticket_price,$ticket_description, $ticket_date){
+        $sql = "UPDATE  SET `ticket_status`=' $ticket_status',`ticket_type`='$ticket_type',`ticket_price`='$ticket_price',`ticket_description`=$ticket_description,`ticket_date`='$ticket_date' WHERE `ticket`= $ticket_id ";
 
         return $this->db_query($sql);
     }

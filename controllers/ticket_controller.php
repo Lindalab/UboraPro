@@ -1,10 +1,10 @@
 <?php 
     require_once("../classes/tickets_class.php");
 
-    function createTicket_ctr($ticket_status, $ticket_type, $ticket_price, $ticket_date){
+    function createTicket_ctr($ticket_status, $ticket_type, $ticket_price,$ticket_description, $ticket_date){
         $ticket = new Tickets();
         
-        return $ticket->createTicket($ticket_status, $ticket_type, $ticket_price, $ticket_date);
+        return $ticket->createTicket($ticket_status, $ticket_type, $ticket_price,$ticket_description, $ticket_date);
     }
 
 
@@ -26,10 +26,10 @@
         return $ticket->getOneTicket($ticket_id);
     }
 
-    function updateTicket_ctr($ticket_id, $ticket_status, $ticket_type, $ticket_price, $ticket_date){
+    function updateTicket_ctr($ticket_id, $ticket_status, $ticket_type, $ticket_price,$ticket_description, $ticket_date){
         $ticket = new Tickets();
 
-        return $ticket->updateTicket($ticket_id, $ticket_status, $ticket_type, $ticket_price, $ticket_date);
+        return $ticket->updateTicket($ticket_id, $ticket_status, $ticket_type, $ticket_price,$ticket_description, $ticket_date);
     }
 
 
