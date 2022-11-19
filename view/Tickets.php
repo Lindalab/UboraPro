@@ -104,7 +104,7 @@ require_once("../functions/getAllTicket.php");
                   <h4 class="u-text u-text-1">Couple</h4>
                   <h2 class="u-text u-text-2">100 ghc</h2>
                   <p class="u-text u-text-3">For two individuals</p>
-                  <a href="" class="u-btn u-button-style u-grey-15 u-hover-palette-2-base u-btn-1">Order Now</a>
+                  <a href="./food.php?tid=1" class="u-btn u-button-style u-grey-15 u-hover-palette-2-base u-btn-1">Order Now</a>
                 </div>
               </div> -->
               <?php 
@@ -115,7 +115,7 @@ require_once("../functions/getAllTicket.php");
                   <h4 class="u-text u-text-4">Regular</h4>
                   <h2 class="u-text u-text-5">150 ghc</h2>
                   <p class="u-text u-text-6">For 1 individual</p>
-                  <a href="" class="u-btn u-button-style u-grey-15 u-hover-palette-2-base u-btn-2">Order Now</a>
+                  <a href="./food.php?tid=2" class="u-btn u-button-style u-grey-15 u-hover-palette-2-base u-btn-2">Order Now</a>
                 </div>
               </div>
               <div class="u-align-center u-container-style u-layout-cell u-right-cell u-size-20 u-size-20-md u-layout-cell-3">
@@ -123,7 +123,7 @@ require_once("../functions/getAllTicket.php");
                   <h4 class="u-text u-text-7">VIP</h4>
                   <h2 class="u-text u-text-8">150 ghc</h2>
                   <p class="u-text u-text-9">For 1 individual</p>
-                  <a href="" class="u-btn u-button-style u-grey-15 u-hover-palette-2-base u-btn-3">Order Now</a>
+                  <a href="./food.php?tid=3" class="u-btn u-button-style u-grey-15 u-hover-palette-2-base u-btn-3">Order Now</a>
                 </div>
               </div> -->
             </div>
@@ -136,16 +136,5 @@ require_once("../functions/getAllTicket.php");
     <footer class="u-align-center u-clearfix u-footer u-image u-footer" id="sec-ff33" data-image-width="1280" data-image-height="941"><div class="u-clearfix u-sheet u-valign-top-lg u-valign-top-xl u-sheet-1">
         <p class="u-small-text u-text u-text-body-color u-text-variant u-text-1">(c) DELC&nbsp; All Rights reserved</p>
       </div></footer>
-    <section class="u-backlink u-clearfix u-grey-80">
-      <a class="u-link" href="https://nicepage.com/website-templates">
-        <span>Website Templates</span>
-      </a>
-      <p class="u-text">
-        <span>created with</span>
-      </p>
-      <a class="u-link" href="">
-        <span>Website Builder Software</span>
-      </a>. 
-    </section>
   
 </body></html>
