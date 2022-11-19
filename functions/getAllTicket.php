@@ -8,7 +8,7 @@
             $ticket_type=$tickets['ticket_type'];
             $ticketName=tickettype($ticket_type);
             $ticket_price=$tickets['ticket_price'];
-            $ticket_description=$tickets['ticket_price'];
+            $ticket_description=$tickets['ticket_description'];
             ticketName($ticket_id,$ticketName,$ticket_price,$ticket_description);
             
 
