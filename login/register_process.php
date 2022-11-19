@@ -1,4 +1,5 @@
 <?php 
+    session_start();
     require_once("../controllers/users_controller.php");
 
     if(isset($_POST['register'])){
@@ -7,22 +8,27 @@
         $user_school_id = $_POST['user_school_id'];
         $phone_number = $_POST['phone_number'];
         $password = $_POST['password'];
-        $hashed_password = password_hash($password, PASSWORD_BCRYPT);
+        $hashed_password = base64_encode($password);
 
         $check = checkEmail_ctr($user_email);
 
         if($check > 0){
+            $_SESSION["reg_msg"] = "email already exist";
+            header("Location: Register.php");
             echo "email already exist";
             return;
         }
+        else {
+            $register = registerUser_ctr($user_name, $user_email, $user_school_id,$phone_number, $hashed_password);
 
-        $register = registerUser_ctr($user_name, $user_email, $user_school_id,$phone_number, $hashed_password);
+            if($register){
+                echo "success";
+                header("Location: Login.php");
 
-        if($register){
-            echo "success";
-
-        }else{
-            echo "failed";
+            }else{
+                $_SESSION["reg_msg"] = "Registration failed";
+                header("Location: Register.php");
+            }
         }
     }
 
