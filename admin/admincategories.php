@@ -55,7 +55,7 @@
       <div class="u-clearfix u-sheet u-sheet-1">
         <h1 class="u-text u-text-default u-text-1">Award categories 2022</h1>
         <div class="u-align-left u-form u-form-1">
-          <form action="" class="u-clearfix u-form-spacing-50 u-form-vertical u-inner-form" source="email" name="form" style="padding: 45px;">
+          <form action="" class="u-clearfix u-form-spacing-50 u-form-vertical u-inner-form" source="email" name="form" style="padding: 45px;" enctype="multipart/form-data">
             <div class="u-form-group u-form-name">
               <label for="name-7f20" class="u-label">Category Name</label>
               <input type="text" placeholder="Enter category" id="name-7f20" name="name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
@@ -64,11 +64,15 @@
               <label for="message-7f20" class="u-label">Category Description</label>
               <textarea placeholder="Enter category description" rows="4" cols="50" id="message-7f20" name="message" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required=""></textarea>
             </div>
+            <div class="u-form-group u-form-message">
+              <label for="message-7f20" class="u-label">Category Image</label>
+              <input type="file" name="award_image" accept="image/*" required>
+            </div>
             <div class="u-align-left u-form-group u-form-submit">
               <a href="#" class="u-btn u-btn-submit u-button-style">Submit</a>
               <input type="submit" value="submit" class="u-form-control-hidden">
             </div>
-            <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
+            <div class="u-form-send-message u-form-send-success"> Category added </div>
             <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
           </form>
         </div>

@@ -62,17 +62,17 @@
         <div class="u-repeater u-repeater-1">
           <div class="u-border-2 u-border-black u-container-style u-list-item u-repeater-item">
             <div class="u-container-layout u-similar-container u-valign-middle u-container-layout-1">
-              <a href="Admin-Categories.php" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-2">Create Award Category</a>
+              <a href="./admincategories.php" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-2">Create Award Category</a>
             </div>
           </div>
           <div class="u-border-2 u-border-black u-container-style u-list-item u-repeater-item">
             <div class="u-container-layout u-similar-container u-valign-middle u-container-layout-2">
-              <a href="Admin-Categories.php" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-3">Edit Award Category</a>
+              <a href="./admincategories.php" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-3">Edit Award Category</a>
             </div>
           </div>
           <div class="u-border-2 u-border-black u-container-style u-list-item u-repeater-item">
             <div class="u-container-layout u-similar-container u-valign-middle u-container-layout-3">
-              <a href="Admin-Categories.php" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-4">Delete Award Category</a>
+              <a href="./admincategories.php" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-4">Delete Award Category</a>
             </div>
           </div>
         </div>
@@ -81,17 +81,17 @@
         <div class="u-repeater u-repeater-2">
           <div class="u-border-2 u-border-black u-container-style u-list-item u-repeater-item">
             <div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-4">
-              <a href="admin-Nominee.php" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-5">Create Award Nominee</a>
+              <a href="./adminnominee.php" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-5">Create Award Nominee</a>
             </div>
           </div>
           <div class="u-border-2 u-border-black u-container-style u-list-item u-repeater-item">
             <div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-5">
-              <a href="admin-Nominee.php" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-6">Edit&nbsp;Award Nominee</a>
+              <a href="./adminnominee.php" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-6">Edit&nbsp;Award Nominee</a>
             </div>
           </div>
           <div class="u-border-2 u-border-black u-container-style u-list-item u-repeater-item">
             <div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-6">
-              <a href="admin-Nominee.php" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-7">Delete&nbsp;Award Nominee</a>
+              <a href="./adminnominee.php" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-7">Delete&nbsp;Award Nominee</a>
             </div>
           </div>
         </div>
@@ -124,17 +124,17 @@
         <div class="u-repeater u-repeater-3">
           <div class="u-border-2 u-border-black u-container-style u-list-item u-repeater-item">
             <div class="u-container-layout u-similar-container u-container-layout-7">
-              <a href="Admin-Transport.php" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-8">Create Available Transport</a>
+              <a href="./admintransport.php" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-8">Create Available Transport</a>
             </div>
           </div>
           <div class="u-border-2 u-border-black u-container-style u-list-item u-repeater-item">
             <div class="u-container-layout u-similar-container u-container-layout-8">
-              <a href="Admin-Transport.php" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-9">Edit Available Transport</a>
+              <a href="./admintransport.php" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-9">Edit Available Transport</a>
             </div>
           </div>
           <div class="u-border-2 u-border-black u-container-style u-list-item u-repeater-item">
             <div class="u-container-layout u-similar-container u-container-layout-9">
-              <a href="Admin-Transport.php" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-10">Delete Available Transport</a>
+              <a href="./admintransport.php" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-10">Delete Available Transport</a>
             </div>
           </div>
         </div>
@@ -143,17 +143,17 @@
         <div class="u-repeater u-repeater-4">
           <div class="u-border-2 u-border-black u-container-style u-list-item u-repeater-item">
             <div class="u-container-layout u-similar-container u-valign-middle u-container-layout-10">
-              <a href="Admin-Food.php" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-11">Create Food Package</a>
+              <a href="./adminfood.php" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-11">Create Food Package</a>
             </div>
           </div>
           <div class="u-border-2 u-border-black u-container-style u-list-item u-repeater-item">
             <div class="u-container-layout u-similar-container u-valign-middle u-container-layout-11">
-              <a href="Admin-Food.php" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-12">Edit Food Package</a>
+              <a href="./adminfood.php" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-12">Edit Food Package</a>
             </div>
           </div>
           <div class="u-border-2 u-border-black u-container-style u-list-item u-repeater-item">
             <div class="u-container-layout u-similar-container u-valign-middle u-container-layout-12">
-              <a href="Admin-Food.php" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-13">Delete Food Package</a>
+              <a href="./adminfood.php" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-13">Delete Food Package</a>
             </div>
           </div>
         </div>
