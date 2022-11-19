@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="keywords" content="​Author&amp;apos;s cake and desserts for your holiday, ​Few words about myself, ​Catalog, How We Work, Facts &amp;amp; Questions, ​​Best Choice, ​Make an order">
     <meta name="description" content="">
-    <title>Admin Categories</title>
+    <title>Admin: Add Categories</title>
     <link rel="stylesheet" href="../css/nicepage.css" media="screen">
 <link rel="stylesheet" href="../css/Admin-Categories.css" media="screen">
     <script class="u-script" type="text/javascript" src="../js/jquery.js" defer=""></script>
