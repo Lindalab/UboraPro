@@ -1,6 +1,7 @@
 <?php
 require_once("../controllers/awards_controller.php");
-
+require_once("../controllers/users_controller.php");
+session_start();
 function display_all_awards()
 {
     $all_awards = getAllAwards_ctr();
@@ -43,8 +44,7 @@ function awards_form_right_image($award_id, $award_image, $award_name)
     </div></div>
     <input name = 'award_id' type='hidden' value = '$award_id'>
     <div class='u-align-left u-form-group u-form-submit u-label-top'>
-              <input type='submit' value='submit' class='u-form-control'>
-            
+              <input type='submit' value='submit' class='u-form-control' disabled>
             </div>
             
           </form>
@@ -77,8 +77,18 @@ function awards_form_left_image($award_id, $award_image, $award_name)
     </div> </div>
     <input name = 'award_id' type='hidden' value = '$award_id'>
     <div class='u-align-left u-form-group u-form-submit u-label-top'>
-              <input type='submit' value='submit' class='u-form-control'>
-             
+    ";
+     
+      $user_id = $_SESSION['user_id'];
+
+      $hasVoted = userHasVoted_ctr($user_id, $award_id);
+      if($hasVoted){
+      echo "<input type='submit' value='Voted!' class='u-form-control' disabled>";
+      }else{
+        echo "<input type='submit' value='submit' class='u-form-control'>";
+      }
+
+    echo"      
             </div>
            
           </form>
