@@ -110,14 +110,6 @@
                   <input id="field-a44a" type="checkbox" value="GHS" name="checkbox[]">
                   <label class="u-label" for="field-a44a">GHS</label>
                 </div>
-                <div class="u-input-row">
-                  <input id="field-fad4" type="checkbox" value="EUR" name="checkbox[]">
-                  <label class="u-label" for="field-fad4">EUR</label>
-                </div>
-                <div class="u-input-row">
-                  <input id="field-7108" type="checkbox" value="YEN" name="checkbox[]">
-                  <label class="u-label" for="field-7108">YEN</label>
-                </div>
               </div>
             </div>
             <div class="u-form-date u-form-group u-form-group-3">
@@ -128,8 +120,8 @@
               <label class="u-label">Payment option</label>
               <div class="u-form-checkbox-group-wrapper">
                 <div class="u-input-row">
-                  <input id="field-ab49" type="checkbox" value="Visa" name="checkbox-1[]">
-                  <label class="u-label" for="field-ab49">Visa</label>
+                  <input id="field-ab49" type="checkbox" value="Credit card" name="checkbox-1[]">
+                  <label class="u-label" for="field-ab49">Credit card</label>
                 </div>
                 <div class="u-input-row">
                   <input id="field-7068" type="checkbox" value="Mobile Money" name="checkbox-1[]">
