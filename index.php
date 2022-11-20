@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 require("admin/privilleges.php");
 ?>
@@ -122,9 +121,3 @@ require("admin/privilleges.php");
     </section>
   
 </body></html>
-=======
-<?php 
-    header("location: view/index.php");
-
-?>
->>>>>>> 0e0c9270af8c5131970bb37f3328d7e825e9c5d5

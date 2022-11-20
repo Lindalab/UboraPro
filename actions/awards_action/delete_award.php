@@ -8,6 +8,7 @@
 
     if($result){
         echo "<script>alert('success')</script>";
+        header("location: ./../../admin/admin.php");
     }else{
         echo "<script>alert('failed')</script>";
     }

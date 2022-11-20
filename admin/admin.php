@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html style="font-size: 16px;" lang="en"><head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -99,6 +101,26 @@
           </div>
         </div>
       </div>
+      <div class="u-list u-list-1">
+        <div class="u-repeater u-repeater-1">
+          <div class="u-border-2 u-border-black u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-valign-middle u-container-layout-1">
+              <a href="./adminItemCategory.php" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-2">Item Category</a>
+            </div>
+          </div>
+          <div class="u-border-2 u-border-black u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-valign-middle u-container-layout-2">
+              <a href="./admincategories.php" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-3">Edit Item Category</a>
+            </div>
+          </div>
+          <div class="u-border-2 u-border-black u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-valign-middle u-container-layout-3">
+              <a href="./admincategories.php" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-4">Delete Item Category</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="u-shape u-shape-svg u-text-palette-2-dark-1 u-shape-1">
         <svg class="u-svg-link" preserveAspectRatio="none" viewBox="0 0 160 160"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-f6d0"></use></svg>
         <svg class="u-svg-content" viewBox="0 0 160 160" x="0px" y="0px" id="svg-f6d0"><path d="M14.5,7.3c0,4-3.3,7.3-7.3,7.3S0,11.2,0,7.3S3.3,0,7.3,0S14.5,3.3,14.5,7.3z M7.3,24.2c-4,0-7.3,3.3-7.3,7.3
@@ -122,6 +144,9 @@
 	C14.5,124.5,11.2,121.2,7.3,121.2z M31.5,121.2c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3s7.3-3.3,7.3-7.3
 	C38.8,124.5,35.5,121.2,31.5,121.2z M7.3,145.5c-4,0-7.3,3.3-7.3,7.3c0,4,3.3,7.3,7.3,7.3s7.3-3.3,7.3-7.3
 	C14.5,148.8,11.2,145.5,7.3,145.5z"></path></svg>
+
+
+  
       </div>
       <div class="u-align-left u-list u-list-3">
         <div class="u-repeater u-repeater-3">
@@ -160,8 +185,11 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="u-rotation-parent u-rotation-parent-1">
+      </div><br>
+      <div>
+      <a href='privilleges.php?Logout=Logout' class='u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-3-base u-radius-50 u-btn-2'>Logout</a>
+</div>
+<div class="u-rotation-parent u-rotation-parent-1">
         <div class="u-rotate-180 u-shape u-shape-svg u-text-palette-2-dark-1 u-shape-2">
           <svg class="u-svg-link" preserveAspectRatio="none" viewBox="0 0 160 160"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-cfc1"></use></svg>
           <svg class="u-svg-content" viewBox="0 0 160 160" x="0px" y="0px" id="svg-cfc1"><path d="M14.5,7.3c0,4-3.3,7.3-7.3,7.3S0,11.2,0,7.3S3.3,0,7.3,0S14.5,3.3,14.5,7.3z M7.3,24.2c-4,0-7.3,3.3-7.3,7.3

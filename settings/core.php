@@ -12,9 +12,7 @@ function checkLogin(){
     {
         return $_SESSION['userLogin'];
     }
-    else{
-        echo $_SESSION['userLogin'];
-    }
+    
   
   }
 
@@ -30,6 +28,9 @@ function checkUserRole($rolevalue)
       return false;
   }
 }
+
+
+
 
 
 

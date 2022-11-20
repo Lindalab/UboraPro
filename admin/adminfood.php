@@ -1,3 +1,6 @@
+<?php
+require("../functions/daiplayItemCategory.php"); 
+?>
 <!DOCTYPE html>
 <html style="font-size: 16px;" lang="en"><head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -68,6 +71,10 @@
               <input type="number" placeholder="Enter price in cedis" id="email-098e" name="item_price" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
             </div>
             <div class="u-form-group u-form-message">
+              <label for="message-7f20" class="u-label"> Item Category </label>
+              <?php  getAllItemCatgory(); ?>
+            </div>
+            <div class="u-form-group u-form-message">
               <label for="message-098e" class="u-label">Food Package description</label>
               <textarea placeholder="Enter description" rows="4" cols="50" id="message-098e" name="item_description" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required=""></textarea>
             </div>
@@ -80,6 +87,7 @@
               <input type="file" name="item_image" accept="image/*" required>
             </div>
             <div class="u-align-left u-form-group u-form-submit">
+              
               <input type="submit" value="Add food package" class="u-btn u-btn-submit u-button-style">
             </div>
             <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>

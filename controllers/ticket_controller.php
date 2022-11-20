@@ -53,6 +53,16 @@
 
     }
 
+    function CountTotalVotes_ctr(){
+        $vote = new Tickets();
+        return $vote->CountTotalVotes();
+    }
+
+    function getTotalUsers_ctr(){
+        $user =new  Tickets();
+        return $user->getTotalUsers();
+    }
+
 
 
 ?>

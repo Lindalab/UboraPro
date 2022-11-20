@@ -45,4 +45,9 @@ function updateCategory_ctr($cat_id,$cat_name){
    return $item->allAnItemCatgeory($item_cat);
  }
 
+ function getAllFromCategory_ctr(){
+   $item=new item_class();
+   return $item->getAllFromCategory();
+ }
+
 ?>

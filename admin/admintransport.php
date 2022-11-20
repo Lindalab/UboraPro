@@ -1,3 +1,6 @@
+<?php
+require("../functions/daiplayItemCategory.php"); 
+?>
 <!DOCTYPE html>
 <html style="font-size: 16px;" lang="en"><head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -94,30 +97,34 @@
       <div class="u-clearfix u-sheet u-valign-bottom u-sheet-1">
         <h1 class="u-text u-text-default u-text-1">Book your Transport!</h1>
         <div class="u-form u-form-1">
-          <form action="https://forms.nicepagesrv.com/Form/Process" class="u-clearfix u-form-spacing-47 u-form-vertical u-inner-form" source="email" name="form" style="padding: 10px;">
-            <div class="u-form-group u-form-name u-form-group-1">
-              <label for="name-910d" class="u-label">Name of Available Transport</label>
-              <input type="text" placeholder="Enter your Name" id="name-910d" name="name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+        <form action="./../actions/items_action/create_item.php" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form" style="padding: 10px;" method="POST" enctype="multipart/form-data">
+            <div class="u-form-group u-form-name">
+              <label for="name-098e" class="u-label">Name of Transport</label>
+              <input type="text" placeholder="Enter transport name" id="name-098e" name="item_name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
             </div>
-            <div class="u-form-group u-form-phone u-form-group-2">
-              <label for="phone-c5ee" class="u-label">Number of Seat available</label>
-              <input type="tel" pattern="\+?\d{0,3}[\s\(\-]?([0-9]{2,3})[\s\)\-]?([\s\-]?)([0-9]{3})[\s\-]?([0-9]{2})[\s\-]?([0-9]{2})" placeholder="Enter number" id="phone-c5ee" name="phone" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+            <div class="u-form-email u-form-group">
+              <label for="email-098e" class="u-label">Pacakage Price</label>
+              <input type="number" placeholder="Enter price in cedis" id="email-098e" name="item_price" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
             </div>
-            <div class="u-form-group u-form-input-layout-horizontal u-form-radiobutton u-form-group-3">
-              <label class="u-label">Bus Type</label>
-              <div class="u-form-radio-button-wrapper">
-                <div class="u-input-row">
-                  <input type="radio" name="radiobutton" value="Bus/Shuttle">
-                  <label class="u-label" for="radiobutton">Bus/Shuttle</label>
-                </div>
-                <div class="u-input-row">
-                  <input type="radio" name="radiobutton" value="Private Car">
-                  <label class="u-label" for="radiobutton">Private Car</label>
-                </div>
-              </div>
+            <div class="u-form-group u-form-message">
+              <label for="message-7f20" class="u-label"> Item Category </label>
+              <?php  getAllItemCatgory(); ?>
+            </div>
+            <div class="u-form-group u-form-message">
+              <label for="message-098e" class="u-label">Transport description</label>
+              <textarea placeholder="Enter description" rows="4" cols="50" id="message-098e" name="item_description" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required=""></textarea>
+            </div>
+            <div class="u-form-email u-form-group">
+              <label for="email-098e" class="u-label">Keywords</label>
+              <input type="text" placeholder="Enter price in cedis" id="email-098e" name="item_keywords" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+            </div>
+            <div class="u-form-group u-form-message">
+              <label for="message-7f20" class="u-label">Vehicle Image</label>
+              <input type="file" name="item_image" accept="image/*" required>
             </div>
             <div class="u-align-left u-form-group u-form-submit">
-              <input type="submit" value="Add transport service" class="u-btn u-btn-submit u-button-style">
+              
+              <input type="submit" value="Add transport package" class="u-btn u-btn-submit u-button-style">
             </div>
             <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
             <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>

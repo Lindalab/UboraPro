@@ -5,6 +5,7 @@
     $item_name = $_POST['item_name'];
     $item_price = $_POST['item_price'];
     $item_description = $_POST['item_description'];
+    $item_cat= $_POST['category_name'];
     
     $root_dir = ".\\..\\..\\images\\awards\\";
     $upload_root_dir = "./../../images/awards/";
@@ -21,6 +22,7 @@
     
         if($result){
             echo "success";
+            header("location: ./../../admin/admin.php");
         }else{
             echo "failed";
         }

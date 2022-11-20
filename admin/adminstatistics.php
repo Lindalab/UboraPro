@@ -1,3 +1,6 @@
+<?php
+require("../controllers/ticket_controller.php"); 
+?>
 <!DOCTYPE html>
 <html style="font-size: 16px;" lang="en"><head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -62,26 +65,26 @@
             </div>
             <div class="u-align-center u-container-style u-custom-item u-list-item u-palette-1-base u-repeater-item u-list-item-2">
               <div class="u-container-layout u-similar-container u-container-layout-2">
-                <h1 class="u-text u-text-body-color u-title u-text-4" data-animation-name="counter" data-animation-event="scroll" data-animation-duration="3000">25</h1>
+                <h1 class="u-text u-text-body-color u-title u-text-4" data-animation-name="counter" data-animation-event="scroll" data-animation-duration="3000"><?php echo countTicketsSold_ctr(); ?></h1>
                 <p class="u-text u-text-body-color u-text-5">Tickets Sold</p>
               </div>
             </div>
             <div class="u-align-center u-container-style u-custom-item u-list-item u-palette-1-base u-repeater-item u-list-item-3">
               <div class="u-container-layout u-similar-container u-container-layout-3">
-                <h1 class="u-text u-text-body-color u-title u-text-6" data-animation-name="counter" data-animation-event="scroll" data-animation-duration="3000">87</h1>
+                <h1 class="u-text u-text-body-color u-title u-text-6" data-animation-name="counter" data-animation-event="scroll" data-animation-duration="3000"><?php echo CountTotalVotes_ctr(); ?></h1>
                 <p class="u-text u-text-body-color u-text-7">Total Number of Votes</p>
               </div>
             </div>
             <div class="u-align-center u-container-style u-custom-item u-list-item u-palette-1-base u-repeater-item u-list-item-3">
               <div class="u-container-layout u-similar-container u-container-layout-3">
-                <h1 class="u-text u-text-body-color u-title u-text-6" data-animation-name="counter" data-animation-event="scroll" data-animation-duration="3000">90</h1>
-                <p class="u-text u-text-body-color u-text-7">Total Number of VIP tickets</p>
+                <h1 class="u-text u-text-body-color u-title u-text-6" data-animation-name="counter" data-animation-event="scroll" data-animation-duration="3000"><?php echo countTicketsTypeSold_ctr(3);?></h1>
+                <p class="u-text u-text-body-color u-text-7">Total VIP tickets Sold </p>
               </div>
             </div>
             <div class="u-align-center u-container-style u-custom-item u-list-item u-palette-1-base u-repeater-item u-list-item-3">
               <div class="u-container-layout u-similar-container u-container-layout-3">
-                <h1 class="u-text u-text-body-color u-title u-text-6" data-animation-name="counter" data-animation-event="scroll" data-animation-duration="3000">78</h1>
-                <p class="u-text u-text-body-color u-text-7">Total Number of Votes for Best award</p>
+                <h1 class="u-text u-text-body-color u-title u-text-6" data-animation-name="counter" data-animation-event="scroll" data-animation-duration="3000"><?php echo getTotalUsers_ctr(); ?></h1>
+                <p class="u-text u-text-body-color u-text-7">Total Participant</p>
               </div>
             </div>
           </div>

@@ -25,6 +25,11 @@ class item_class extends db_connection
         return $this->db_query($sql);
     }
 
+    function getAllFromCategory(){
+        $sql="SELECT * FROM `cart`";
+        return $this->fetchAllData($sql);
+    }
+
 
 	function addToItem($item_cat,$item_name,$item_price,$item_description,$item_image,$item_keyword){
         $sql="INSERT INTO `items`(`item_cat`, `item_name`, `item_price`, `item_description`, `item_image`, `item_keyword`) VALUES ('$item_cat','$item_name','$item_price','$item_description','$item_image','$item_keyword')";
