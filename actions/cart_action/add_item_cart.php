@@ -1,5 +1,5 @@
 <?php 
-    require_once("../../controllers/cart_controller.php");
+    require_once dirname(__FILE__)."/../../controllers/cart_controller.php";
 
     $item_id = $_GET['item_id'];
     $item_qty = 1;
@@ -16,6 +16,7 @@
 
     if($result){
         echo "<script>alert('success')</script>";
+        header("location:../view/transport.php");
     }else{
         echo "<script>alert('failed')</script>";
     }

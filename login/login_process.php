@@ -17,6 +17,7 @@ if (isset($_POST['login'])) {
         $_SESSION['phone_number'] = $login['phone_number'];
         $_SESSION['password'] = $login['password'];
         $_SESSION['user_role'] = $login['user_role'];
+        $_SESSION['userLogin']=true;   
         
         header("Location: ../index.php");
     } else {

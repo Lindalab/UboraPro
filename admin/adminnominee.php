@@ -76,7 +76,7 @@
               <input type="file" name="nominee_image" accept="image/*" required>
             </div>
             <div class="u-align-left u-form-group u-form-submit">
-              <input type="submit" value="submit" class="u-form-control">
+              <input type="submit" value="Add Nominee" class="u-btn u-btn-submit u-button-style">
             </div>
             <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
             <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>

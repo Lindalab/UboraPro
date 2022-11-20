@@ -1,5 +1,5 @@
 <?php 
-    require_once("../../controllers/cart_controller.php");
+    require_once dirname(__FILE__)."/../controllers/cart_controller.php";
 
     $ticket_id = $_GET['ticket_id'];
     $ticket_qty = 1;
@@ -12,6 +12,7 @@
 
     if($result){
         echo "<script>alert('success')</script>";
+        header("location:../view/food.php");
     }else{
         echo "<script>alert('failed')</script>";
     }

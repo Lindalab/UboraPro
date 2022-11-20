@@ -1,6 +1,6 @@
 <?php
 //connect to database class
-require dirname(__FILE__)."/../settings/db_class.php";
+require_once dirname(__FILE__)."/../settings/db_class.php";
 
 /**
 *General class to handle all functions 
@@ -49,6 +49,11 @@ class item_class extends db_connection
 
     function allItems(){
         $sql="SELECT * FROM `items`";
+        return $this->fetchAllData($sql);
+    }
+
+    function allAnItemCatgeory($item_cat){
+        $sql="SELECT * FROM `items` where item_cat='$item_cat' ";
         return $this->fetchAllData($sql);
     }
 

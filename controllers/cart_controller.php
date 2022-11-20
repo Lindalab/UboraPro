@@ -1,5 +1,5 @@
 <?php 
-    require_once("../classes/cart_class.php");
+    require_once dirname(__FILE__)."/../classes/cart_class.php";
 
     /**
      * Items Cart Operations
@@ -56,6 +56,11 @@
       function showAPersonTicketCart_ctr($user_id,$ip_address){
         $ticketCart = new Cart();
         return $ticketCart->showAPersonTicketCart($user_id,$ip_address);
+      }
+
+      function updateticketCart($ticket_id, $ip_address, $user_id, $qty){
+        $ticketCart = new Cart();
+        return $ticketCart->updateticketCart($ticket_id, $ip_address, $user_id, $qty);
       }
 
 ?>
