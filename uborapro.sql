@@ -194,6 +194,7 @@ CREATE TABLE `ticket` (
   `ticket_status` int(11) NOT NULL,
   `ticket_type` int(11) NOT NULL,
   `ticket_price` double NOT NULL,
+  `ticket_description` varchar(100) NOT NULL,
   `ticket_date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 

@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta name="keywords" content="​Author&amp;apos;s cake and desserts for your holiday, ​Few words about myself, ​Catalog, How We Work, Facts &amp;amp; Questions, ​​Best Choice, ​Make an order">
     <meta name="description" content="">
-    <title>Admin Categories</title>
-    <link rel="stylesheet" href="../css/nicepage.css" media="screen">
-<link rel="stylesheet" href="../css/Admin-Categories.css" media="screen">
+    <title>Admin: Add Categories</title>
+    <link rel="stylesheet" href="./../css/nicepage.css" media="screen">
+<link rel="stylesheet" href="./../css/Admin-Categories.css" media="screen">
     <script class="u-script" type="text/javascript" src="../js/jquery.js" defer=""></script>
     <meta name="generator" content="Nicepage 4.21.12, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
@@ -24,7 +24,7 @@
   </head>
   <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-white u-header" id="sec-ef51"><div class="u-clearfix u-sheet u-sheet-1">
         <a href="" class="u-image u-logo u-image-1" data-image-width="1920" data-image-height="1080">
-          <img src="../images/ubora2.png" class="u-logo-image u-logo-image-1">
+          <img src="./../images/ubora2.png" class="u-logo-image u-logo-image-1">
         </a>
         <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
           <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
@@ -55,7 +55,7 @@
       <div class="u-clearfix u-sheet u-sheet-1">
         <h1 class="u-text u-text-default u-text-1">Award categories 2022</h1>
         <div class="u-align-left u-form u-form-1">
-          <form action="" class="u-clearfix u-form-spacing-50 u-form-vertical u-inner-form" source="email" name="form" style="padding: 45px;">
+          <form action="" class="u-clearfix u-form-spacing-50 u-form-vertical u-inner-form" source="email" name="form" style="padding: 45px;" enctype="multipart/form-data">
             <div class="u-form-group u-form-name">
               <label for="name-7f20" class="u-label">Category Name</label>
               <input type="text" placeholder="Enter category" id="name-7f20" name="name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
@@ -64,16 +64,25 @@
               <label for="message-7f20" class="u-label">Category Description</label>
               <textarea placeholder="Enter category description" rows="4" cols="50" id="message-7f20" name="message" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required=""></textarea>
             </div>
+            <div class="u-form-group u-form-message">
+              <label for="message-7f20" class="u-label">Category Image</label>
+              <input type="file" name="award_image" accept="image/*" required>
+            </div>
             <div class="u-align-left u-form-group u-form-submit">
               <a href="#" class="u-btn u-btn-submit u-button-style">Submit</a>
               <input type="submit" value="submit" class="u-form-control-hidden">
             </div>
-            <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
+            <div class="u-form-send-message u-form-send-success"> Category added </div>
             <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
           </form>
         </div>
-        <img class="u-image u-image-contain u-image-default u-image-1" src="../images/ubora2.png" alt="" data-image-width="1920" data-image-height="1080">
+        <img class="u-image u-image-contain u-image-default u-image-1" src="./../images/ubora2.png" alt="" data-image-width="1920" data-image-height="1080">
       </div>
+    </section>
+    <section>
+      <header>
+        <h2>Manage Categories</h2>
+      </header>
     </section>
     
     
