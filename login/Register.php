@@ -29,6 +29,7 @@
     <?php
       if (isset($_SESSION["reg_msg"])) {
         echo '<script>alert('. $_SESSION["reg_msg"] .')</script>';
+        unset($_SESSION["reg_msg"]);
       }
     ?>
         <a href="https://nicepage.com" class="u-image u-logo u-image-1" data-image-width="1920" data-image-height="1080">
