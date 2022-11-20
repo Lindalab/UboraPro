@@ -56,22 +56,27 @@
       <div class="u-clearfix u-sheet u-valign-top-sm u-sheet-1">
         <img class="u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-image u-image-contain u-image-default u-image-1" src="./../images/ubora2.png" alt="" data-image-width="1920" data-image-height="1080">
         <div class="u-form u-form-1">
-          <form action="" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form" style="padding: 10px;">
+          <form action="./../actions/awards_action/add_nominee.php" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" method="POST" name="form" style="padding: 10px;" enctype="multipart/form-data">
             <div class="u-form-group u-form-name">
-              <label for="name-6d53" class="u-label">Nominee Name</label>
-              <input type="text" placeholder="Enter Nominee Name" id="name-6d53" name="name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+              <label for="nom_name" class="u-label">Nominee Name</label>
+              <input type="text" placeholder="Enter Nominee Name" id="nom_name" name="nominee_name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
             </div>
             <div class="u-form-email u-form-group">
-              <label for="email-6d53" class="u-label">Nominee Category</label>
-              <input type="text" placeholder="Enter Nominee Category" id="email-6d53" name="category name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+              <label for="nom_cat" class="u-label">Nominee Category</label>
+              <select placeholder="Enter Nominee Category" id="nom_cat" name="award_id" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+                <option value="2">Best Cat</option>
+              </select>
             </div>
             <div class="u-form-email u-form-group u-form-group-3">
-              <label for="email-6ed8" class="u-label">Nominee Email</label>
-              <input type="email" placeholder="Enter a valid email address" id="email-6ed8" name="email" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+              <label for="nom_email" class="u-label">Nominee Description</label>
+              <textarea placeholder="Enter description of nominee" id="nom_email" name="nominee_description" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required=""></textarea>
+            </div>
+            <div class="u-form-group u-form-message">
+              <label class="u-label">Nominee Image</label>
+              <input type="file" name="nominee_image" accept="image/*" required>
             </div>
             <div class="u-align-left u-form-group u-form-submit">
-              <a href="#" class="u-btn u-btn-submit u-button-style">Submit</a>
-              <input type="submit" value="submit" class="u-form-control-hidden">
+              <input type="submit" value="submit" class="u-form-control">
             </div>
             <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
             <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
