@@ -1,24 +1,28 @@
 <?php 
-    require_once("../../controllers/awards_controller.php");
+    require_once dirname(__FILE__)."/../../controllers/awards_controller.php";
 
-    $award_name = $_GET['award_name'];
-    $award_description = $_GET['award_description'];
-    // $award_image = $_GET['award_image'];
+    $award_name = $_POST['award_name'];
+    $award_description = $_POST['award_description'];
+    // $award_image = $_POST['award_image'];
 
-    $destinationfolder="../images/awards/";
-    $imgname=  basename($_FILES['award_image']['name']);
-    $tempname = $_FILES["file"]["tmp_name"];
-    $award_image = $destinationfolder.$imgname;
+    $root_dir = ".\\..\\..\\images\\awards\\";
+    $upload_root_dir = "./../../images/awards/";
+    $file = $_FILES["award_image"];
+    $file_dest = $root_dir . basename($file["name"]);
+    $upload_file_dest = $upload_root_dir . basename($file["name"]);
+    $file_type = strtolower(pathinfo($file_dest, PATHINFO_EXTENSION));
 
 
     $checkAwardName=checkAward_ctr($award_name);
     if($checkAwardName == 0){
-        move_uploaded_file($tempname, $award_image);
-        $result = createAward_ctr($award_name, $award_description, $award_image);
-        if($result){
-            echo "success";
-        }else{
-            echo "failed";
+        $move = move_uploaded_file($file["tmp_name"], $file_dest);
+        if ($move) {
+            $result = createAward_ctr($award_name, $award_description, $upload_file_dest);
+            if($result){
+                echo "success";
+            }else{
+                echo "failed";
+            }
         }
 
     }

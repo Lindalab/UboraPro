@@ -1,5 +1,5 @@
 <?php
-require_once("../settings/db_class.php");
+require_once dirname(__FILE__)."/../settings/db_class.php";
 
 class Users extends db_connection
 {
@@ -21,7 +21,7 @@ class Users extends db_connection
 
     //this function checks if a user has voted already
     function userHasVoted($user_id, $award_id){
-        $sql = "SELECT * vote where `user_id` = '$user_id' and `award_id` = '$award_id'";
+        $sql = "SELECT * FROM vote where `user_id` = '$user_id' and `award_id` = '$award_id'";
         $this->fetchAllData($sql);
         return $this->countData();
     }

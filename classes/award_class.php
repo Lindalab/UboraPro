@@ -1,5 +1,5 @@
 <?php 
-require_once("../settings/db_class.php");
+require_once dirname(__FILE__)."/../settings/db_class.php";
 
 class Awards extends db_connection{
 
@@ -30,10 +30,10 @@ class Awards extends db_connection{
     }
     
     // this would list the nominees under a particular award. This is suitable for a single view
-    function getNomineesForAnAward($award_id){
+    function  getNomineesForAnAward($award_id){
         $sql = "SELECT * FROM `nominee` WHERE award_id='$award_id'";
 
-        return $this->fetchOne($sql);
+        return $this->fetchAllData($sql);
     }
     
 

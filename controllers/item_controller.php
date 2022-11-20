@@ -1,5 +1,5 @@
 <?php
-require_once("../classes/item_class.php");
+require_once dirname(__FILE__)."/../classes/item_class.php";
 
 function createCategory_ctr($cat_name){
     $category = new item_class();

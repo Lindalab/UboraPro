@@ -58,22 +58,29 @@
         <img class="u-image u-image-default u-image-2" src="./../images/e13f7d1c62dc8cdaf201de18ae6bcc7760b240645bb4d44dae285874f55b952c2cc5d2b4879bd22fec3ac199c3fc5821d9572659f5d775f7f0455f_1280.jpg" alt="" data-image-width="1280" data-image-height="853">
         <img class="u-image u-image-default u-image-3" src="./../images/07e4604caa54baffcb17d73bfa89eb8831cedafdb80768039ee8655070a43bf154987f6f1c64b17c42b57dee288de789b60d17eac273d5657a258c_1280.jpg" alt="" data-image-width="719" data-image-height="1280">
         <div class="u-form u-form-1">
-          <form action="" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form" style="padding: 10px;">
+          <form action="./../actions/items_action/create_item.php" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form" style="padding: 10px;" method="POST" enctype="multipart/form-data">
             <div class="u-form-group u-form-name">
               <label for="name-098e" class="u-label">Name of Food package</label>
-              <input type="text" placeholder="Enter food package name" id="name-098e" name="name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+              <input type="text" placeholder="Enter food package name" id="name-098e" name="item_name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
             </div>
             <div class="u-form-email u-form-group">
               <label for="email-098e" class="u-label">Pacakage Price</label>
-              <input type="number" placeholder="Enter price in cedis" id="email-098e" name="price" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+              <input type="number" placeholder="Enter price in cedis" id="email-098e" name="item_price" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
             </div>
             <div class="u-form-group u-form-message">
               <label for="message-098e" class="u-label">Food Package description</label>
-              <textarea placeholder="Enter description" rows="4" cols="50" id="message-098e" name="message" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required=""></textarea>
+              <textarea placeholder="Enter description" rows="4" cols="50" id="message-098e" name="item_description" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required=""></textarea>
+            </div>
+            <div class="u-form-email u-form-group">
+              <label for="email-098e" class="u-label">Keywords</label>
+              <input type="text" placeholder="Enter price in cedis" id="email-098e" name="item_keywords" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+            </div>
+            <div class="u-form-group u-form-message">
+              <label for="message-7f20" class="u-label">Category Image</label>
+              <input type="file" name="item_image" accept="image/*" required>
             </div>
             <div class="u-align-left u-form-group u-form-submit">
-              <a href="#" class="u-btn u-btn-submit u-button-style">Submit</a>
-              <input type="submit" value="submit" class="u-form-control-hidden">
+              <input type="submit" value="submit" class="u-form-control">
             </div>
             <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
             <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>

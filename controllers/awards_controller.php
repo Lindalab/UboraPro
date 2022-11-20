@@ -1,5 +1,5 @@
 <?php 
-    require_once("../classes/award_class.php");
+    require_once dirname(__FILE__)."/../classes/award_class.php";
 
 
     function createAward_ctr($award_name, $award_description, $award_image){

@@ -23,12 +23,8 @@ if (isset($_POST['login'])) {
     } else {
         $_SESSION["log_msg"] = "Invalid Credentials";
         header("Location: Login.php");
-        if($login){
-            foreach($login as $detail){
-                $db_email = $detail['user_email'];
-                $db_password = $detail['password'];
-            }
         }
+<<<<<<< HEAD
 
         // if($db_email === $email && $db_password === $password){
         //     session_start();
@@ -48,6 +44,9 @@ if (isset($_POST['login'])) {
         //     echo "failed";
         // }
     }
+=======
+    
+>>>>>>> 0e0c9270af8c5131970bb37f3328d7e825e9c5d5
 }
 
 

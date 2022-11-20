@@ -1,26 +1,26 @@
 <?php 
-    require_once("../../controllers/awards_controller.php");
+    require_once dirname(__FILE__)."/../../controllers/awards_controller.php";;
 
-    $award_id = $_GET['award_id'];
-    $nominee_name = $_GET['nominee_name'];
-    $nominee_description = $_GET['nominee_description'];
+    $award_id = $_POST['award_id'];
+    $nominee_name = $_POST['nominee_name'];
+    $nominee_description = $_POST['nominee_description'];
 
-   
+    $root_dir = ".\\..\\..\\images\\nominees\\";
+    $upload_root_dir = "./../../images/nominees/";
+    $file = $_FILES["nominee_image"];
+    $file_dest = $root_dir . basename($file["name"]);
+    $upload_file_dest = $upload_root_dir . basename($file["name"]);
+    $file_type = strtolower(pathinfo($file_dest, PATHINFO_EXTENSION));
+
+    $move = move_uploaded_file($file["tmp_name"], $file_dest);
+    if ($move) {
+        $result = addNominee_ctr($award_id, $nominee_name, $nominee_description, $upload_file_dest);
     
-    // add a nominee image
-    $user_file_name = $_FILES['nominee_image']['name'];
-    $target_dir = "../images/nominees/";
-    $nominee_image = $target_dir.$user_file_name;
-    
-    
-    move_uploaded_file($_FILES["nominee_image"]['tmp_name'], $nominee_image);
-
-    $result = addNominee_ctr($award_id, $nominee_name, $nominee_description, $nominee_image);
-
-    if($result){
-        echo "success";
-    }else{
-        echo "failed";
+        if($result){
+            echo "success";
+        }else{
+            echo "failed";
+        }
     }
 
 
