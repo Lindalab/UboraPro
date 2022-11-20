@@ -41,6 +41,7 @@ function awards_form_right_image($award_id, $award_image, $award_name)
     }
     echo "
     </div></div>
+    <input name = 'award_id' type='hidden' value = '$award_id'>
     <div class='u-align-left u-form-group u-form-submit u-label-top'>
               <input type='submit' value='submit' class='u-form-control'>
             
