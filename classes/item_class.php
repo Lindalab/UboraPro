@@ -25,6 +25,11 @@ class item_class extends db_connection
         return $this->db_query($sql);
     }
 
+    function deleteItemCategory($cat_id){
+        $sql="DELETE FROM `cart` WHERE cart_id='$cat_id'";
+        return $this->db_query($sql);
+    }
+
     function getAllFromCategory(){
         $sql="SELECT * FROM `cart`";
         return $this->fetchAllData($sql);

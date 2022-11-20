@@ -11,6 +11,11 @@ function updateCategory_ctr($cat_id,$cat_name){
     return $category->updateCategory($cat_id,$cat_name);
 }
 
+function deleteItemCategory_ctr($cat_id){
+   $category = new item_class();
+    return $category->deleteItemCategory($cat_id);
+}
+
 /**
  * Items
  * */

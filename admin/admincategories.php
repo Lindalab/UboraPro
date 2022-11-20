@@ -1,3 +1,7 @@
+<?php
+require_once dirname(__FILE__)."/../functions/displayAllAwards.php";
+?>
+
 
 
 <!DOCTYPE html>
@@ -12,6 +16,10 @@
     <script class="u-script" type="text/javascript" src="../js/jquery.js" defer=""></script>
     <meta name="generator" content="Nicepage 4.21.12, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" integrity="sha384-xeJqLiuOvjUBq3iGOjvSQSIlwrpqjSHXpduPd6rQpuiM3f5/ijby8pCsnbu5S81n" crossorigin="anonymous">
     
     
     <script type="application/ld+json">{
@@ -85,6 +93,8 @@
         <h2>Manage Categories</h2>
       </header>
       <!-- Add code here -->
+
+      <?php diaplayAllAwards(); ?>
       
     </section>
     

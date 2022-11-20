@@ -96,6 +96,10 @@ require_once("../functions/getAllFood.php");
         </div>
       </div></header>
     <section class="u-align-center u-clearfix u-section-1" id="sec-b8f2">
+    <div>
+      <h3>Order Food</h3>
+    <a href='transport.php' class='u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-3-base u-radius-50 u-btn-2'>Skip</a>
+    </div>
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <div class="u-clearfix u-expanded-width u-gutter-30 u-layout-wrap u-layout-wrap-1">
           <div class="u-gutter-0 u-layout">
@@ -111,6 +115,8 @@ require_once("../functions/getAllFood.php");
         </div>
       </div>
     </section>
+
+   
     
     
     <footer class="u-align-center u-clearfix u-footer u-image u-footer" id="sec-ff33" data-image-width="1280" data-image-height="941"><div class="u-clearfix u-sheet u-valign-top-lg u-valign-top-xl u-sheet-1">

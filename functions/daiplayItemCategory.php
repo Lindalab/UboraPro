@@ -30,11 +30,10 @@ function  myawards( $catId, $catName)
 
 
 // Get All Category
-function showrandCTable_fnc()
+  function showrandCTable_fnc()
 {
     $data = getAllFromCategory_ctr();
-    $catId = NULL;
-    $catName = NULL;
+
     echo "<table class='table'>
     <thead class='table-warning'>
       <tr>
@@ -54,20 +53,23 @@ function showrandCTable_fnc()
 </table>";
 }
 
+
 function showCategoryRow_fnc( $catId, $catName)
 {
     echo "
     <tr>
       <td>$catName</td>
       <td>
-      <a href = '?id=$catId' class='btn btn-primary btn-sm active' role='button' aria-pressed='true'><i class='bi bi-trash-fill'></i></a>
+      <a href = './../actions/items_action/delete_category.php?id=$catId' class='btn btn-warning btn-sm active' role='button' aria-pressed='true'><i class='bi bi-trash-fill'></i></a>
       </td>
       <td>
-      <a href = '?id=$catId&brName=$catName' class='btn btn-primary btn-sm active' role='button' aria-pressed='true'><i class='bi bi-pencil-square'></i></a>
+      <a href = '?id=$catId&brName=$catName' class='btn btn-warning btn-sm active' role='button' aria-pressed='true'><i class='bi bi-pencil-square'></i></a>
       </td>
     </tr>
     ";
 }
+
+
 
 
 ?>
