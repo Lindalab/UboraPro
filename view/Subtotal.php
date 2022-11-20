@@ -102,10 +102,10 @@
                         $user_id = $_SESSION['user_id'];
                       $ip_address = $_SERVER['REMOTE_ADDR'];
                       $total += subtotalTicket($user_id, $ip_address);
-                      $total += item_subtotal($user_id, $ip_address)
+                      $total += item_subtotal($user_id, $ip_address);
                     
-                      
-                    ?>
+                      $_SESSION['total'] = $total;
+                     ?>
                     
                   </tbody>
                 </table>
@@ -173,7 +173,7 @@
                         </tbody>
                       </table>
                     </div>
-                    <a href="" onclick="payWithPaystack()" class="u-border-none u-btn u-button-style u-cart-checkout-btn u-btn-4">Proceed to Checkout</a>
+                    <a href="" onclick="" class="u-border-none u-btn u-button-style u-cart-checkout-btn u-btn-4">Proceed to Checkout</a>
                   </div>
                 </div>
               </div>

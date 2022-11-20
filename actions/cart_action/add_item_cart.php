@@ -11,8 +11,13 @@
         session_start();
     }
     $user_id = $_SESSION['user_id'];
-    
-    $result = addToItemsCart_ctr($item_id,$ip_address,$user_id,$item_qty);
+    if(showAPersonTicketCart_ctr($user_id,$ip_address)){
+        echo "<script>alert('failed')</script>";
+        header("location:../view/transport.php");
+        return;
+    }
+
+        $result = addToItemsCart_ctr($item_id,$ip_address,$user_id,$item_qty);
 
     if($result){
         echo "<script>alert('success')</script>";

@@ -1,3 +1,6 @@
+<?php 
+  session_start();
+?>
 <!DOCTYPE html>
 <html style="font-size: 16px;" lang="en"><head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -5,16 +8,9 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <title>Payment</title>
-<<<<<<< HEAD
-    <link rel="stylesheet" href="nicepage.css" media="screen">
-<link rel="stylesheet" href="Payment.css" media="screen">
-    <script class="u-script" type="text/javascript" src="../js/jquery.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="../js/nicepage.js" defer=""></script>
-=======
     <link rel="stylesheet" href="./../css/nicepage.css" media="screen">
 <link rel="stylesheet" href="./../css/Payment.css" media="screen">
     <script class="u-script" type="text/javascript" src="./../js/jquery.js" defer=""></script>
->>>>>>> 254e7fd6173974745db5d4a9a9e83aa611203d4d
     <meta name="generator" content="Nicepage 4.21.12, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     
@@ -33,11 +29,7 @@
   </head>
   <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-white u-header" id="sec-ef51"><div class="u-clearfix u-sheet u-sheet-1">
         <a href="https://nicepage.com" class="u-image u-logo u-image-1" data-image-width="1920" data-image-height="1080">
-<<<<<<< HEAD
-          <img src="../images/ubora2.png" class="u-logo-image u-logo-image-1">
-=======
           <img src="./../images/ubora2.png" class="u-logo-image u-logo-image-1">
->>>>>>> 254e7fd6173974745db5d4a9a9e83aa611203d4d
         </a>
         <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
           <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
@@ -109,47 +101,20 @@
           <form action="https://forms.nicepagesrv.com/Form/Process" class="u-clearfix u-form-spacing-33 u-form-vertical u-inner-form" source="email" id="form" name="form" style="padding: 50px;">
             <div class="u-form-group u-form-name">
               <label for="name-a85c" class="u-label">Paid Amount</label>
-              <input type="text" placeholder="Amount" id="amount" name="amount" value="45" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="" disabled>
+              <input type="text" placeholder="Amount" id="amount" name="amount" value="<?php echo $_SESSION['total']; ?>" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="" disabled>
             </div>
-            <div class="u-form-radio-group u-form-group u-form-input-layout-horizontal u-form-group-2">
-              <label class="u-label">Payment Currency</label>
-              <div class="u-form-radio-group-wrapper">
-                <div class="u-input-row">
-                  <input id="field-b372" type="radio" value="USD" name="radio[]">
-                  <label class="u-label" for="field-b372">USD</label>
-                </div>
-                <div class="u-input-row">
-                  <input id="field-a44a" type="radio" value="GHS" name="radio[]">
-                  <label class="u-label" for="field-a44a">GHS</label>
-                </div>
-              </div>
-            </div>
-            <div class="u-form-radio-group u-form-group u-form-group-4">
-              <label class="u-label">Payment option</label>
-              <div class="u-form-radio-group-wrapper">
-                <div class="u-input-row">
-                  <input id="field-ab49" type="radio" value="Credit card" name="radio-1[]">
-                  <label class="u-label" for="field-ab49">Credit card</label>
-                </div>
-                <div class="u-input-row">
-                  <input id="field-7068" type="radio" value="Mobile Money" name="radio-1[]">
-                  <label class="u-label" for="field-7068">Mobile Money</label>
-                </div>
-              </div>
-            </div>
+           
+           
             <div class="u-align-center u-form-group u-form-submit">
-              <input type="hidden" name="email" id="email" value="david.quarshie@ashesi.edu.gh">
+              
+              <input type="hidden" name="email" id="email" value="<?php  echo $_SESSION['user_email']; ?>">
               <input type="submit" value="Make Payment" class="u-btn u-btn-submit u-button-style" onclick="payWithPaystack(event)">
             </div>
             <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
             <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
           </form>
         </div>
-<<<<<<< HEAD
-        <img class="u-image u-image-contain u-image-default u-image-1" src="../images/ubora2.png" alt="" data-image-width="1920" data-image-height="1080">
-=======
         <img class="u-image u-image-contain u-image-default u-image-1" src="./../images/ubora2.png" alt="" data-image-width="1920" data-image-height="1080">
->>>>>>> 254e7fd6173974745db5d4a9a9e83aa611203d4d
       </div>
     </section>
     
