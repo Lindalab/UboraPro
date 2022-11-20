@@ -57,7 +57,10 @@
         </div>
       </div></header>
     <section class="u-clearfix u-section-1" id="sec-8670">
-      <h1 class="u-text u-text-default u-text-1">Admin Dashboard</h1>
+      <div class="u-text u-text-default u-text-1">   
+        <h1>Admin Dashboard</h1>
+        <a href="./adminstatistics.php" style="text-align: center;">View Summary Statistics</a>
+      </div>
       <div class="u-list u-list-1">
         <div class="u-repeater u-repeater-1">
           <div class="u-border-2 u-border-black u-container-style u-list-item u-repeater-item">

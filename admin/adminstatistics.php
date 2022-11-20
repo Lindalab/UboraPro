@@ -5,10 +5,9 @@
     <meta name="keywords" content="UboraPro Statistics, 92, 25, 87">
     <meta name="description" content="">
     <title>adminstatistics</title>
-    <link rel="stylesheet" href="nicepage.css" media="screen">
-<link rel="stylesheet" href="adminstatistics.css" media="screen">
-    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <link rel="stylesheet" href="./../css/nicepage.css" media="screen">
+<link rel="stylesheet" href="./../css/adminstatistics.css" media="screen">
+    <script class="u-script" type="text/javascript" src="./../js/jquery.js" defer=""></script>
     <meta name="generator" content="Nicepage 4.21.12, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     
@@ -17,7 +16,7 @@
 		"@context": "http://schema.org",
 		"@type": "Organization",
 		"name": "",
-		"logo": "images/ubora2.png"
+		"logo": "./../images/ubora2.png"
 }</script>
     <meta name="theme-color" content="#478ac9">
     <meta property="og:title" content="adminstatistics">
@@ -25,7 +24,7 @@
   </head>
   <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-white u-header" id="sec-ef51"><div class="u-clearfix u-sheet u-sheet-1">
         <a href="https://nicepage.com" class="u-image u-logo u-image-1" data-image-width="1920" data-image-height="1080">
-          <img src="../images/ubora2.png" class="u-logo-image u-logo-image-1">
+          <img src="./../images/ubora2.png" class="u-logo-image u-logo-image-1">
         </a>
         <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
           <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
@@ -71,6 +70,18 @@
               <div class="u-container-layout u-similar-container u-container-layout-3">
                 <h1 class="u-text u-text-body-color u-title u-text-6" data-animation-name="counter" data-animation-event="scroll" data-animation-duration="3000">87</h1>
                 <p class="u-text u-text-body-color u-text-7">Total Number of Votes</p>
+              </div>
+            </div>
+            <div class="u-align-center u-container-style u-custom-item u-list-item u-palette-1-base u-repeater-item u-list-item-3">
+              <div class="u-container-layout u-similar-container u-container-layout-3">
+                <h1 class="u-text u-text-body-color u-title u-text-6" data-animation-name="counter" data-animation-event="scroll" data-animation-duration="3000">90</h1>
+                <p class="u-text u-text-body-color u-text-7">Total Number of VIP tickets</p>
+              </div>
+            </div>
+            <div class="u-align-center u-container-style u-custom-item u-list-item u-palette-1-base u-repeater-item u-list-item-3">
+              <div class="u-container-layout u-similar-container u-container-layout-3">
+                <h1 class="u-text u-text-body-color u-title u-text-6" data-animation-name="counter" data-animation-event="scroll" data-animation-duration="3000">78</h1>
+                <p class="u-text u-text-body-color u-text-7">Total Number of Votes for Best award</p>
               </div>
             </div>
           </div>
