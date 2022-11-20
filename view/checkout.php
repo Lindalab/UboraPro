@@ -5,16 +5,9 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <title>Payment</title>
-<<<<<<< HEAD
-    <link rel="stylesheet" href="nicepage.css" media="screen">
-<link rel="stylesheet" href="Payment.css" media="screen">
-    <script class="u-script" type="text/javascript" src="../js/jquery.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="../js/nicepage.js" defer=""></script>
-=======
     <link rel="stylesheet" href="./../css/nicepage.css" media="screen">
 <link rel="stylesheet" href="./../css/Payment.css" media="screen">
     <script class="u-script" type="text/javascript" src="./../js/jquery.js" defer=""></script>
->>>>>>> 254e7fd6173974745db5d4a9a9e83aa611203d4d
     <meta name="generator" content="Nicepage 4.21.12, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     
@@ -33,11 +26,7 @@
   </head>
   <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-white u-header" id="sec-ef51"><div class="u-clearfix u-sheet u-sheet-1">
         <a href="https://nicepage.com" class="u-image u-logo u-image-1" data-image-width="1920" data-image-height="1080">
-<<<<<<< HEAD
-          <img src="../images/ubora2.png" class="u-logo-image u-logo-image-1">
-=======
           <img src="./../images/ubora2.png" class="u-logo-image u-logo-image-1">
->>>>>>> 254e7fd6173974745db5d4a9a9e83aa611203d4d
         </a>
         <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
           <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
@@ -145,11 +134,7 @@
             <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
           </form>
         </div>
-<<<<<<< HEAD
-        <img class="u-image u-image-contain u-image-default u-image-1" src="../images/ubora2.png" alt="" data-image-width="1920" data-image-height="1080">
-=======
         <img class="u-image u-image-contain u-image-default u-image-1" src="./../images/ubora2.png" alt="" data-image-width="1920" data-image-height="1080">
->>>>>>> 254e7fd6173974745db5d4a9a9e83aa611203d4d
       </div>
     </section>
     
