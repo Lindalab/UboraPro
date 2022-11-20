@@ -187,7 +187,7 @@
         </div>
       </div><br>
       <div>
-      <a href='privilleges.php?Logout=Logout' class='u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-3-base u-radius-50 u-btn-2'>Logout</a>
+      <a href='../index.php' class='u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-3-base u-radius-50 u-btn-2'>Back</a>
 </div>
 <div class="u-rotation-parent u-rotation-parent-1">
         <div class="u-rotate-180 u-shape u-shape-svg u-text-palette-2-dark-1 u-shape-2">

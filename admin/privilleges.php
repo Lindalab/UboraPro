@@ -1,5 +1,5 @@
 <?php
-require("../settings/core.php");
+require_once dirname(__FILE__)."/../settings/core.php";
 
 
 function checkUserRoleToDisplay()
@@ -9,16 +9,16 @@ function checkUserRoleToDisplay()
             if (checkUserRole($_SESSION['user_role'])) {
              
                 echo "
-                <a href='./admin/admin.php' class='u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-3-base u-radius-50 u-btn-1'>Login As Admin</a>
+                <a href='./admin/admin.php' class='u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-3-base u-radius-50 u-btn-1'>Admin Privilleges</a>
 
-                <a href='../login/Login.php?Logout=Logout' class='u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-3-base u-radius-50 u-btn-2'>Logout</a>
+                <a href='./admin/privilleges.php?Logout=Logout' class='u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-3-base u-radius-50 u-btn-2'>Logout</a>
                 ";
             } else {
                 
                 echo "
                 <a href='./view/voting.php' class='u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-3-base u-radius-50 u-btn-1'>vote Now!</a>
                 <a href='./view/Tickets.php' class='u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-3-base u-radius-50 u-btn-2'> Buy tickets!</a>
-                <a href='../login/Login.php?Logout=Logout' class='u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-3-base u-radius-50 u-btn-2'>Logout</a>
+                <a href='./admin/privilleges.php?Logout=Logout' class='u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-3-base u-radius-50 u-btn-2'>Logout</a>
                 ";
             }
         }
