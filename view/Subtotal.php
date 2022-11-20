@@ -173,7 +173,7 @@
                         </tbody>
                       </table>
                     </div>
-                    <a href="" onclick="" class="u-border-none u-btn u-button-style u-cart-checkout-btn u-btn-4">Proceed to Checkout</a>
+                    <a href="checkout.php" onclick="" class="u-border-none u-btn u-button-style u-cart-checkout-btn u-btn-4">Proceed to Checkout</a>
                   </div>
                 </div>
               </div>

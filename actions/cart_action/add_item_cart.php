@@ -16,12 +16,16 @@
         header("location:../view/transport.php");
         return;
     }
+    if(showAPersonItemsCart_ctr($user_id, $ip_address)){
+        header("location:./../../view/transport.php");
+        return;
+    }
 
         $result = addToItemsCart_ctr($item_id,$ip_address,$user_id,$item_qty);
 
     if($result){
         echo "<script>alert('success')</script>";
-        header("location:../view/transport.php");
+        header("location:./../../view/transport.php");
     }else{
         echo "<script>alert('failed')</script>";
     }

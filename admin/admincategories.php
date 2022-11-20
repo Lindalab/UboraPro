@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html style="font-size: 16px;" lang="en"><head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -82,6 +84,8 @@
       <header>
         <h2>Manage Categories</h2>
       </header>
+      <!-- Add code here -->
+      
     </section>
     
     

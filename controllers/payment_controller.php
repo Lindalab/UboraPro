@@ -1,5 +1,5 @@
 <?php 
-    require_once("../classes/payment_class.php");
+    require_once dirname(__FILE__)."/../classes/payment_class.php";
 
     function makePayment_ctr($paid_amt,$user_id,$order_id,$currency,$payment_date){
         $payment = new Payment;

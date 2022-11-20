@@ -43,8 +43,8 @@
       $currency = $res['data']['currency'];
       $payment_date = date("Y-m-d");
   
-      $result = makePayment_ctr($paid_amt,$user_id,$order_id,$currency,$payment_date);
-
+      $result = makePayment_ctr($amount,$user_id,$order_id,$currency,$payment_date);
+      
       
       $ip_add = $_SERVER['REMOTE_ADDR'];
 
