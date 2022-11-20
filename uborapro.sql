@@ -86,7 +86,7 @@ CREATE TABLE `items` (
 
 CREATE TABLE `item_cart` (
   `item_id` int(11) NOT NULL,
-  `ip_address` int(50) NOT NULL,
+  `ip_address` varchar(50) NOT NULL,
   `user_id` int(11) NOT NULL,
   `item_qty` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -230,7 +230,7 @@ CREATE TABLE `tickethistroy` (
 
 CREATE TABLE `ticket_cart` (
   `ticket_id` int(11) NOT NULL,
-  `ip_address` int(50) NOT NULL,
+  `ip_address` varchar(50) NOT NULL,
   `user_id` int(11) NOT NULL,
   `ticket_qty` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -440,9 +440,8 @@ ALTER TABLE `user`
 --
 -- Constraints for table `items`
 --
-ALTER TABLE `items`
-  ADD CONSTRAINT `items_ibfk_1` FOREIGN KEY (`item_cat`) REFERENCES `items` (`item_id`);
-
+ ALTER TABLE `items`
+  ADD CONSTRAINT `items_ibfk_1` FOREIGN KEY (`item_cat`) REFERENCES `cart`(`cat_id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 --
 -- Constraints for table `item_cart`
 --

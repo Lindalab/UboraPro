@@ -15,6 +15,7 @@
 
     if($result){
         echo "success";
+        header("location: ./../../admin/admin.php");
     }else{
         echo "failed";
     }

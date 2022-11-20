@@ -48,6 +48,21 @@ class Tickets extends db_connection{
         $sql="DELETE FROM `ticket_cart` WHERE  `ticket_id`='$ticket_id' and `ip_address`='$ip_address' and `user_id`='$user_id' ";
         return $this->db_query($sql);
     }
+
+
+    function CountTotalVotes(){
+        $sql = "SELECT `user_id` FROM `vote`";
+        $result= $this->fetchAllData($sql);
+        return $this->countData();
+
+    }
+
+    function getTotalUsers(){
+        $sql = "SELECT DISTINCT(`user_id`) FROM `payment`";
+        $result= $this->fetchAllData($sql);
+        return $this->countData();
+    }
+
 }
 
 

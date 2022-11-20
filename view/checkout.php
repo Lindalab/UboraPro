@@ -5,13 +5,18 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <title>Payment</title>
+<<<<<<< HEAD
     <link rel="stylesheet" href="nicepage.css" media="screen">
 <link rel="stylesheet" href="Payment.css" media="screen">
     <script class="u-script" type="text/javascript" src="../js/jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="../js/nicepage.js" defer=""></script>
+=======
+    <link rel="stylesheet" href="./../css/nicepage.css" media="screen">
+<link rel="stylesheet" href="./../css/Payment.css" media="screen">
+    <script class="u-script" type="text/javascript" src="./../js/jquery.js" defer=""></script>
+>>>>>>> 254e7fd6173974745db5d4a9a9e83aa611203d4d
     <meta name="generator" content="Nicepage 4.21.12, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
-    
     
     <script type="application/ld+json">{
 		"@context": "http://schema.org",
@@ -19,13 +24,20 @@
 		"name": "",
 		"logo": "images/ubora2.png"
 }</script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" async defer></script>
+    <script src="https://js.paystack.co/v2/inline.js" async defer></script>
+    <script src="./../js/payment/paystack.js" async defer></script>
     <meta name="theme-color" content="#478ac9">
     <meta property="og:title" content="Payment">
     <meta property="og:type" content="website">
   </head>
   <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-white u-header" id="sec-ef51"><div class="u-clearfix u-sheet u-sheet-1">
         <a href="https://nicepage.com" class="u-image u-logo u-image-1" data-image-width="1920" data-image-height="1080">
+<<<<<<< HEAD
           <img src="../images/ubora2.png" class="u-logo-image u-logo-image-1">
+=======
+          <img src="./../images/ubora2.png" class="u-logo-image u-logo-image-1">
+>>>>>>> 254e7fd6173974745db5d4a9a9e83aa611203d4d
         </a>
         <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
           <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
@@ -94,52 +106,50 @@
     <section class="u-clearfix u-section-1" id="sec-94e1">
       <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-align-center u-form u-form-1">
-          <form action="https://forms.nicepagesrv.com/Form/Process" class="u-clearfix u-form-spacing-33 u-form-vertical u-inner-form" source="email" name="form" style="padding: 50px;">
+          <form action="https://forms.nicepagesrv.com/Form/Process" class="u-clearfix u-form-spacing-33 u-form-vertical u-inner-form" source="email" id="form" name="form" style="padding: 50px;">
             <div class="u-form-group u-form-name">
               <label for="name-a85c" class="u-label">Paid Amount</label>
-              <input type="text" placeholder="Amount" id="name-a85c" name="amount" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+              <input type="text" placeholder="Amount" id="amount" name="amount" value="45" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="" disabled>
             </div>
-            <div class="u-form-checkbox-group u-form-group u-form-input-layout-horizontal u-form-group-2">
+            <div class="u-form-radio-group u-form-group u-form-input-layout-horizontal u-form-group-2">
               <label class="u-label">Payment Currency</label>
-              <div class="u-form-checkbox-group-wrapper">
+              <div class="u-form-radio-group-wrapper">
                 <div class="u-input-row">
-                  <input id="field-b372" type="checkbox" value="USD" name="checkbox[]">
+                  <input id="field-b372" type="radio" value="USD" name="radio[]">
                   <label class="u-label" for="field-b372">USD</label>
                 </div>
                 <div class="u-input-row">
-                  <input id="field-a44a" type="checkbox" value="GHS" name="checkbox[]">
+                  <input id="field-a44a" type="radio" value="GHS" name="radio[]">
                   <label class="u-label" for="field-a44a">GHS</label>
                 </div>
               </div>
             </div>
-            <div class="u-form-date u-form-group u-form-group-3">
-              <label for="date-4a1f" class="u-label">Payment Date</label>
-              <input type="date" placeholder="MM/DD/YYYY" id="date-4a1f" name="date" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
-            </div>
-            <div class="u-form-checkbox-group u-form-group u-form-group-4">
+            <div class="u-form-radio-group u-form-group u-form-group-4">
               <label class="u-label">Payment option</label>
-              <div class="u-form-checkbox-group-wrapper">
+              <div class="u-form-radio-group-wrapper">
                 <div class="u-input-row">
-                  <input id="field-ab49" type="checkbox" value="Credit card" name="checkbox-1[]">
+                  <input id="field-ab49" type="radio" value="Credit card" name="radio-1[]">
                   <label class="u-label" for="field-ab49">Credit card</label>
                 </div>
                 <div class="u-input-row">
-                  <input id="field-7068" type="checkbox" value="Mobile Money" name="checkbox-1[]">
+                  <input id="field-7068" type="radio" value="Mobile Money" name="radio-1[]">
                   <label class="u-label" for="field-7068">Mobile Money</label>
                 </div>
               </div>
             </div>
             <div class="u-align-center u-form-group u-form-submit">
-              <a href="#" class="u-btn u-btn-submit u-button-style">Make Payment</a>
-              <input type="submit" value="submit" class="u-form-control-hidden">
+              <input type="hidden" name="email" id="email" value="david.quarshie@ashesi.edu.gh">
+              <input type="submit" value="Make Payment" class="u-btn u-btn-submit u-button-style" onclick="payWithPaystack(event)">
             </div>
             <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
             <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
-            <input type="hidden" value="" name="recaptchaResponse">
-            <input type="hidden" name="formServices" value="d544b4c863795dc104fe754b85fafb8a">
           </form>
         </div>
+<<<<<<< HEAD
         <img class="u-image u-image-contain u-image-default u-image-1" src="../images/ubora2.png" alt="" data-image-width="1920" data-image-height="1080">
+=======
+        <img class="u-image u-image-contain u-image-default u-image-1" src="./../images/ubora2.png" alt="" data-image-width="1920" data-image-height="1080">
+>>>>>>> 254e7fd6173974745db5d4a9a9e83aa611203d4d
       </div>
     </section>
     
@@ -147,16 +157,5 @@
     <footer class="u-align-center u-clearfix u-footer u-image u-footer" id="sec-ff33" data-image-width="1280" data-image-height="941"><div class="u-clearfix u-sheet u-valign-top-lg u-valign-top-xl u-sheet-1">
         <p class="u-small-text u-text u-text-body-color u-text-variant u-text-1">(c) DELC&nbsp; All Rights reserved</p>
       </div></footer>
-    <section class="u-backlink u-clearfix u-grey-80">
-      <a class="u-link" href="https://nicepage.com/website-mockup" target="_blank">
-        <span>Website Mockup</span>
-      </a>
-      <p class="u-text">
-        <span>created with</span>
-      </p>
-      <a class="u-link" href="https://nicepage.studio" target="_blank">
-        <span>Website Builder</span>
-      </a>. 
-    </section>
   
 </body></html>
