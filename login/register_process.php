@@ -13,7 +13,7 @@
         $check = checkEmail_ctr($user_email);
 
         if($check > 0){
-            $_SESSION["reg_msg"] = "email already exist";
+            $_SESSION["reg_msg"] = "User already exist";
             header("Location: Register.php");
             echo "email already exist";
             return;

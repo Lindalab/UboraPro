@@ -26,6 +26,11 @@
     <meta property="og:type" content="website">
   </head>
   <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-white u-header" id="sec-ef51"><div class="u-clearfix u-sheet u-sheet-1">
+    <?php
+      if (isset($_SESSION["reg_msg"])) {
+        echo '<script>alert('. $_SESSION["reg_msg"] .')</script>';
+      }
+    ?>
         <a href="https://nicepage.com" class="u-image u-logo u-image-1" data-image-width="1920" data-image-height="1080">
           <img src="../images/ubora2.png" class="u-logo-image u-logo-image-1">
         </a>
