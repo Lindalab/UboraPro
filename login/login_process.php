@@ -17,6 +17,7 @@ if (isset($_POST['login'])) {
         $_SESSION['phone_number'] = $login['phone_number'];
         $_SESSION['password'] = $login['password'];
         $_SESSION['user_role'] = $login['user_role'];
+        $_SESSION['userLogin']=true;   
         
         header("Location: ../index.php");
     } else {
@@ -29,22 +30,23 @@ if (isset($_POST['login'])) {
             }
         }
 
-        if($db_email === $email && $db_password === $password){
-            session_start();
-            $user_detail =  getAUserDetails_ctr($user_email);
-            foreach($user_detail as $user){
-                $_SESSION['user_id'] = $user['user_id'];
-                $_SESSION['user_name'] = $user['user_name'];
-                $_SESSION['user_email'] = $user['user_email'];
-                $_SESSION['user_school_id'] = $user['user_school_id'];
-                $_SESSION['phone_number'] = $user['phone_number'];
-                $_SESSION['password'] = $user['password'];
-                $_SESSION['user_role'] = $user['user_role'];       
-            }    
-            echo "success";
-        }else{
-            echo "failed";
-        }
+        // if($db_email === $email && $db_password === $password){
+        //     session_start();
+        //     $user_detail =  getAUserDetails_ctr($user_email);
+        //     foreach($user_detail as $user){
+        //         $_SESSION['user_id'] = $user['user_id'];
+        //         $_SESSION['user_name'] = $user['user_name'];
+        //         $_SESSION['user_email'] = $user['user_email'];
+        //         $_SESSION['user_school_id'] = $user['user_school_id'];
+        //         $_SESSION['phone_number'] = $user['phone_number'];
+        //         $_SESSION['password'] = $user['password'];
+        //         $_SESSION['user_role'] = $user['user_role']; 
+                  
+        //     }    
+        //     echo "success";
+        // }else{
+        //     echo "failed";
+        // }
     }
 }
 

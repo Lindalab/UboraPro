@@ -52,6 +52,11 @@ class item_class extends db_connection
         return $this->fetchAllData($sql);
     }
 
+    function allAnItemCatgeory($item_cat){
+        $sql="SELECT * FROM `items` where item_cat='$item_cat' ";
+        return $this->fetchAllData($sql);
+    }
+
 
 	
 

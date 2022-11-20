@@ -1,3 +1,7 @@
+<?php
+require("admin/privilleges.php");
+?>
+
 <!DOCTYPE html>
 <html style="font-size: 16px;" lang="en"><head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -94,8 +98,9 @@
     <section class="u-clearfix u-section-1" id="sec-713c">
       <div class="u-clearfix u-sheet u-sheet-1">
         <img class="u-image u-image-default u-image-1" src="./images/ubora.jpg" alt="" data-image-width="724" data-image-height="1024">
-        <a href="./view/voting.php" class="u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-3-base u-radius-50 u-btn-1">vote Now!</a>
-        <a href="./view/Tickets.php" class="u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-3-base u-radius-50 u-btn-2"> Buy tickets!</a>
+        <?php checkUserRoleToDisplay(); ?>
+        <!-- <a href="./view/voting.php" class="u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-3-base u-radius-50 u-btn-1">vote Now!</a>
+        <a href="./view/Tickets.php" class="u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-3-base u-radius-50 u-btn-2"> Buy tickets!</a> -->
       </div>
     </section>
     

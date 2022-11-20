@@ -40,4 +40,9 @@ function updateCategory_ctr($cat_id,$cat_name){
     return $item->allItems();
  }
 
+ function allAnItemCatgeory_ctr($item_cat){
+   $item = new item_class();
+   return $item->allAnItemCatgeory($item_cat);
+ }
+
 ?>

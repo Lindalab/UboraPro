@@ -1,3 +1,7 @@
+<?php
+require_once("../functions/getAllFood.php");
+?>
+
 <!DOCTYPE html>
 <html style="font-size: 16px;" lang="en"><head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -104,6 +108,10 @@
                   <a href="./transport.php?fid=1&tid=" class="u-btn u-button-style u-grey-15 u-hover-palette-2-base u-btn-1">Order Now</a>
                 </div>
               </div>
+
+              <?php
+                    showfoodItem_fnc(1);
+              ?>
               <div class="u-align-center u-container-style u-layout-cell u-size-20 u-size-20-md u-layout-cell-2">
                 <div class="u-border-2 u-border-grey-50 u-container-layout u-container-layout-2">
                   <img class="u-image u-image-default u-image-2" src="../images/f6c419d4661fc1c4a385729a83f7727e109af29168aea2df63f51ecb9c5cffb9f2933915914b508baca080844b9c1ca122150c3fb5a3b9703a684a_1280.jpg" alt="" data-image-width="1280" data-image-height="850">

@@ -16,6 +16,7 @@
 
     if($result){
         echo "<script>alert('success')</script>";
+        header("location:../view/transport.php");
     }else{
         echo "<script>alert('failed')</script>";
     }

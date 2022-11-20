@@ -18,12 +18,13 @@
 
 
     function ticketName($ticket_id,$ticketName,$ticket_price,$ticket_description){
+        
         echo "<div class='u-align-center u-container-style u-layout-cell u-left-cell u-size-20 u-size-20-md u-layout-cell-1'>
         <div class='u-border-2 u-border-grey-50 u-container-layout u-container-layout-1'>
           <h4 class='u-text u-text-1'>$ticketName</h4>
           <h2 class='u-text u-text-2'>$ticket_price ghc</h2>
           <p class='u-text u-text-3'>$ticket_description</p>
-          <a href='./?Id=$ticket_id' class='u-btn u-button-style u-grey-15 u-hover-palette-2-base u-btn-1'>Order Now</a>
+          <a href='..\actions\cart_action\add_tickets_cart.php?ticket_id=$ticket_id' class='u-btn u-button-style u-grey-15 u-hover-palette-2-base u-btn-2'>Order Now</a>
         </div>
       </div>";
        
