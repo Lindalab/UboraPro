@@ -1,5 +1,5 @@
 <?php 
-    require_once dir(__FILE__)."/../../controllers/cart_controller.php";
+    require_once dir(__FILE__)."/../controllers/cart_controller.php";
 
     $ticket_id = $_GET['ticket_id'];
     $ticket_qty = 1;
