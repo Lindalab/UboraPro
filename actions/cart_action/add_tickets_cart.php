@@ -1,9 +1,5 @@
 <?php 
-<<<<<<< HEAD
-    require_once dirname(__FILE__)."/../controllers/cart_controller.php";
-=======
     require_once dirname(__FILE__)."/../../controllers/cart_controller.php";
->>>>>>> 254e7fd6173974745db5d4a9a9e83aa611203d4d
 
     $ticket_id = $_GET['ticket_id'];
     $ticket_qty = 1;
@@ -16,7 +12,7 @@
 
     if($result){
         echo "<script>alert('success')</script>";
-        header("location: ./../../admin/admin.php");
+        header("location: ./../../view/food.php");
     }else{
         echo "<script>alert('failed')</script>";
     }

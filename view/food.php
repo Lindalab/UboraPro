@@ -100,34 +100,12 @@ require_once("../functions/getAllFood.php");
         <div class="u-clearfix u-expanded-width u-gutter-30 u-layout-wrap u-layout-wrap-1">
           <div class="u-gutter-0 u-layout">
             <div class="u-layout-row">
-              <div class="u-align-center u-container-style u-layout-cell u-left-cell u-size-20 u-size-20-md u-layout-cell-1">
-                <div class="u-border-2 u-border-grey-50 u-container-layout u-container-layout-1">
-                  <img class="u-image u-image-default u-image-1" src="../images/e13f7d1c62dc8cdaf201de18ae6bcc7760b240645bb4d44dae285874f55b952c2cc5d2b4879bd22fec3ac199c3fc5821d9572659f5d775f7f0455f_1280.jpg" alt="" data-image-width="1280" data-image-height="853">
-                  <h2 class="u-text u-text-1">100 ghc</h2>
-                  <p class="u-text u-text-2">Jollof package</p>
-                  <a href="./transport.php?fid=1&tid=" class="u-btn u-button-style u-grey-15 u-hover-palette-2-base u-btn-1">Order Now</a>
-                </div>
-              </div>
-
+              
               <?php
                     showfoodItem_fnc(1);
               ?>
-              <div class="u-align-center u-container-style u-layout-cell u-size-20 u-size-20-md u-layout-cell-2">
-                <div class="u-border-2 u-border-grey-50 u-container-layout u-container-layout-2">
-                  <img class="u-image u-image-default u-image-2" src="../images/f6c419d4661fc1c4a385729a83f7727e109af29168aea2df63f51ecb9c5cffb9f2933915914b508baca080844b9c1ca122150c3fb5a3b9703a684a_1280.jpg" alt="" data-image-width="1280" data-image-height="850">
-                  <h2 class="u-text u-text-3">150 ghc</h2>
-                  <p class="u-text u-text-4">Spaghetti Package</p>
-                  <a href="./transport.php?fid=2&tid=" class="u-btn u-button-style u-grey-15 u-hover-palette-2-base u-btn-2">Order Now</a>
-                </div>
-              </div>
-              <div class="u-align-center u-container-style u-layout-cell u-right-cell u-size-20 u-size-20-md u-layout-cell-3">
-                <div class="u-border-2 u-border-grey-50 u-container-layout u-container-layout-3">
-                  <img class="u-image u-image-default u-image-3" src="../images/07e4604caa54baffcb17d73bfa89eb8831cedafdb80768039ee8655070a43bf154987f6f1c64b17c42b57dee288de789b60d17eac273d5657a258c_1280.jpg" alt="" data-image-width="719" data-image-height="1280">
-                  <h2 class="u-text u-text-5">250 ghc</h2>
-                  <p class="u-text u-text-6">Local dish package</p>
-                  <a href="./transport.php?fid=3&tid=" class="u-btn u-button-style u-grey-15 u-hover-palette-2-base u-btn-3">Order Now</a>
-                </div>
-              </div>
+             
+              
             </div>
           </div>
         </div>

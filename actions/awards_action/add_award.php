@@ -5,8 +5,8 @@
     $award_description = $_POST['award_description'];
     // $award_image = $_POST['award_image'];
 
-    $root_dir = ".\\..\\..\\images\\awards\\";
-    $upload_root_dir = "./../../images/awards/";
+    $root_dir = ".\\..\\images\\awards\\";
+    $upload_root_dir = "./../images/awards/";
     $file = $_FILES["award_image"];
     $file_dest = $root_dir . basename($file["name"]);
     $upload_file_dest = $upload_root_dir . basename($file["name"]);
