@@ -71,7 +71,7 @@ require_once("../functions/awards_functions.php");
                 </li>
                 <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Tickets.php">Tickets</a>
                 </li>
-                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Voting.php">Voting</a>
+                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="voting.php">Voting</a>
                 </li>
               </ul>
             </div>
@@ -138,17 +138,47 @@ require_once("../functions/awards_functions.php");
   </header>
   <section class="u-clearfix u-section-1" id="sec-bf0a">
     <div class="u-clearfix u-sheet u-valign-top-sm u-sheet-1">
-     
+
       <?php
 
-          // $c = 2;
-          // while($c >0){
-          display_all_awards();
-        //     $c--;
-        // }
+      // $c = 2;
+      // while($c >0){
+      display_all_awards();
+      //     $c--;
+      // }
       ?>
-    
-  
+
+      <img class="u-expanded-width-xs u-image u-image-circle u-preserve-proportions u-image-3" src="../images/ubora4.jpeg" alt="" data-image-width="906" data-image-height="1280">
+      <div class="u-form u-form-2">
+        <form action="./../actions/user_action/vote_process.php" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" name="form" style="padding: 10px;">
+          <div class="u-form-group u-form-input-layout-horizontal u-form-radiobutton u-label-top u-form-group-3">
+            <label class="u-label u-spacing-0 u-label-6">Vote for Community Outreach</label>
+            <div class="u-form-radio-button-wrapper">
+              <div class="u-input-row">
+                <input type="radio" name="radiobutton" value="Eric" required="required">
+                <label class="u-label" for="radiobutton">Eric</label>
+              </div>
+              <div class="u-input-row">
+                <input type="radio" name="radiobutton" value="Linda" required="required">
+                <label class="u-label" for="radiobutton">Linda</label>
+              </div>
+              <div class="u-input-row">
+                <input type="radio" name="radiobutton" value="Dave" required="required">
+                <label class="u-label" for="radiobutton">Dave</label>
+              </div>
+              <div class="u-input-row">
+                <input type="radio" name="radiobutton" value="Carol" required="required">
+                <label class="u-label" for="radiobutton">Carol</label>
+              </div>
+            </div>
+          </div>
+          <div class="u-align-left u-form-group u-form-submit u-label-top">
+            <input type="submit" value="submit" class="u-form-control">
+            <!-- <a href="#" class="u-btn u-btn-submit u-button-style">Submit</a> -->
+          </div>
+
+        </form>
+      </div>
 
     </div>
 
