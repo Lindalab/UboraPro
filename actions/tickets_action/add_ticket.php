@@ -9,7 +9,8 @@
     $ticket_type = $_POST['ticket_type'];
     $ticket_price = $_POST['ticket_price'];
     $ticket_description=$_POST['ticket_description'];
-     $valid_period = $_POST['valid_period'];
+    $ticket_date= $_POST['valid_period'];
+    //  $valid_period = $_POST['valid_period'];
     
     $result = createTicket_ctr($ticket_status, $ticket_type, $ticket_price,$ticket_description, $ticket_date);
 

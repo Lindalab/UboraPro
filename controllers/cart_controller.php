@@ -24,10 +24,15 @@
         return $itemsCart->decreaseItemsCartByOne($item_id,$ip_address, $user_id);
       } 
 
+      function showAPersonItemsCartT_ctr($user_id,$ip_address, $item_id){
+        $itemsCart = new Cart();
+        return $itemsCart->showAPersonItemsCartT($user_id,$ip_address,$item_id);
+      } 
+
       function showAPersonItemsCart_ctr($user_id,$ip_address){
         $itemsCart = new Cart();
         return $itemsCart->showAPersonItemsCart($user_id,$ip_address);
-      } 
+      }
 
      /**
       * Ticket Carts Operations

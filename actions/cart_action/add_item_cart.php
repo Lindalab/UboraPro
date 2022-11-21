@@ -3,6 +3,7 @@
 
     $item_id = $_GET['item_id'];
     $item_qty = 1;
+    $item_cat = $_GET['cat'];
  
     $ip_address = $_SERVER['REMOTE_ADDR'];
 
@@ -11,13 +12,15 @@
         session_start();
     }
     $user_id = $_SESSION['user_id'];
-    if(showAPersonTicketCart_ctr($user_id,$ip_address)){
-        echo "<script>alert('failed')</script>";
-        header("location:../view/transport.php");
-        return;
-    }
-    if(showAPersonItemsCart_ctr($user_id, $ip_address)){
-        header("location:./../../view/transport.php");
+
+    if(showAPersonItemsCartT_ctr($user_id,$ip_address, $item_id)){
+        if($item_cat == 1){
+            header("location:./../../view/transport.php");
+            
+        }else{
+            header("location:./../../view/Subtotal.php");
+        }
+      
         return;
     }
 

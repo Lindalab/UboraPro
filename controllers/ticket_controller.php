@@ -1,5 +1,5 @@
 <?php 
-    require_once("../classes/tickets_class.php");
+    require_once dirname(__FILE__)."/../classes/tickets_class.php";
 
     function createTicket_ctr($ticket_status, $ticket_type, $ticket_price,$ticket_description, $ticket_date){
         $ticket = new Tickets();

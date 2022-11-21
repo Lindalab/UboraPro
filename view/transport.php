@@ -107,7 +107,7 @@ require_once("../functions/getAllFood.php");
               
 
               <?php
-                    showfoodItem_fnc(2);
+                    showfoodItem_fnc('2');
               ?>
              
             </div>

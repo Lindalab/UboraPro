@@ -2,7 +2,7 @@
 //database
 
 //database credentials
-require_once('db_cred.php');
+require_once dirname(__FILE__).'/./db_cred.php';
 
 /**
  *@author Linda Arthur & Eric Gadzi

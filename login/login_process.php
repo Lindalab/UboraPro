@@ -18,12 +18,14 @@ if (isset($_POST['login'])) {
         $_SESSION['password'] = $login['password'];
         $_SESSION['user_role'] = $login['user_role'];
         $_SESSION['userLogin']=true;   
-        
+       
         header("Location: ../index.php");
     } else {
         $_SESSION["log_msg"] = "Invalid Credentials";
         header("Location: Login.php");
         }
+
+       
     
 }
 
