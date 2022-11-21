@@ -4,6 +4,7 @@
     
     function showfoodItem_fnc($item_cat){
         $data=allAnItemCatgeory_ctr($item_cat);
+        if($data){
         foreach($data as $food){
             $item_id= $food['item_id'];
             $item_name=$food['item_name'];
@@ -12,6 +13,7 @@
             $item_image=$food['item_image'];
             foodRow_fnc($item_id,$item_name,$item_price, $item_image);
         }
+    }
     }
 
     function foodRow_fnc($item_id,$item_name,$item_price, $item_image){

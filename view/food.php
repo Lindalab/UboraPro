@@ -106,7 +106,7 @@ require_once("../functions/getAllFood.php");
             <div class="u-layout-row">
               
               <?php
-                    showfoodItem_fnc(1);
+                    showfoodItem_fnc('1');
               ?>
              
               
