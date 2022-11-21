@@ -121,6 +121,26 @@
         </div>
       </div>
 
+      <div class="u-list u-list-1">
+        <div class="u-repeater u-repeater-1">
+          <div class="u-border-2 u-border-black u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-valign-middle u-container-layout-1">
+              <a href="./adminTicket.php" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-2">Ticket Category</a>
+            </div>
+          </div>
+          <div class="u-border-2 u-border-black u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-valign-middle u-container-layout-2">
+              <a href="./adminTicket.php" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-3">Edit Ticket Category</a>
+            </div>
+          </div>
+          <div class="u-border-2 u-border-black u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-valign-middle u-container-layout-3">
+              <a href="./adminTicket.php" class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-body-color u-text-hover-white u-btn-4">Delete Ticket Category</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="u-shape u-shape-svg u-text-palette-2-dark-1 u-shape-1">
         <svg class="u-svg-link" preserveAspectRatio="none" viewBox="0 0 160 160"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-f6d0"></use></svg>
         <svg class="u-svg-content" viewBox="0 0 160 160" x="0px" y="0px" id="svg-f6d0"><path d="M14.5,7.3c0,4-3.3,7.3-7.3,7.3S0,11.2,0,7.3S3.3,0,7.3,0S14.5,3.3,14.5,7.3z M7.3,24.2c-4,0-7.3,3.3-7.3,7.3

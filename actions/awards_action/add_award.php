@@ -20,7 +20,7 @@
             $result = createAward_ctr($award_name, $award_description, $upload_file_dest);
             if($result){
                 echo "success";
-                header("location: ./../../admin/admin.php");
+                header("location:./../../admin/admin.php");
             }else{
                 echo "failed";
             }

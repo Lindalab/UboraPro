@@ -1,5 +1,6 @@
 <?php
 require_once("../functions/getAllTicket.php");
+
 ?>
 <!DOCTYPE html>
 <html style="font-size: 16px;" lang="en"><head>
@@ -108,6 +109,8 @@ require_once("../functions/getAllTicket.php");
                 </div>
               </div> -->
               <?php 
+            
+             
               showTypeOfTicket();
               ?>
               <!-- <div class="u-align-center u-container-style u-layout-cell u-size-20 u-size-20-md u-layout-cell-2">

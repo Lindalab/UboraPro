@@ -2,17 +2,25 @@
     require_once("../controllers/ticket_controller.php");
 
     function showTypeOfTicket(){
+        
         $data= getAllTickets_ctr();
+        if($data){
+           
         foreach($data as $tickets){
+            
             $ticket_id=$tickets['ticket_id'];
             $ticket_type=$tickets['ticket_type'];
             $ticketName=tickettype($ticket_type);
             $ticket_price=$tickets['ticket_price'];
             $ticket_description=$tickets['ticket_description'];
+            
             ticketName($ticket_id,$ticketName,$ticket_price,$ticket_description);
             
 
         }
+    }else{
+        echo "failed to load tickets";
+    }
     }
 
 

@@ -39,11 +39,16 @@
         }
 
        // Show a person Cart Item
-        function showAPersonItemsCart($user_id,$ip_address){
-            $sql="SELECT items.item_id, items.item_cat,items.item_name,items.item_price,items.item_image, item_cart.item_qty,item_cart.user_id,item_cart.ip_address FROM `item_cart`, `items` WHERE items.item_id=item_cart.item_id and item_cart.user_id ='$user_id' and item_cart.ip_address='$ip_address' ;";
+        function showAPersonItemsCartT($user_id,$ip_address, $item_id){
+            $sql="SELECT items.item_id, items.item_cat,items.item_name,items.item_price,items.item_image, item_cart.item_qty,item_cart.user_id,item_cart.ip_address, item_cart.item_id FROM `item_cart`, `items` WHERE items.item_id=item_cart.item_id and item_cart.user_id ='$user_id' and item_cart.ip_address='$ip_address' and  item_cart.item_id='$item_id'  ;";
             return $this->fetchAllData($sql);
         }
+        
+        function showAPersonItemsCart($user_id,$ip_address){
+            $sql="SELECT items.item_id, items.item_cat,items.item_name,items.item_price,items.item_image, item_cart.item_qty,item_cart.user_id,item_cart.ip_address, item_cart.item_id FROM `item_cart`, `items` WHERE items.item_id=item_cart.item_id and item_cart.user_id ='$user_id' and item_cart.ip_address='$ip_address'  ;";
+            return $this->fetchAllData($sql);
 
+        }
 
         /**
          * Actions for Ticket Cart
