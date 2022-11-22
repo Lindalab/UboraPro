@@ -21,6 +21,7 @@
     function subtotalTicket($user_id, $ip_address){
 
         $ticket_details = showAPersonTicketCart_ctr($user_id,$ip_address);
+        $subtotal = 0;
         if($ticket_details){
         $ticket_name = tickettype($ticket_details['ticket_type']);
         $ticket_price = $ticket_details['ticket_price'];

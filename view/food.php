@@ -1,5 +1,6 @@
-<?php
+<?php 
 require_once("../functions/getAllFood.php");
+
 ?>
 
 <!DOCTYPE html>
