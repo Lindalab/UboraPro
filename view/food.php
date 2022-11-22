@@ -107,7 +107,7 @@ require_once dirname(__FILE__)."/../functions/getAllFood.php";
             <div class="u-layout-row">
               
               <?php
-                    showfoodItem_fnc(1);
+                    showfoodItem_fnc("Food");
               ?>
              
               

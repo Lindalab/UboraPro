@@ -55,4 +55,8 @@ function deleteItemCategory_ctr($cat_id){
    return $item->getAllFromCategory();
  }
 
+ function getAllItemCatgeory($cat_name){
+   $item=new item_class();
+   return $item->getAllItemCatgeory($cat_name);
+ }
 ?>
