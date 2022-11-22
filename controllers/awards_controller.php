@@ -24,6 +24,12 @@
         return $award->getAllAwardsAndNominees();
     }
 
+    function getAllAwardsAndNomineesA_ctr(){
+        $award = new Awards();
+
+        return $award->getAllAwardsAndNomineesA();
+    }
+
     function getNomineesForAwards_ctr($award_id){
         $award = new Awards();
 

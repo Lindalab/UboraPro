@@ -56,6 +56,11 @@
     }
 
 
+
+    function showTicketsAdmin_fnc(){}
+    function showTicketRowAdmin_fnc(){}
+
+
    
 
    
