@@ -20,6 +20,8 @@
         return $ticket->getAllTickets();
     }
 
+    
+
     function getOneTicket_ctr($ticket_id){
         $ticket = new Tickets;
 
