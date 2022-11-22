@@ -82,9 +82,9 @@ require_once dirname(__FILE__)."/../functions/daiplayItemCategory.php";
     </section>
     <section>
       <header>
-        <h2>Manage Food</h2>
+        <!-- <h2>Manage Food</h2> -->
 
-        <?php showrandCTable_fnc(); ?>
+        <?php //showrandCTable_fnc(); ?>
       </header>
     </section>
     

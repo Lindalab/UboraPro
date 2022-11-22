@@ -5,8 +5,8 @@
     $nominee_name = $_POST['nominee_name'];
     $nominee_description = $_POST['nominee_description'];
 
-    $root_dir = ".\\..\\..\\images\\nominees\\";
-    $upload_root_dir = "./../../images/nominees/";
+    $root_dir = ".\\..\\images\\nominees\\";
+    $upload_root_dir = "./../images/nominees/";
     $file = $_FILES["nominee_image"];
     $file_dest = $root_dir . basename($file["name"]);
     $upload_file_dest = $upload_root_dir . basename($file["name"]);
