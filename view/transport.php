@@ -1,5 +1,5 @@
 <?php
-require_once("../functions/getAllFood.php");
+require_once dirname(__FILE__)."/../functions/getAllFood.php";
 ?>
 
 <!DOCTYPE html>

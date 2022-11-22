@@ -1,6 +1,6 @@
 <?php 
 
-    require_once "../controllers/cart_controller.php";
+    require_once dirname(__FILE__)."/../controllers/cart_controller.php";
 
     function tickettype($ticket_type){
         $ticket_name= "";
