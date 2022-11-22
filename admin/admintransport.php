@@ -1,5 +1,20 @@
 <?php
 require("../functions/daiplayItemCategory.php"); 
+$item_name = "";
+$item_description = "";
+$item_id = "";
+$item_image = "";
+$item_price = "";
+$item_keywords = "";
+
+if(isset($_GET['item_id'])){
+  $item_id = $_GET['item_id'];
+  $item_name = $_GET['itemName'];
+  $item_price = $_GET['itemPrice'];
+  $item_description = $_GET['itemdescription'];
+  $item_image = $_GET['item_image'];
+  $item_keywords = $_GET['item_keywords'];;
+}
 ?>
 <!DOCTYPE html>
 <html style="font-size: 16px;" lang="en"><head>
@@ -105,11 +120,11 @@ require("../functions/daiplayItemCategory.php");
         <form action="./../actions/items_action/create_item.php" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form" style="padding: 10px;" method="POST" enctype="multipart/form-data">
             <div class="u-form-group u-form-name">
               <label for="name-098e" class="u-label">Name of Transport</label>
-              <input type="text" placeholder="Enter transport name" id="name-098e" name="item_name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+              <input type="text" value="<?php echo $item_name ?>" placeholder="Enter transport name" id="name-098e" name="item_name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
             </div>
             <div class="u-form-email u-form-group">
               <label for="email-098e" class="u-label">Pacakage Price</label>
-              <input type="number" placeholder="Enter price in cedis" id="email-098e" name="item_price" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+              <input type="number" value="<?php echo $item_price ?>" placeholder="Enter price in cedis" id="email-098e" name="item_price" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
             </div>
             <div class="u-form-group u-form-message">
               <label for="message-7f20" class="u-label"> Item Category </label>
@@ -117,15 +132,15 @@ require("../functions/daiplayItemCategory.php");
             </div>
             <div class="u-form-group u-form-message">
               <label for="message-098e" class="u-label">Transport description</label>
-              <textarea placeholder="Enter description" rows="4" cols="50" id="message-098e" name="item_description" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required=""></textarea>
+              <textarea placeholder="Enter description" rows="4" cols="50" id="message-098e" value="<?php echo $item_description ?>" name="item_description" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required=""></textarea>
             </div>
             <div class="u-form-email u-form-group">
               <label for="email-098e" class="u-label">Keywords</label>
-              <input type="text" placeholder="Enter price in cedis" id="email-098e" name="item_keywords" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+              <input type="text" value="<?php echo $item_keywords ?>" placeholder="Enter price in cedis" id="email-098e" name="item_keywords" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
             </div>
             <div class="u-form-group u-form-message">
               <label for="message-7f20" class="u-label">Vehicle Image</label>
-              <input type="file" name="item_image" accept="image/*" required>
+              <input type="file" value="<?php echo $item_image ?>" name="item_image" accept="image/*" required>
             </div>
             <div class="u-align-left u-form-group u-form-submit">
               

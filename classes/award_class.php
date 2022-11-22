@@ -77,6 +77,10 @@ class Awards extends db_connection{
         
     }
 
+    function deleteANomineeForAnAward_ctr($award_id, $nominee_id){
+        
+    }
+
     function updateANominee($award_id,$nominee_id, $nominee_name, $nominee_description, $nominee_image){
         $sql = "UPDATE `nominee` SET `nominee_name`='$nominee_name',`award_id`='$award_id',`nominee_description`='$nominee_description',`nominee_image`='$nominee_image' WHERE `nominee_id`='$nominee_id' ";
 

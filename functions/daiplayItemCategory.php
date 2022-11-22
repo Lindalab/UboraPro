@@ -24,7 +24,6 @@ function  myawards( $catId, $catName)
 {
     echo "
     <option value='$catId'>$catName</option>
-    
     ";
 }
 
@@ -76,6 +75,7 @@ function getAllfoodTable_fnc($item_cat){
     echo "<table class='table'>
     <thead class='table-warning'>
       <tr>
+        <th scope='col'>Image</th>
         <th scope='col'>Food Name</th>
         <th scope='col'>Food Price</th>
         <th scope='col'>Food Descrption</th>
@@ -84,29 +84,32 @@ function getAllfoodTable_fnc($item_cat){
       </tr>
     </thead>
     <tbody>";
-    foreach ($data as $award) {
-        $itemId = $award['item_id'];
-        $itemName = $award['item_name'];
-        $itemPrice = $award['item_price'];
-        $itemDescription = $award['item_description'];
-        getAllFoodTablerow_fnc($itemId,$itemName,$itemPrice, $itemDescription);
+    foreach ($data as $item) {
+        $itemId = $item['item_id'];
+        $itemName = $item['item_name'];
+        $itemPrice = $item['item_price'];
+        $itemDescription = $item['item_description'];
+        $item_image = $item['item_image'];
+        $item_keyword = $item['item_keyword'];
+        getAllFoodTablerow_fnc($itemId,$itemName,$itemPrice, $itemDescription, $item_image, $item_keyword);
     }
     echo "
     </tbody>
 </table>";
 
 }
-function  getAllFoodTablerow_fnc($itemId,$itemName,$itemPrice, $itemDescription){
+function  getAllFoodTablerow_fnc($itemId,$itemName,$itemPrice, $itemDescription, $item_image, $item_keyword){
   echo "
   <tr>
+    <td><img src='$item_image' width='50' height='50' ></td>
     <td>$itemName</td>
     <td>$itemPrice</td>
     <td>$itemDescription</td>
     <td>
-    <a href = '?id=$itemId' class='btn btn-warning btn-sm active' role='button' aria-pressed='true'><i class='bi bi-trash-fill'></i></a>
+    <a href = '../actions/items_action/deleteItem_ctr.php?item_id=$itemId' class='btn btn-warning btn-sm active' role='button' aria-pressed='true'><i class='bi bi-trash-fill'></i></a>
     </td>
     <td>
-    <a href = '?id=$itemId&itemName=$itemName&itemPrice=$itemPrice&itemdescription=$itemDescription' class='btn btn-warning btn-sm active' role='button' aria-pressed='true'><i class='bi bi-pencil-square'></i></a>
+    <a href = '?item_id=$itemId&itemName=$itemName&itemPrice=$itemPrice&itemdescription=$itemDescription&item_image=$item_image&item_keywords=$item_keyword' class='btn btn-warning btn-sm active' role='button' aria-pressed='true'><i class='bi bi-pencil-square'></i></a>
     </td>
   </tr>
   ";
@@ -121,6 +124,7 @@ function getAllTransportTable_fnc($item_cat){
     echo "<table class='table'>
     <thead class='table-warning'>
       <tr>
+      <th scope='col'>Image</th>
         <th scope='col'>Transport Name</th>
         <th scope='col'>Transport Price</th>
         <th scope='col'>Transport Descrption</th>
@@ -129,29 +133,32 @@ function getAllTransportTable_fnc($item_cat){
       </tr>
     </thead>
     <tbody>";
-    foreach ($data as $award) {
-        $itemId = $award['item_id'];
-        $itemName = $award['item_name'];
-        $itemPrice = $award['item_price'];
-        $itemDescription = $award['item_description'];
-        getAllFoodTablerow_fnc($itemId,$itemName,$itemPrice, $itemDescription);
+    foreach ($data as $item) {
+        $itemId = $item['item_id'];
+        $itemName = $item['item_name'];
+        $itemPrice = $item['item_price'];
+        $itemDescription = $item['item_description'];
+        $item_image = $item['item_image'];
+        $item_keyword = $item['item_keyword'];
+        getAllFoodTablerow_fnc($itemId,$itemName,$itemPrice, $itemDescription, $item_image, $item_keyword);
     }
     echo "
     </tbody>
 </table>";
 
 }
-function  getAllTransportTablerow_fnc($itemId,$itemName,$itemPrice, $itemDescription){
+function  getAllTransportTablerow_fnc($itemId,$itemName,$itemPrice, $itemDescription, $item_image){
   echo "
   <tr>
+    <td><img src='$item_image' width = '50' height ='50' ></td>
     <td>$itemName</td>
     <td>$itemPrice</td>
     <td>$itemDescription</td>
     <td>
-    <a href = '?id=$itemId' class='btn btn-warning btn-sm active' role='button' aria-pressed='true'><i class='bi bi-trash-fill'></i></a>
+    <a href = '?item_id=$itemId' class='btn btn-warning btn-sm active' role='button' aria-pressed='true'><i class='bi bi-trash-fill'></i></a>
     </td>
     <td>
-    <a href = '?id=$itemId&itemName=$itemName&itemPrice=$itemPrice&itemdescription=$itemDescription' class='btn btn-warning btn-sm active' role='button' aria-pressed='true'><i class='bi bi-pencil-square'></i></a>
+    <a href = '?item_id=$itemId&itemName=$itemName&itemPrice=$itemPrice&itemdescription=$itemDescription' class='btn btn-warning btn-sm active' role='button' aria-pressed='true'><i class='bi bi-pencil-square'></i></a>
     </td>
   </tr>
   ";

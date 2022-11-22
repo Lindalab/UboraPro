@@ -7,7 +7,7 @@
     $item_description = $_POST['item_description'];
     $item_cat= $_POST['category_name'];
     
-    $root_dir = ".\\..\\images\\awards\\";
+    $root_dir = ".\\..\\..\\images\\awards\\";
     $upload_root_dir = "./../images/awards/";
     $file = $_FILES["item_image"];
     $file_dest = $root_dir . basename($file["name"]);
@@ -22,7 +22,11 @@
     
         if($result){
             echo "success";
-            header("location: ./../../admin/admin.php");
+            if($item_cat == 1){
+            header("location: ./../../admin/adminfood.php");
+            }else{
+                header("location: ./../../admin/adminTicket.php");
+            }
         }else{
             echo "failed";
         }

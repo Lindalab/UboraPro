@@ -73,6 +73,12 @@
         return $award->deleteANominee($nominee_id);
     }
 
+    function deleteANomineeForAnAward_ctr($award_id, $nominee_id){
+        $award = new Awards();
+
+        return $award->deleteANomineeForAnAward_ctr($award_id, $nominee_id);
+    }
+
     function checkAward_ctr($award_name){
         $award = new Awards();
         return $award->checkAward($award_name);

@@ -7,6 +7,7 @@
 
     if($result){
         echo "<script>alert('success');</script>";
+        header("location: ../../admin/adminfood.php");
     }else{
         echo "<script>alert('failed');</script>";
     }

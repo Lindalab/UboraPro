@@ -57,7 +57,7 @@ function  displayawards( $awardId, $awardName)
     <tr>
       <td>$awardName</td>
       <td>
-      <a href = './../actions/items_action/delete_category.php?id=$awardId' class='btn btn-warning btn-sm active' role='button' aria-pressed='true'><i class='bi bi-trash-fill'></i></a>
+      <a href = './../actions/awards_action/delete_award.php?award_id=$awardId' class='btn btn-warning btn-sm active' role='button' aria-pressed='true'><i class='bi bi-trash-fill'></i></a>
       </td>
       <td>
       <a href = '?id=$awardId&brName=$awardId' class='btn btn-warning btn-sm active' role='button' aria-pressed='true'><i class='bi bi-pencil-square'></i></a>
@@ -100,7 +100,7 @@ function displayNomineeAwardRow_fnc($nomineeId,$nomineeName,$nomineeDescription,
     <td>$nomineeDescription</td>
     <td>$nomineeAward</td>
     <td>
-    <a href = './../actions/items_action/delete_category.php?id=$nomineeId' class='btn btn-warning btn-sm active' role='button' aria-pressed='true'><i class='bi bi-trash-fill'></i></a>
+    <a href = './../actions/awards_action/delete_nominee.php?nominee_id=$nomineeId' class='btn btn-warning btn-sm active' role='button' aria-pressed='true'><i class='bi bi-trash-fill'></i></a>
     </td>
     <td>
     <a href = '?id=$nomineeId&nomineeName=$nomineeName&nomineeDescription=$nomineeDescription' class='btn btn-warning btn-sm active' role='button' aria-pressed='true'><i class='bi bi-pencil-square'></i></a>

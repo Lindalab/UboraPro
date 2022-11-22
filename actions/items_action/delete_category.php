@@ -1,7 +1,7 @@
 <?php 
     require_once("../../controllers/item_controller.php");
 
-    $cat_id = $_POST["id"];
+    $cat_id = $_GET["id"];
 
     $result = deleteItemCategory_ctr($cat_id);
 
