@@ -26,7 +26,7 @@
     <meta property="og:type" content="website">
   </head>
   <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-white u-header" id="sec-ef51"><div class="u-clearfix u-sheet u-sheet-1">
-        <a href="https://nicepage.com" class="u-image u-logo u-image-1" data-image-width="1920" data-image-height="1080">
+        <a href="./../index.php" class="u-image u-logo u-image-1" data-image-width="1920" data-image-height="1080">
           <img src="../images/ubora2.png" class="u-logo-image u-logo-image-1">
         </a>
         <div class="u-countdown u-countdown-1" data-timer-id="6bac" data-type="to-date" data-target-date="Thu, 1 Dec 2022 10:39:48 GMT" data-for="everyone" data-direction="down" data-time-left="750m" data-target-number="100" data-start-time="Mon Nov 14 2022 16:12:21 GMT+0000 (Greenwich Standard Time)" data-frequency="1s" data-after-count="none" data-redirect-url="https://">
@@ -76,7 +76,7 @@
         <div class="u-form u-form-1">
           <form action="./login_process.php" method="POST" class="u-clearfix u-form-spacing-50 u-form-vertical u-inner-form" source="email" name="form" id="form" style="padding: 50px;" data-parsley-validate="">
             <div class="u-form-email u-form-group">
-              <label for="email-3f67" class="u-label">Email</label>
+              <label for="email-3f67" class="u-label">Email Address</label>
               <input type="email" placeholder="Enter a valid Ashesi email address" id="email-3f67" name="user_email" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" data-parsleytrigger="change" data-parsley-pattern="((\w*)[(\.)].(\w*)@ashesi.edu.gh$)" required="">
             </div>
             <div class="u-form-group u-form-password u-form-group-2">
@@ -86,8 +86,6 @@
             <div class="u-align-left u-form-group u-form-submit">
               <input type="submit" name="login" value="Submit" class="u-form-control">
             </div>
-            <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
-            <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
           </form>
         </div>
         <!-- End of Login Form -->

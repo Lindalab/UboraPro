@@ -37,7 +37,7 @@
 <body class="u-body u-xl-mode" data-lang="en">
   <header class="u-clearfix u-header u-white u-header" id="sec-ef51">
     <div class="u-clearfix u-sheet u-sheet-1">
-      <a href="" class="u-image u-logo u-image-1" data-image-width="1920" data-image-height="1080">
+      <a href="../index.php" class="u-image u-logo u-image-1" data-image-width="1920" data-image-height="1080">
         <img src="./../images/ubora2.png" class="u-logo-image u-logo-image-1">
       </a>
       <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
@@ -190,35 +190,4 @@
       </footer>
 
 </body>
-
-
-<script>
-  // const paymentForm = document.getElementById('paymentForm');
-  // paymentForm.addEventListener("submit", payWithPaystack, false);
-
-  function payWithPaystack() {
-    event.preventDefault();
-
-    let handler = PaystackPop.setup({
-      key: 'pk_test_bed9ac10a9fd731dd3af495d9160b4a59b72217a', // Replace with your public key
-      email: "<?php echo $_SESSION['user_email']; ?>",
-      amount: 100,
-      ref: '' + Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
-      // label: "Optional string that replaces customer email"
-      currency: 'GHS',
-      onClose: function() {
-        alert('Window closed.');
-      },
-      callback: function(response) {
-        let message = 'Payment complete! Reference: ' + response.reference;
-        alert(message);
-        window.location = "../actions/payment_processing.php?reference=" + response.reference;
-      }
-    });
-
-    handler.openIframe();
-  }
-</script>
-
-
 </html>

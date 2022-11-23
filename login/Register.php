@@ -32,7 +32,7 @@
         unset($_SESSION["reg_msg"]);
       }
     ?>
-        <a href="https://nicepage.com" class="u-image u-logo u-image-1" data-image-width="1920" data-image-height="1080">
+        <a href="./../index.php" class="u-image u-logo u-image-1" data-image-width="1920" data-image-height="1080">
           <img src="../images/ubora2.png" class="u-logo-image u-logo-image-1">
         </a>
         <div class="u-countdown u-countdown-1" data-timer-id="6bac" data-type="to-date" data-target-date="Thu, 1 Dec 2022 10:39:48 GMT" data-for="everyone" data-direction="down" data-time-left="750m" data-target-number="100" data-start-time="Mon Nov 14 2022 16:12:21 GMT+0000 (Greenwich Standard Time)" data-frequency="1s" data-after-count="none" data-redirect-url="https://">
@@ -81,8 +81,12 @@
         <div class="u-form u-form-1">
           <form action="./register_process.php" class="u-clearfix u-form-spacing-41 u-form-vertical u-inner-form" method="POST" source="email" name="form" style="padding: 50px;" id="form" data-parsley-validate="">
             <div class="u-form-group u-form-name">
-              <label for="name-9b05" class="u-label">Name</label>
-              <input type="text" placeholder="Enter your Name" id="name-9b05" name="user_name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" data-parsley-pattern="^([^0-9]*)$" placeholder="User Name" data-parsleytrigger="change" required="">
+              <label for="name-9b05" class="u-label">First Name</label>
+              <input type="text" placeholder="Enter your Name" id="name-9b05" name="first_name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" data-parsley-pattern="^([^0-9]*)$" placeholder="First Name" data-parsleytrigger="change" required="">
+            </div>
+            <div class="u-form-group u-form-name">
+              <label for="name-9b05" class="u-label">Last Name</label>
+              <input type="text" placeholder="Enter your Name" id="name-9b05" name="last_name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" data-parsley-pattern="^([^0-9]*)$" placeholder="Last Name" data-parsleytrigger="change" required="">
             </div>
             <div class="u-form-email u-form-group">
               <label for="email-9b05" class="u-label">Email</label>
@@ -90,7 +94,7 @@
             </div>
             <div class="u-form-email u-form-group">
               <label for="school_id" class="u-label">Student ID</label>
-              <input type="number" placeholder="Enter a valid student ID" id="school_id" name="user_school_id" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" data-parsleytrigger="change" required="">
+              <input type="number" placeholder="Enter a valid student ID" id="school_id" name="user_school_id" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" data-parsley-minlength="8" data-parsleytrigger="change" required="">
             </div>
             <div class="u-form-group u-form-phone u-form-group-3">
               <label for="phone-66e5" class="u-label">Phone</label>
@@ -112,8 +116,6 @@
             <div class="u-align-left u-form-group u-form-submit">
               <input type="submit" name="register" value="Submit" class="u-form-control">
             </div>
-            <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
-            <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
           </form>
         </div>
       </div>

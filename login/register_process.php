@@ -8,7 +8,17 @@
         $user_school_id = $_POST['user_school_id'];
         $phone_number = $_POST['phone_number'];
         $password = $_POST['password'];
-        $hashed_password = base64_encode($password);
+        $confirm_password = $_POST['conf_password'];
+
+        if ($password == $confirm_password) {
+            $hashed_password = base64_encode($password);
+        }
+        else {
+            $_SESSION["reg_msg"] = "Wrong password confirmed";
+            header("Location: Register.php");
+        }
+
+        
 
         $check = checkEmail_ctr($user_email);
 
