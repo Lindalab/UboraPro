@@ -28,7 +28,7 @@ require("admin/privilleges.php");
     <meta property="og:type" content="website">
   </head>
   <body data-home-page="Home.html" data-home-page-title="Home" class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-white u-header" id="sec-ef51"><div class="u-clearfix u-sheet u-sheet-1">
-        <a href="https://nicepage.com" class="u-image u-logo u-image-1" data-image-width="1920" data-image-height="1080">
+        <a href="#" class="u-image u-logo u-image-1" data-image-width="1920" data-image-height="1080">
           <img src="./images/ubora2.png" class="u-logo-image u-logo-image-1">
         </a>
         <!-- <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
