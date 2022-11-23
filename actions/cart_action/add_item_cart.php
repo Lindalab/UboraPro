@@ -6,6 +6,7 @@
     $item_cat = $_GET['cat'];
  
     $ip_address = $_SERVER['REMOTE_ADDR'];
+    
 
 
     if(!isset($_SESSION['user_id'])){
@@ -13,8 +14,8 @@
     }
     $user_id = $_SESSION['user_id'];
 
-    if(showAPersonItemsCartT_ctr($user_id,$ip_address, $item_id)){
-        if($item_cat == 1){
+    if(showAPersonItemsCartCName_ctr($user_id,$ip_address,$itemCartegory)){
+        if($item_cat == "Food"){
             header("location:./../../view/transport.php");
             return;
         }else{
