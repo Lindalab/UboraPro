@@ -11,10 +11,11 @@ function item_subtotal($user_id, $ip_address){
         $item_name = $item['item_name'];
         $item_price = $item['item_price'];
         $item_qty = $item['item_qty'];
+        $item_image = $item['item_image'];
         $subtotal = $item_price*$item_qty;
         $item_type = $item['item_cat'];
         $total += $subtotal;
-        display_item_subtotal($item_id, $item_name, $item_price, $item_qty, $subtotal, $item_type);
+        display_item_subtotal($item_id, $item_name, $item_price, $item_qty, $item_image, $subtotal, $item_type);
     }
     }
     return $total;
@@ -22,7 +23,7 @@ function item_subtotal($user_id, $ip_address){
 }
 
 
-function display_item_subtotal($item_id, $item_name, $item_price, $item_qty, $subtotal){
+function display_item_subtotal($item_id, $item_name, $item_price, $item_qty, $item_image, $subtotal){
     // if($item_type == 1){
     //     $name = "food_name"
     // }
@@ -44,7 +45,7 @@ function display_item_subtotal($item_id, $item_name, $item_price, $item_qty, $su
           </svg>
         </a>
       </span>
-      <img class='u-cart-product-image u-image u-image-default u-product-control' src='../images/ubora4.jpeg' data-image-width='906' data-image-height='1280'>
+      <img class='u-cart-product-image u-image u-image-default u-product-control' src='$item_image' data-image-width='906' data-image-height='1280'>
       <h2 class='u-cart-product-title u-product-control u-text u-text-2'>
         <!-- Product Title here -->
         <a class='u-product-title-link' href='#'>$item_name</a>
