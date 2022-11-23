@@ -100,6 +100,7 @@
         <img class="u-image u-image-default u-image-1" src="../images/ubora.jpg" alt="" data-image-width="724" data-image-height="1024">
         <a href="../view/voting.php" class="u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-3-base u-radius-50 u-btn-1">vote Now!</a>
         <a href="../view/Tickets.php" class="u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-3-base u-radius-50 u-btn-2"> Buy tickets!</a>
+        <a href='../admin/privilleges.php?Logout=Logout' class='u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-3-base u-radius-50 u-btn-2'>Logout</a>
       </div>
     </section>
     

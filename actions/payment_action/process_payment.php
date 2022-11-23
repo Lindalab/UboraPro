@@ -14,6 +14,7 @@
     
     
     $curl = curl_init();
+    // $data = "T032500960937628";
     $data = $_GET["reference"];
     curl_setopt_array($curl, array(
       CURLOPT_URL => 'https://api.paystack.co/transaction/verify/'.$data,
@@ -24,12 +25,12 @@
       CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
       CURLOPT_CUSTOMREQUEST => "GET",
       CURLOPT_HTTPHEADER => array(
-        "Authorization: Bearer sk_test_c3917133d2043a8e4bdddd20905479a015cdc8de",
+        "Authorization: Bearer sk_live_497a3a223893acf3ff8ecfd4dce1158b2fc9b088",
         "Cache-Control: no-cache",
       ),
     ));
     
-    $response = json_decode(curl_exec($curl));
+    $response = json_decode(curl_exec($curl), true);
     $err = curl_error($curl);
   
     curl_close($curl);
@@ -37,19 +38,24 @@
     if ($err) {
       echo "cURL Error #:" . $err;
     } else {
-      $res = json_decode($response, true);
+      $res = $response;
+
+      print_r($res);
 
       $amount =  $res['data']['amount'];
       $currency = $res['data']['currency'];
       $payment_date = date("Y-m-d");
+
+      $order_id = 1;
   
-      $result = makePayment_ctr($amount,$user_id,$order_id,$currency,$payment_date);
+      $result = makePayment_ctr("200","1","1","GHC",$payment_date);
+      
       
       
       $ip_add = $_SERVER['REMOTE_ADDR'];
 
       // delete items from cart;
-      $itemcartlist = showAPersonItemsCart_ctr($user_id,$ip_address);
+      $itemcartlist = showAPersonItemsCart_ctr($user_id,$ip_add);
 
       if($itemcartlist){
         foreach ($itemcartlist as $cart) {
@@ -65,16 +71,17 @@
 
   
       // delete ticket from cart;
-      $ticketList = showAPersonTicketCart_ctr($user_id,$ip_address);
+      $ticketList = showAPersonTicketCart_ctr($user_id,$ip_add);
       if($ticketList){
-      foreach ($ticketList as $cart) {
-        $ticket_id = $cart['ticket_id'];
-        $qty = $cart['ticket_qty'];
+        print_r($ticketList);
+      // foreach ($ticketList as $cart) {
+        $ticket_id = $ticketList['ticket_id'];
+        $qty = $ticketList['ticket_qty'];
         $order_type = 2;
         addToticketHistroy_ctr($order_id,$ticket_id,$qty);
         
-        deleteTicketCart_ctr($ticket_id,$ip_address,$user_id,$qty);
-      }
+        deleteTicketCart_ctr($ticket_id,$ip_add,$user_id,$qty);
+      // }
     }
 
     echo "success";
