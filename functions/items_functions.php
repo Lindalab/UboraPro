@@ -24,9 +24,7 @@ function item_subtotal($user_id, $ip_address){
 
 
 function display_item_subtotal($item_id, $item_name, $item_price, $item_qty, $item_image, $subtotal){
-    // if($item_type == 1){
-    //     $name = "food_name"
-    // }
+ 
     echo "
     <tr style='height: 165px;'>
     <td class='u-border-1 u-border-grey-dark-1 u-first-column u-table-cell'>

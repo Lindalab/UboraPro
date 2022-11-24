@@ -7,6 +7,7 @@
     $item = $_GET["item_type"];
  
     $ip_address = $_SERVER['REMOTE_ADDR'];
+    
 
 
     if(!isset($_SESSION['user_id'])){
@@ -21,6 +22,7 @@
         }
         elseif ($item == "Transport") {
             header("location:./../../view/Subtotal.php");
+      
         }
     }
     else {

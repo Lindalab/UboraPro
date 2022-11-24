@@ -1,4 +1,6 @@
 <?php 
+   
+    require_once dirname(__FILE__)."/../controllers/users_controller.php";
     session_start();
     unset($_SESSION["reg_msg"]);
     require_once("../controllers/users_controller.php");

@@ -40,10 +40,20 @@
 
        // Show a person Cart Item
         function showAPersonItemsCartT($user_id,$ip_address, $item_id){
-            $sql="SELECT items.item_id, items.item_cat,items.item_name,items.item_price,items.item_image, item_cart.item_qty,item_cart.user_id,item_cart.ip_address, item_cart.item_id FROM `item_cart`, `items` WHERE items.item_id=item_cart.item_id and item_cart.user_id ='$user_id' and item_cart.ip_address='$ip_address' and  item_cart.item_id='$item_id'  ;";
+            $sql="SELECT items.item_id, items.item_cat,items.item_name,items.item_price,items.item_image, item_cart.item_qty,item_cart.user_id,item_cart.ip_address, item_cart.item_id FROM `item_cart`, `items` WHERE items.item_id=item_cart.item_id and item_cart.user_id ='$user_id' and item_cart.ip_address='$ip_address' and  item_cart.item_id='$item_id' ";
             return $this->fetchAllData($sql);
         }
         
+        function showAPersonItemsCartCName($user_id,$ip_address,$itemCartegory){
+            $sql="SELECT items.item_id, items.item_cat,items.item_name,items.item_price,items.item_image, item_cart.item_qty,item_cart.user_id,item_cart.ip_address, item_cart.item_id,cart.cat_name 
+            FROM `item_cart`, `items`,cart 
+            WHERE cart.cat_name LIKE '%$itemCartegory%'
+            and items.item_id=item_cart.item_id 
+            and items.item_cat=cart.cat_id  
+            and item_cart.user_id ='$user_id'
+            and item_cart.ip_address='$ip_address'";
+            return $this->fetchAllData($sql);
+        }
         function showAPersonItemsCart($user_id,$ip_address){
             $sql="SELECT items.item_id, items.item_cat,items.item_name,items.item_price,items.item_image, item_cart.item_qty,item_cart.user_id,item_cart.ip_address, item_cart.item_id FROM `item_cart` JOIN `items` WHERE items.item_id=item_cart.item_id and (item_cart.user_id ='$user_id' OR item_cart.ip_address='$ip_address');";
             return $this->fetchAllData($sql);
