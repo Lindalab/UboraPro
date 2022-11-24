@@ -18,15 +18,16 @@
     if(showAPersonItemsCartCName_ctr($user_id,$ip_address,$itemCartegory)){
         if($itemCartegory == "Food"){
             header("location:./../../view/transport.php");
-            
+            return;
         }else{
             header("location:./../../view/Subtotal.php");
+      
         }
       
-        return;
+        
     }
 
-        $result = addToItemsCart_ctr($item_id,$ip_address,$user_id,$item_qty);
+    $result = addToItemsCart_ctr($item_id,$ip_address,$user_id,$item_qty);
 
     if($result){
         echo "<script>alert('success')</script>";

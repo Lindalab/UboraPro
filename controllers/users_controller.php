@@ -1,5 +1,5 @@
 <?php 
-    require_once dirname(__FILE__)."/../classes/user_class.php";
+    require_once dirname(__FILE__)."./../classes/user_class.php";
 
     function registerUser_ctr($user_name, $user_email, $user_school_id, $phone_number, $password){
         $user = new Users;

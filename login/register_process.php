@@ -1,7 +1,7 @@
 <?php 
+   
+    require_once dirname(__FILE__)."/../controllers/users_controller.php";
     session_start();
-    require_once("../controllers/users_controller.php");
-
     if(isset($_POST['register'])){
         $user_name = $_POST['user_name'];
         $user_email = $_POST['user_email'];
