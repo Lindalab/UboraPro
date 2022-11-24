@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html style="font-size: 16px;" lang="en"><head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,12 +29,6 @@
     <meta property="og:type" content="website">
   </head>
   <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-white u-header" id="sec-ef51"><div class="u-clearfix u-sheet u-sheet-1">
-    <?php
-      if (isset($_SESSION["reg_msg"])) {
-        echo '<script>alert('. $_SESSION["reg_msg"] .')</script>';
-        unset($_SESSION["reg_msg"]);
-      }
-    ?>
         <a href="./../index.php" class="u-image u-logo u-image-1" data-image-width="1920" data-image-height="1080">
           <img src="../images/ubora2.png" class="u-logo-image u-logo-image-1">
         </a>
@@ -75,6 +72,13 @@
     <section class="u-clearfix u-section-1" id="sec-8fa8">
       <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-clearfix u-group-elements u-group-elements-1">
+        <p style="color: red;">
+            <?php
+              if (isset( $_SESSION["reg_msg"])) {
+                echo $_SESSION["reg_msg"];
+              }
+            ?>
+          </p>
           <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-1" src="../images/gc48e398d4e4389e2ea1a357b83a51d85bc95cc9ad1642abaf20e90b478db006b53fbf62a0d246dc56433bb3fc271feff_1280.png" alt="" data-image-width="1280" data-image-height="1280">
           <h1 class="u-text u-text-1">egister</h1>
         </div>
@@ -108,14 +112,10 @@
               <label for="name-0657" class="u-label">Confirm Password</label>
               <input type="password" placeholder="Enter your Password" id="name-0657" name="conf_password" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" data-parsleytrigger="change" data-parsley-minlength="8" required="">
             </div>
-            <div class="u-form-agree u-form-group u-form-group-4">
-              <input type="checkbox" id="agree-01e4" name="agree" class="u-agree-checkbox" required="">
-              <label for="agree-01e4" class="u-agree-label u-label">I accept the <a href="#">Terms of Service</a>
-              </label>
-            </div>
             <div class="u-align-left u-form-group u-form-submit">
               <input type="submit" name="register" value="Submit" class="u-form-control">
             </div>
+            <p>Already registered? <a href="Login.php"> Login here</a></p>
           </form>
         </div>
       </div>

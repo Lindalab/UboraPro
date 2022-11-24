@@ -21,7 +21,7 @@ require_once dirname(__FILE__)."/../functions/getAllFood.php";
 		"@context": "http://schema.org",
 		"@type": "Organization",
 		"name": "",
-		"logo": "images/ubora2.png"
+		"logo": "../images/ubora2.png"
 }</script>
     <meta name="theme-color" content="#478ac9">
     <meta property="og:title" content="Food">

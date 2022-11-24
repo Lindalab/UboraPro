@@ -20,7 +20,7 @@
         }
 
         function  addToOrderItemHistroy($order_id,$item_id,$item_qty){
-            $sql="INSERT INTO `orderhistory`(`order_id`, `item_id`, `item_qty`) VALUES ('$order_id',',$item_id','$item_qty')";
+            $sql="INSERT INTO `orderhistory`(`order_id`, `item_id`, `item_qty`) VALUES ('$order_id','$item_id','$item_qty')";
             return $this->db_query($sql);
 
         }

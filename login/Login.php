@@ -1,3 +1,7 @@
+<?php
+  session_start();
+  echo base64_decode('Y2F0aGVyaW5l');
+?>
 <!DOCTYPE html>
 <html style="font-size: 16px;" lang="en"><head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -68,6 +72,13 @@
     <section class="u-clearfix u-section-1" id="sec-9d3f">
       <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-clearfix u-group-elements u-group-elements-1">
+          <p style="color: red;">
+            <?php
+              if (isset( $_SESSION["log_msg"])) {
+                echo $_SESSION["log_msg"];
+              }
+            ?>
+          </p>
           <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-1" src="../images/goldL.png" alt="L" data-image-width="1271" data-image-height="1280">
           <h1 class="u-text u-text-default u-text-1">ogin</h1>
         </div>
@@ -87,6 +98,7 @@
               <input type="submit" name="login" value="Submit" class="u-form-control">
             </div>
           </form>
+          <p>Not registered yet? <a href="Register.php"> Register here</a></p>
         </div>
         <!-- End of Login Form -->
       </div>

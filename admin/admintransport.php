@@ -46,7 +46,7 @@ if(isset($_GET['item_id'])){
     <meta property="og:type" content="website">
   </head>
   <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-white u-header" id="sec-ef51"><div class="u-clearfix u-sheet u-sheet-1">
-        <a href="https://nicepage.com" class="u-image u-logo u-image-1" data-image-width="1920" data-image-height="1080">
+        <a href="../index.php" class="u-image u-logo u-image-1" data-image-width="1920" data-image-height="1080">
           <img src="./../images/ubora2.png" class="u-logo-image u-logo-image-1">
         </a>
         <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
@@ -143,7 +143,7 @@ if(isset($_GET['item_id'])){
               <input type="file" value="<?php echo $item_image ?>" name="item_image" accept="image/*" required>
             </div>
             <div class="u-align-left u-form-group u-form-submit">
-              
+              <input type="hidden" name="type" value="Transport">
               <input type="submit" value="Add transport package" class="u-btn u-btn-submit u-button-style">
             </div>
             <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>

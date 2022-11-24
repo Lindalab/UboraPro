@@ -9,9 +9,9 @@
         return $itemsCart->addToItemsCart($item_id,$ip_address,$user_id,$item_qty);
       } 
 
-      function deleteItemsCart_ctr($user_id, $ip_address,$item_id){
+      function deleteItemsCart_ctr($user_id){
         $itemsCart = new Cart();
-        return $itemsCart->deleteItemsCart($user_id, $ip_address,$item_id);
+        return $itemsCart->deleteItemsCart($user_id);
       }
       
       function increaseItemsCartByOne_ctr($item_id,$ip_address, $user_id){
@@ -43,9 +43,9 @@
         return $ticketCart->addToTicketCart($ticket_id,$ip_address,$user_id,$ticket_qty);
       } 
 
-      function deleteTicketCart_ctr($ticket_id,$ip_address,$user_id,$item_qty){
+      function deleteTicketCart_ctr($user_id){
         $ticketCart = new Cart();
-        return $ticketCart->deleteTicketCart($ticket_id,$ip_address,$user_id,$item_qty);
+        return $ticketCart->deleteTicketCart($user_id);
       } 
 
       function increaseTicketCartByOne_ctr($ticket_id,$ip_address, $user_id,$ticket_qty){

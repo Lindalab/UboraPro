@@ -68,7 +68,7 @@ class item_class extends db_connection
     }
 
     function getAllItemCatgeory($cat_name){
-        $sql="SELECT items.* FROM `items` JOIN cart where item_cat=cart.cat_id AND cart.cat_name LIKE '%$cat_name%'";
+        $sql="SELECT items.*, cart.cat_name FROM `items` JOIN cart where item_cat=cart.cat_id AND cart.cat_name LIKE '%$cat_name%'";
         return $this->fetchAllData($sql);
     }
 

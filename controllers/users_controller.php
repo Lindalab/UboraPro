@@ -1,12 +1,11 @@
 <?php 
     require_once dirname(__FILE__)."/../classes/user_class.php";
 
-    function registerUser_ctr($user_name, $user_email, $user_school_id, $phone_number, $password){
+    function registerUser_ctr($fname, $lname, $user_email, $user_school_id, $phone_number, $password){
         $user = new Users;
 
-        return $user->registerUser($user_name, $user_email, $user_school_id, $phone_number, $password);
+        return $user->registerUser($fname, $lname, $user_email, $user_school_id, $phone_number, $password);
     }
-
 
     function vote_ctr($user_id,$nomimee_id,$award_id ){
         $user = new Users;

@@ -6,10 +6,11 @@
     session_start();
     $user_id = $_SESSION['user_id'];
     $reciept_no = mt_rand();
-    $order_date = date("Y-m-d");
+    $date = new DateTime();
+    $current_date = $date->format("Y-m-d");
     $order_status = "success";
     $order_type = 1;
-    $order_id = addtoOrder_ctr($user_id,$reciept_no,$order_date,$order_type,$order_status);
+    $order_id = addtoOrder_ctr($user_id,$reciept_no,$current_date,$order_type,$order_status);
 
     
     
@@ -33,50 +34,45 @@
     $err = curl_error($curl);
   
     curl_close($curl);
-    
+     
     if ($err) {
       echo "cURL Error #:" . $err;
     } else {
-      $res = json_decode($response, true);
-
-      $amount =  $res['data']['amount'];
-      $currency = $res['data']['currency'];
-      $payment_date = date("Y-m-d");
+      $amount = $response->data->amount;
+      $currency = $response->data->currency;
   
-      $result = makePayment_ctr($amount,$user_id,$order_id,$currency,$payment_date);
+      $result = makePayment_ctr($amount,$user_id,$order_id,$currency,$current_date);
       
       
       $ip_add = $_SERVER['REMOTE_ADDR'];
 
       // delete items from cart;
-      $itemcartlist = showAPersonItemsCart_ctr($user_id,$ip_address);
+      $itemcartlist = showAPersonItemsCart_ctr($user_id,$ip_add);
 
       if($itemcartlist){
-        foreach ($itemcartlist as $cart) {
+        foreach ($itemcartlist as $key => $cart) {
           $item_id = $cart['item_id'];
-          $qty = 1;
+          $item_qty = $cart['item_qty'];
           $order_type = 1;
+          
           addToOrderItemHistroy_ctr($order_id,$item_id,$item_qty);
           
-          deleteItemsCart_ctr($user_id, $ip_address,$item_id);
-      }
-      }
+        }
+        deleteItemsCart_ctr($user_id);
 
+        $ticketList = showAPersonTicketCart_ctr($user_id,$ip_add);
+        if($ticketList){
+          $ticket_id = $ticketList['ticket_id'];
+          $qty = $ticketList['ticket_qty'];
+          $order_type = 2;
+          addToticketHistroy_ctr($order_id,$ticket_id,$qty);
+        }
+          deleteTicketCart_ctr($ticket_id);
+          echo "success";
+    }
 
   
       // delete ticket from cart;
-      $ticketList = showAPersonTicketCart_ctr($user_id,$ip_address);
-      if($ticketList){
-      foreach ($ticketList as $cart) {
-        $ticket_id = $cart['ticket_id'];
-        $qty = $cart['ticket_qty'];
-        $order_type = 2;
-        addToticketHistroy_ctr($order_id,$ticket_id,$qty);
-        
-        deleteTicketCart_ctr($ticket_id,$ip_address,$user_id,$qty);
-      }
-    }
-
-    echo "success";
+      
   }
 ?>

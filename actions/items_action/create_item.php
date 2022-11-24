@@ -20,15 +20,17 @@
     if ($move) {
         $result = addToItem_ctr($item_cat,$item_name,$item_price,$item_description,$upload_file_dest,$item_keyword);
     
-        if($result){
-            echo "success";
-            if($item_cat == 1){
+        if ($_POST["type"] == "Food") {
             header("location: ./../../admin/adminfood.php");
-            }else{
-                header("location: ./../../admin/adminTicket.php");
-            }
         }else{
-            echo "failed";
+            header("location: ./../../admin/admintransport.php");
+        }
+        }
+    else {
+        if ($_POST["type"] == "Food") {
+            header("location: ./../../admin/adminfood.php");
+        }else{
+            header("location: ./../../admin/admintransport.php");
         }
     }
 ?>

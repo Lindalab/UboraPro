@@ -16,8 +16,8 @@
         }
 
         // deletes every item from user's cart 
-        function deleteItemsCart($user_id, $ip_address,$item_id){
-            $sql = "DELETE FROM `item_cart` WHERE  `ip_address` ='$ip_address' and `user_id`='$user_id' and `item_id`='$item_id'  ";
+        function deleteItemsCart($user_id){
+            $sql = "DELETE FROM `item_cart` WHERE `user_id`='$user_id'";
 
             return $this->db_query($sql);
         }
@@ -45,7 +45,7 @@
         }
         
         function showAPersonItemsCart($user_id,$ip_address){
-            $sql="SELECT items.item_id, items.item_cat,items.item_name,items.item_price,items.item_image, item_cart.item_qty,item_cart.user_id,item_cart.ip_address, item_cart.item_id FROM `item_cart`, `items` WHERE items.item_id=item_cart.item_id and item_cart.user_id ='$user_id' and item_cart.ip_address='$ip_address'  ;";
+            $sql="SELECT items.item_id, items.item_cat,items.item_name,items.item_price,items.item_image, item_cart.item_qty,item_cart.user_id,item_cart.ip_address, item_cart.item_id FROM `item_cart` JOIN `items` WHERE items.item_id=item_cart.item_id and (item_cart.user_id ='$user_id' OR item_cart.ip_address='$ip_address');";
             return $this->fetchAllData($sql);
 
         }
@@ -59,8 +59,8 @@
             return $this->db_query($sql);
          }
 
-         function deleteTicketCart($ticket_id,$ip_address,$user_id,$item_qty){
-            $sql="DELETE FROM `ticket_cart` WHERE `ticket_id`='$ticket_id' and `ip_address`='$ip_address' and `user_id` ='$user_id' and `ticket_qty`= '$item_qty'";
+         function deleteTicketCart($user_id){
+            $sql="DELETE FROM `ticket_cart` WHERE `user_id` ='$user_id'";
             return $this->db_query($sql);
          }
 
@@ -75,7 +75,7 @@
          }
 
          function showAPersonTicketCart($user_id,$ip_address){
-            $sql="SELECT ticket.ticket_id,ticket.ticket_type,ticket.ticket_price,ticket.ticket_date, ticket_cart.ip_address,ticket_cart.user_id, ticket_cart.ticket_qty FROM `ticket_cart`,ticket WHERE ticket.ticket_id=ticket_cart.ticket_id and ticket_cart.user_id='$user_id' and ticket_cart.ip_address = '$ip_address' ";
+            $sql="SELECT ticket.ticket_id,ticket.ticket_type,ticket.ticket_price,ticket.ticket_date, ticket_cart.ip_address,ticket_cart.user_id, ticket_cart.ticket_qty FROM `ticket_cart` JOIN ticket WHERE ticket.ticket_id=ticket_cart.ticket_id and (ticket_cart.user_id='$user_id' OR ticket_cart.ip_address = '$ip_address')";
             return $this->fetchOne($sql);
          }
 

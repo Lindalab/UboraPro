@@ -1,5 +1,6 @@
 <?php
 session_start();
+unset($_SESSION["log_msg"]);
 require_once("../controllers/users_controller.php");
 
 if (isset($_POST['login'])) {
@@ -11,7 +12,7 @@ if (isset($_POST['login'])) {
 
     if ($login) {
         $_SESSION['user_id'] = $login['user_id'];
-        $_SESSION['user_name'] = $login['user_name'];
+        $_SESSION['user_name'] = $login['fname'] . " " . $login['lname'];
         $_SESSION['user_email'] = $login['user_email'];
         $_SESSION['user_school_id'] = $login['user_school_id'];
         $_SESSION['phone_number'] = $login['phone_number'];
@@ -21,7 +22,7 @@ if (isset($_POST['login'])) {
        
         header("Location: ../index.php");
     } else {
-        $_SESSION["log_msg"] = "Invalid Credentials";
+        $_SESSION["log_msg"] = "Invalid Credentials. Please try again!";
         header("Location: Login.php");
         }
 

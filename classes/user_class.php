@@ -5,9 +5,9 @@ class Users extends db_connection
 {
 
     // add a user to the database
-    function registerUser($user_name, $user_email, $user_school_id,$phone_number, $password, $user_role = 2)
+    function registerUser($fname, $lname, $user_email, $user_school_id,$phone_number, $password, $user_role = 2)
     {
-        $sql = "INSERT INTO `user`(`user_name`, `user_email`, `user_school_id`, `phone_number`, `password`, `user_role`) VALUES ('$user_name','$user_email',' $user_school_id','$phone_number','$password', '$user_role')";
+        $sql = "INSERT INTO `user`(`fname`, `lname`, `user_email`, `user_school_id`, `phone_number`, `password`, `user_role`) VALUES ('$fname', '$lname', '$user_email',' $user_school_id','$phone_number','$password', '$user_role')";
 
         return $this->db_query($sql);
     }
